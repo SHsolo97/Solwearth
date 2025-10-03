@@ -5,6 +5,19 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle, Package, Zap, Settings, Shield, Leaf } from "lucide-react"
 import Link from "next/link"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "SE 5001 Organic Waste Converter (400-500 KG) | Heavy Duty OWC Machine - Solwearth",
+  description: "Buy SE 5001 heavy duty automatic organic waste converter for large scale food waste management. Process 400-500 KG food waste daily. Industrial grade, PLC controlled, stainless steel construction.",
+  keywords: "SE 5001, heavy duty organic waste converter, 500kg food waste converter, industrial OWC machine, factory waste management, heavy duty compost machine",
+  openGraph: {
+    title: "SE 5001 Heavy Duty Organic Waste Converter - Solwearth",
+    description: "Industrial strength solution for factories, large corporations and institutions. Convert 400-500 KG food waste daily with our SE 5001 organic waste converter.",
+    images: ['/images/machine/SE-5001-front-view.png'],
+    type: 'website',
+  },
+}
 
 export default function SE5001Page() {
   const specifications = [
@@ -53,8 +66,70 @@ export default function SE5001Page() {
     },
   ]
 
+  const productSchema = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "SE 5001 Organic Waste Converter",
+    "description": "Heavy duty fully automatic organic waste converter for industrial food waste management. Processes 400-500 KG daily with robust PLC control system.",
+    "image": "https://www.solwearth.com/images/machine/SE-5001-front-view.png",
+    "brand": {
+      "@type": "Brand",
+      "name": "Solwearth Ecotech"
+    },
+    "manufacturer": {
+      "@type": "Organization",
+      "name": "Solwearth Ecotech"
+    },
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/InStock",
+      "priceCurrency": "INR"
+    },
+    "additionalProperty": [
+      {"@type": "PropertyValue", "name": "Capacity", "value": "400-500 KG"},
+      {"@type": "PropertyValue", "name": "Processing Time", "value": "22-26 hours"},
+      {"@type": "PropertyValue", "name": "Power Consumption", "value": "9 Kw"},
+      {"@type": "PropertyValue", "name": "Material", "value": "Stainless Steel"},
+      {"@type": "PropertyValue", "name": "Warranty", "value": "1 year"}
+    ],
+    "category": "Waste Management Equipment"
+  }
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.solwearth.com/"
+      },
+      {
+        "@type": "ListItem", 
+        "position": 2,
+        "name": "Products",
+        "item": "https://www.solwearth.com/#products"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "SE 5001",
+        "item": "https://www.solwearth.com/products/se-5001"
+      }
+    ]
+  }
+
   return (
     <main className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <Header />
 
       {/* Hero Section */}

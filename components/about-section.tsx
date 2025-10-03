@@ -17,7 +17,7 @@ export function AboutSection() {
         <div className="grid md:grid-cols-2 gap-12">
           {/* About Us */}
           <div className="space-y-4">
-            <h3 className="text-3xl font-bold text-gray-900">About Us</h3>
+            <h2 className="text-3xl font-bold text-gray-900">About Solwearth Ecotech</h2>
             <p className="text-gray-600 leading-relaxed">
               <span className="font-semibold">Solwearth Ecotech Pvt. Ltd.</span> is committed to social responsibility
               and sustainable development. By integrating advanced technology with industry expertise, we have developed
@@ -28,7 +28,7 @@ export function AboutSection() {
 
           {/* Unique Features */}
           <div className="space-y-4">
-            <h3 className="text-3xl font-bold text-gray-900">Unique features of Organic waste converter machines</h3>
+            <h2 className="text-3xl font-bold text-gray-900">Key Features of Our Organic Waste Converters</h2>
             <ul className="space-y-3">
               {features.map((feature, index) => (
                 <li key={index} className="flex items-start gap-3">

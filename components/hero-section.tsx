@@ -12,9 +12,9 @@ export function HeroSection({ onRequestQuote }: HeroSectionProps) {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="space-y-6" style={{ animation: 'slideInFromLeft 0.8s ease-out' }}>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
               FULLY AUTOMATIC ORGANIC WASTE CONVERTER (OWC)
-            </h2>
+            </h1>
             <p className="text-lg text-gray-600 leading-relaxed">
               A compact and efficient Organic waste converter machines, designed for seamless food waste management in
               restaurants, apartments, hostels, canteens, malls, and catering facilities. Our innovative technology
@@ -42,7 +42,7 @@ export function HeroSection({ onRequestQuote }: HeroSectionProps) {
           <div className="relative" style={{ animation: 'slideInFromRight 0.8s ease-out' }}>
             <img
               src="/images/machine/automatic-waste-convertor-hero.png"
-              alt="Automatic Food Waste Converter"
+              alt="Fully automatic organic waste converter machine by Solwearth Ecotech for commercial food waste management"
               className="w-full h-auto object-contain max-h-80 transition-transform duration-500 hover:scale-105"
             />
           </div>

@@ -5,6 +5,19 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle, Package, Zap, Settings, Shield, Leaf } from "lucide-react"
 import Link from "next/link"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "SE 3501 Organic Waste Converter (350-375 KG) | Large Scale OWC Machine - Solwearth",
+  description: "Buy SE 3501 automatic organic waste converter for large capacity food waste management. Process 350-375 KG food waste daily. Industrial grade, PLC controlled, stainless steel construction.",
+  keywords: "SE 3501, large organic waste converter, 350kg food waste converter, industrial OWC machine, corporate waste management, large scale compost machine",
+  openGraph: {
+    title: "SE 3501 Large Organic Waste Converter - Solwearth",
+    description: "Perfect for corporate offices, large hotels and industrial facilities. Convert 350-375 KG food waste daily with our SE 3501 organic waste converter.",
+    images: ['/images/machine/SE-3501-front-view.png'],
+    type: 'website',
+  },
+}
 
 export default function SE3501Page() {
   const specifications = [
@@ -53,8 +66,70 @@ export default function SE3501Page() {
     },
   ]
 
+  const productSchema = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "SE 3501 Organic Waste Converter",
+    "description": "Large capacity fully automatic organic waste converter for industrial food waste management. Processes 350-375 KG daily with advanced PLC control system.",
+    "image": "https://www.solwearth.com/images/machine/SE-3501-front-view.png",
+    "brand": {
+      "@type": "Brand",
+      "name": "Solwearth Ecotech"
+    },
+    "manufacturer": {
+      "@type": "Organization",
+      "name": "Solwearth Ecotech"
+    },
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/InStock",
+      "priceCurrency": "INR"
+    },
+    "additionalProperty": [
+      {"@type": "PropertyValue", "name": "Capacity", "value": "350-375 KG"},
+      {"@type": "PropertyValue", "name": "Processing Time", "value": "21-25 hours"},
+      {"@type": "PropertyValue", "name": "Power Consumption", "value": "8 Kw"},
+      {"@type": "PropertyValue", "name": "Material", "value": "Stainless Steel"},
+      {"@type": "PropertyValue", "name": "Warranty", "value": "1 year"}
+    ],
+    "category": "Waste Management Equipment"
+  }
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.solwearth.com/"
+      },
+      {
+        "@type": "ListItem", 
+        "position": 2,
+        "name": "Products",
+        "item": "https://www.solwearth.com/#products"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "SE 3501",
+        "item": "https://www.solwearth.com/products/se-3501"
+      }
+    ]
+  }
+
   return (
     <main className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <Header />
 
       {/* Hero Section */}

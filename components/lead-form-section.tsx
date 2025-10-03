@@ -68,7 +68,7 @@ export function LeadFormSection() {
             {/* Left Section - Contact Information (3 columns width) */}
             <div className="lg:col-span-3 space-y-8">
               <div>
-                <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Why Choose Us?</h3>
+                <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Why Choose Solwearth?</h3>
                 <p className="text-lg text-gray-600 leading-relaxed">
                   Solwearth Ecotech Pvt. Ltd is committed to social responsibility and sustainable development. We offer
                   technology and support for waste management needs across various industries.
@@ -80,12 +80,12 @@ export function LeadFormSection() {
                 {/* Head Office */}
                 <Card className="bg-white shadow-lg hover:shadow-xl transition-shadow">
                   <CardContent className="p-6">
-                    <h4 className="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2">
+                    <div className="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2">
                       <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
                         <MapPin className="w-5 h-5 text-green-600" />
                       </div>
                       Head Office
-                    </h4>
+                    </div>
                     <p className="text-sm text-gray-500 mb-3">Cochin, Kerala</p>
                     <p className="text-gray-700 leading-relaxed text-sm">
                       46/2861-A, 1st Floor,<br />
@@ -99,12 +99,12 @@ export function LeadFormSection() {
                 {/* Factory Address */}
                 <Card className="bg-white shadow-lg hover:shadow-xl transition-shadow">
                   <CardContent className="p-6">
-                    <h4 className="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2">
+                    <div className="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2">
                       <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
                         <MapPin className="w-5 h-5 text-green-600" />
                       </div>
                       Factory
-                    </h4>
+                    </div>
                     <p className="text-sm text-gray-500 mb-3">Bengaluru, Karnataka</p>
                     <p className="text-gray-700 leading-relaxed text-sm">
                       Sy No. 123-A, Heelalige Village,<br />
@@ -119,7 +119,7 @@ export function LeadFormSection() {
               {/* Contact Details */}
               <Card className="bg-gradient-to-br from-green-600 to-green-700 text-white shadow-xl">
                 <CardContent className="p-8">
-                  <h4 className="text-2xl font-bold mb-6">Contact Details</h4>
+                  <div className="text-2xl font-bold mb-6">Contact Details</div>
                   <div className="space-y-5">
                     <div className="flex items-start gap-4">
                       <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
@@ -152,7 +152,7 @@ export function LeadFormSection() {
 
               {/* Social Media */}
               <div>
-                <h4 className="text-xl font-bold text-gray-900 mb-4">Follow Us</h4>
+                <div className="text-xl font-bold text-gray-900 mb-4">Follow Us</div>
                 <div className="flex gap-3">
                   <a
                     href="https://www.facebook.com/Solwearth"

@@ -1,4 +1,19 @@
+import type { Metadata } from "next"
 import { LocationPageTemplate } from "@/components/location-page-template"
+
+export const metadata: Metadata = {
+  title: "Organic Waste Converter in Bangalore | Food Waste Management Solutions",
+  description: "Top organic waste converter supplier in Bangalore. Automatic OWC machines for hotels, restaurants, apartments. Free installation. Call +91 98950 44004.",
+  keywords: "organic waste converter Bangalore, food waste converter Bangalore, OWC machine Bangalore, waste management Bangalore, compost machine Bangalore",
+  openGraph: {
+    title: "Organic Waste Converter in Bangalore - Solwearth Ecotech",
+    description: "Leading supplier of automatic organic waste converters in Bangalore. Serving 100+ clients across Karnataka.",
+    url: 'https://www.solwearth.com/locations/india/bangalore',
+  },
+  alternates: {
+    canonical: "https://www.solwearth.com/locations/india/bangalore"
+  }
+}
 
 export default function BangalorePage() {
   return (

@@ -5,6 +5,19 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle, Package, Zap, Settings, Shield, Leaf } from "lucide-react"
 import Link from "next/link"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "SE 1H Organic Waste Converter (1000 KG) | Commercial Grade OWC Machine - Solwearth",
+  description: "Buy SE 1H commercial grade automatic organic waste converter for large scale food waste management. Process 1000 KG food waste daily. Heavy duty, PLC controlled, stainless steel construction.",
+  keywords: "SE 1H, commercial organic waste converter, 1000kg food waste converter, commercial grade OWC machine, industrial waste management, commercial compost machine",
+  openGraph: {
+    title: "SE 1H Commercial Grade Organic Waste Converter - Solwearth",
+    description: "Maximum capacity solution for large industries, municipalities and commercial complexes. Convert 1000 KG food waste daily with our SE 1H organic waste converter.",
+    images: ['/images/machine/SE-1H-front-view.png'],
+    type: 'website',
+  },
+}
 
 export default function SE1HPage() {
   const specifications = [
@@ -53,8 +66,70 @@ export default function SE1HPage() {
     },
   ]
 
+  const productSchema = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "SE 1H Organic Waste Converter",
+    "description": "Commercial grade fully automatic organic waste converter for maximum capacity food waste management. Processes 1000 KG daily with heavy-duty PLC control system.",
+    "image": "https://www.solwearth.com/images/machine/SE-1H-front-view.png",
+    "brand": {
+      "@type": "Brand",
+      "name": "Solwearth Ecotech"
+    },
+    "manufacturer": {
+      "@type": "Organization",
+      "name": "Solwearth Ecotech"
+    },
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/InStock",
+      "priceCurrency": "INR"
+    },
+    "additionalProperty": [
+      {"@type": "PropertyValue", "name": "Capacity", "value": "1000 KG"},
+      {"@type": "PropertyValue", "name": "Processing Time", "value": "27-30 hours"},
+      {"@type": "PropertyValue", "name": "Power Consumption", "value": "12 Kw"},
+      {"@type": "PropertyValue", "name": "Material", "value": "Stainless Steel"},
+      {"@type": "PropertyValue", "name": "Warranty", "value": "1 year"}
+    ],
+    "category": "Waste Management Equipment"
+  }
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.solwearth.com/"
+      },
+      {
+        "@type": "ListItem", 
+        "position": 2,
+        "name": "Products",
+        "item": "https://www.solwearth.com/#products"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "SE 1H",
+        "item": "https://www.solwearth.com/products/se-1h"
+      }
+    ]
+  }
+
   return (
     <main className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <Header />
 
       {/* Hero Section */}

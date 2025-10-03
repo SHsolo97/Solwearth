@@ -98,7 +98,7 @@ export function BlogCard({
 
           {/* Read More Link */}
           <div className="flex items-center gap-2 text-green-600 font-semibold group-hover:gap-4 transition-all pt-3 border-t border-gray-100">
-            <span>Read More</span>
+            <span>Read Full Article</span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </div>
         </div>

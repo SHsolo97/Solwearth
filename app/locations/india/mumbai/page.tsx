@@ -1,4 +1,16 @@
 import { LocationPageTemplate } from "@/components/location-page-template"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Organic Waste Converter in Mumbai | Food Waste Management Solutions - Solwearth",
+  description: "Leading organic waste converter supplier in Mumbai. Automatic OWC machines for hotels, restaurants, apartments in Mumbai. Convert food waste to compost in 24 hours. Call +91 98950 440 04",
+  keywords: "organic waste converter Mumbai, food waste converter Mumbai, OWC machine Mumbai, waste management Mumbai, compost machine Mumbai",
+  openGraph: {
+    title: "Organic Waste Converter Mumbai - Solwearth Ecotech",
+    description: "Transform Mumbai's food waste into compost with our automatic organic waste converters. Serving hotels, restaurants and commercial establishments.",
+    type: 'website',
+  },
+}
 
 export default function MumbaiPage() {
   return (

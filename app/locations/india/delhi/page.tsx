@@ -1,4 +1,16 @@
 import { LocationPageTemplate } from "@/components/location-page-template"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Organic Waste Converter Manufacturer in Delhi | OWC Machine Supplier - Solwearth",
+  description: "Leading organic waste converter manufacturer in Delhi NCR. Industrial OWC machines for government offices, corporates, hotels in Delhi. Advanced waste management solutions. Call +91 98950 440 04",
+  keywords: "organic waste converter Delhi, OWC manufacturer Delhi, food waste converter Delhi NCR, waste management Delhi, compost machine Delhi",
+  openGraph: {
+    title: "Organic Waste Converter Manufacturer Delhi - Solwearth Ecotech",
+    description: "Advanced waste management solutions for India's capital. Serving government, corporate and commercial sectors with efficient organic waste converters.",
+    type: 'website',
+  },
+}
 
 export default function DelhiPage() {
   return (

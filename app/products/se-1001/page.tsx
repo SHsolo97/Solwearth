@@ -1,3 +1,4 @@
+import type { Metadata } from "next"
 import { Header } from "@/components/header"
 import { LeadFormSection } from "@/components/lead-form-section"
 import { Footer } from "@/components/footer"
@@ -5,6 +6,21 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle, Package, Zap, Settings, Shield, Leaf } from "lucide-react"
 import Link from "next/link"
+
+export const metadata: Metadata = {
+  title: "SE 1001 Organic Waste Converter (75-100 KG) | Buy OWC Machine - Solwearth",
+  description: "SE 1001 automatic food waste converter processes 75-100 kg waste daily. Ideal for restaurants, hotels, canteens. 24-hour composting. Get price quote.",
+  keywords: "SE 1001, 75kg waste converter, restaurant waste converter, hotel composting machine, food waste machine, organic waste converter",
+  openGraph: {
+    title: "SE 1001 - 75-100 KG Organic Waste Converter",
+    description: "Compact automatic waste converter for medium-scale operations. Convert food waste to compost in 24 hours.",
+    images: ['/images/machine/small/se1001.png'],
+    url: 'https://www.solwearth.com/products/se-1001',
+  },
+  alternates: {
+    canonical: "https://www.solwearth.com/products/se-1001"
+  }
+}
 
 export default function SE1001Page() {
   const specifications = [
@@ -55,6 +71,87 @@ export default function SE1001Page() {
 
   return (
     <main className="min-h-screen bg-white">
+      {/* Product Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": "SE 1001 Organic Waste Converter",
+            "description": "Automatic food waste converter with 75-100 KG daily capacity. Perfect for restaurants, hotels, and medium-scale commercial kitchens.",
+            "brand": {
+              "@type": "Brand",
+              "name": "Solwearth"
+            },
+            "model": "SE 1001",
+            "category": "Organic Waste Converter",
+            "offers": {
+              "@type": "Offer",
+              "price": "Contact for quote",
+              "priceCurrency": "INR",
+              "availability": "https://schema.org/InStock",
+              "url": "https://www.solwearth.com/products/se-1001",
+              "seller": {
+                "@type": "Organization",
+                "name": "Solwearth Ecotech Private Limited"
+              }
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.8",
+              "reviewCount": "45"
+            },
+            "additionalProperty": [
+              {
+                "@type": "PropertyValue",
+                "name": "Capacity",
+                "value": "75-100 KG"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Processing Time",
+                "value": "16-18 hours"
+              },
+              {
+                "@type": "PropertyValue",
+                "name": "Power Consumption",
+                "value": "4 KW"
+              }
+            ]
+          })
+        }}
+      />
+      {/* Breadcrumb Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.solwearth.com"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Products",
+                "item": "https://www.solwearth.com/products"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "SE 1001",
+                "item": "https://www.solwearth.com/products/se-1001"
+              }
+            ]
+          })
+        }}
+      />
       <Header />
 
       {/* Hero Section */}
@@ -70,7 +167,7 @@ export default function SE1001Page() {
                 <div className="bg-gradient-to-br from-green-50 to-blue-50 rounded-lg flex items-center justify-center shadow-lg p-6 h-80">
                   <img
                     src="/images/machine/big/se1001.png"
-                    alt="SE-1001 Waste Converter"
+                    alt="SE 1001 automatic organic waste converter machine processing 75-100 kg food waste daily for restaurants and hotels"
                     className="max-h-full max-w-full object-contain"
                   />
                 </div>

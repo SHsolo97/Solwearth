@@ -34,8 +34,54 @@ export function LocationPageTemplate({
     { name: "SE 1H", capacity: "1000 KG", link: "/products/se-1h" },
   ]
 
+  // Extract city name for schema
+  const cityName = location.split(',')[0].trim()
+  const stateName = location.split(',')[1]?.trim() || ''
+
   return (
     <main className="min-h-screen bg-white">
+      {/* Local Business Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": `Solwearth Ecotech - ${cityName}`,
+            "description": `Organic waste converter supplier in ${cityName}`,
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": cityName,
+              "addressRegion": stateName,
+              "addressCountry": "IN"
+            },
+            "telephone": "+91-98950-44004",
+            "email": "info@solwearth.com",
+            "priceRange": "$$",
+            "areaServed": {
+              "@type": "City",
+              "name": cityName
+            },
+            "parentOrganization": {
+              "@type": "Organization",
+              "name": "Solwearth Ecotech Private Limited"
+            },
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Organic Waste Converters",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Product",
+                    "name": "Organic Waste Converter"
+                  }
+                }
+              ]
+            }
+          })
+        }}
+      />
       <Header />
 
       {/* Hero Section */}

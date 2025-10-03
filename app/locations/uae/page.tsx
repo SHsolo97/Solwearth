@@ -1,4 +1,16 @@
 import { LocationPageTemplate } from "@/components/location-page-template"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Organic Waste Converters in UAE | Food Waste Management Dubai Abu Dhabi - Solwearth",
+  description: "Premium organic waste converter supplier in UAE. OWC machines for hotels, restaurants, apartments in Dubai, Abu Dhabi, Sharjah. Advanced food waste management solutions in Middle East.",
+  keywords: "organic waste converter UAE, food waste converter Dubai, OWC machine Abu Dhabi, waste management UAE, compost machine Middle East",
+  openGraph: {
+    title: "Organic Waste Converters UAE - Solwearth Ecotech",
+    description: "Advanced waste management solutions for UAE's modern infrastructure. Serving Dubai, Abu Dhabi and across Emirates with cutting-edge OWC technology.",
+    type: 'website',
+  },
+}
 
 export default function UAEPage() {
   return (

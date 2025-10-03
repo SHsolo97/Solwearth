@@ -4,6 +4,18 @@ import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 import Link from "next/link"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Organic Waste Converter Products | OWC Machine Range 25KG to 1000KG - Solwearth",
+  description: "Browse our complete range of automatic organic waste converters. Models from 25KG to 1000KG capacity. SE-501, SE-1001, SE-2001, SE-3501, SE-5001, SE-1H. Buy OWC machine online.",
+  keywords: "organic waste converter products, OWC machine range, food waste converter models, automatic waste management, compost machine varieties",
+  openGraph: {
+    title: "Complete OWC Machine Product Range - Solwearth",
+    description: "Choose from 6 models of organic waste converters, from small 25KG units to industrial 1000KG capacity machines.",
+    type: 'website',
+  },
+}
 
 export default function AllProductsPage() {
   const products = [

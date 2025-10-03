@@ -1,4 +1,16 @@
 import { LocationPageTemplate } from "@/components/location-page-template"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Food Waste Converter in Chennai | Organic Waste Management Solutions - Solwearth",
+  description: "Premium food waste converter supplier in Chennai. Automatic OWC machines for IT companies, hotels, restaurants in Chennai. Advanced waste management technology. Call +91 98950 440 04",
+  keywords: "food waste converter Chennai, organic waste converter Chennai, OWC machine Chennai, waste management Chennai, compost machine Chennai",
+  openGraph: {
+    title: "Food Waste Converter Chennai - Solwearth Ecotech",
+    description: "State-of-the-art food waste management solutions for Chennai's industrial and commercial sectors. Process waste in under 24 hours.",
+    type: 'website',
+  },
+}
 
 export default function ChennaiPage() {
   return (

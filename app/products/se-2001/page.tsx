@@ -5,6 +5,19 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle, Package, Zap, Settings, Shield, Leaf } from "lucide-react"
 import Link from "next/link"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "SE 2001 Organic Waste Converter (150-200 KG) | Medium Scale OWC Machine - Solwearth",
+  description: "Buy SE 2001 automatic organic waste converter for medium capacity food waste management. Process 150-200 KG food waste daily. Fully automatic, PLC controlled, stainless steel construction.",
+  keywords: "SE 2001, medium organic waste converter, 200kg food waste converter, commercial OWC machine, hotel waste management, medium scale compost machine",
+  openGraph: {
+    title: "SE 2001 Medium Organic Waste Converter - Solwearth",
+    description: "Ideal for hotels, large restaurants and commercial facilities. Convert 150-200 KG food waste daily with our SE 2001 organic waste converter.",
+    images: ['/images/machine/SE-2001-front-view.png'],
+    type: 'website',
+  },
+}
 
 export default function SE2001Page() {
   const specifications = [
@@ -53,8 +66,70 @@ export default function SE2001Page() {
     },
   ]
 
+  const productSchema = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "SE 2001 Organic Waste Converter",
+    "description": "Medium capacity fully automatic organic waste converter for commercial food waste management. Processes 150-200 KG daily with advanced PLC control.",
+    "image": "https://www.solwearth.com/images/machine/SE-2001-front-view.png",
+    "brand": {
+      "@type": "Brand",
+      "name": "Solwearth Ecotech"
+    },
+    "manufacturer": {
+      "@type": "Organization",
+      "name": "Solwearth Ecotech"
+    },
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/InStock",
+      "priceCurrency": "INR"
+    },
+    "additionalProperty": [
+      {"@type": "PropertyValue", "name": "Capacity", "value": "150-200 KG"},
+      {"@type": "PropertyValue", "name": "Processing Time", "value": "16-22 hours"},
+      {"@type": "PropertyValue", "name": "Power Consumption", "value": "6 Kw"},
+      {"@type": "PropertyValue", "name": "Material", "value": "Stainless Steel"},
+      {"@type": "PropertyValue", "name": "Warranty", "value": "1 year"}
+    ],
+    "category": "Waste Management Equipment"
+  }
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.solwearth.com/"
+      },
+      {
+        "@type": "ListItem", 
+        "position": 2,
+        "name": "Products",
+        "item": "https://www.solwearth.com/#products"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "SE 2001",
+        "item": "https://www.solwearth.com/products/se-2001"
+      }
+    ]
+  }
+
   return (
     <main className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <Header />
 
       {/* Hero Section */}

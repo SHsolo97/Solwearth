@@ -99,7 +99,7 @@ export function ProductsSection({ showAll = false, onRequestQuote }: ProductsSec
                     variant="outline"
                     className="border-green-600 text-green-600 hover:bg-green-50 bg-transparent"
                   >
-                    SEE DETAILS
+                    {product.name} Details
                   </Button>
                 </Link>
               </CardFooter>

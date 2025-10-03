@@ -3,6 +3,18 @@ import { LeadFormSection } from "@/components/lead-form-section"
 import { Footer } from "@/components/footer"
 import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle, Target, Zap, Users, Globe, Award } from "lucide-react"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "About Solwearth Ecotech | Leading Organic Waste Converter Manufacturer in India",
+  description: "Learn about Solwearth Ecotech, India's leading manufacturer of organic waste converters. ISO certified company specializing in sustainable food waste management solutions since 2010.",
+  keywords: "about Solwearth, organic waste converter manufacturer, food waste management company India, ISO certified waste management, sustainable technology",
+  openGraph: {
+    title: "About Solwearth Ecotech - Organic Waste Management Leaders",
+    description: "Discover how Solwearth Ecotech is revolutionizing waste management across India and the Middle East with innovative organic waste converters.",
+    type: 'website',
+  },
+}
 
 export default function AboutPage() {
   const features = [
