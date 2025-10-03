@@ -16,7 +16,7 @@ export function HeroSection({ onRequestQuote }: HeroSectionProps) {
               FULLY AUTOMATIC ORGANIC WASTE CONVERTER (OWC)
             </h1>
             <p className="text-lg text-gray-600 leading-relaxed">
-              A compact and efficient Organic waste converter machines, designed for seamless food waste management in
+              A compact and efficient fully automatic organic waste converter (OWC), designed for seamless food waste management in
               restaurants, apartments, hostels, canteens, malls, and catering facilities. Our innovative technology
               ensures minimal effort and maximum efficiency.
             </p>

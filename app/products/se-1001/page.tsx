@@ -288,7 +288,7 @@ export default function SE1001Page() {
                 </p>
               </div>
               <Link href="/contact">
-                <Button className="bg-white text-green-600 hover:bg-gray-100 px-8 py-6">Contact Us Now</Button>
+                <Button className="bg-white text-green-600 hover:bg-gray-100 px-8 py-6">Get SE 1001 Quote</Button>
               </Link>
             </div>
           </div>

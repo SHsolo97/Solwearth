@@ -168,7 +168,7 @@ export function Header() {
               }}
               className="px-5 py-2.5 bg-green-600 text-white text-sm font-medium rounded-lg hover:bg-green-700 transition-colors shadow-sm hover:shadow-md"
             >
-              Contact Us
+              Get Free Quote
             </button>
           </nav>
 
@@ -295,7 +295,7 @@ export function Header() {
               }}
               className="w-full mt-2 px-5 py-3 bg-green-600 text-white text-sm font-medium rounded-lg hover:bg-green-700 transition-colors shadow-sm"
             >
-              Contact Us
+              Get Free Quote
             </button>
           </nav>
         )}

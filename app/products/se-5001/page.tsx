@@ -183,7 +183,7 @@ export default function SE5001Page() {
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">Key Features</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">SE 5001 Key Features</h2>
             <div className="grid md:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <Card key={index} className="bg-white hover:shadow-lg transition-shadow">
@@ -228,7 +228,7 @@ export default function SE5001Page() {
       <section className="py-16 bg-gradient-to-b from-gray-50 to-blue-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Ideal For</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">SE 5001 Ideal For</h2>
             <p className="text-xl text-gray-600 mb-8">
               The SE-5001 is perfectly suited for large-scale operations, convention centres, and facilities requiring
               maximum waste management capacity.
@@ -253,7 +253,7 @@ export default function SE5001Page() {
       <section className="py-16 bg-green-600">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center text-white">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Waste Management?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Get Your SE 5001 Waste Converter Today</h2>
             <p className="text-xl mb-8 text-green-50">
               Contact us today to learn more about the SE-5001 and how it can benefit your facility.
             </p>
@@ -268,7 +268,7 @@ export default function SE5001Page() {
                 </p>
               </div>
               <Link href="/contact">
-                <Button className="bg-white text-green-600 hover:bg-gray-100 px-8 py-6">Contact Us Now</Button>
+                <Button className="bg-white text-green-600 hover:bg-gray-100 px-8 py-6">Get SE 5001 Quote</Button>
               </Link>
             </div>
           </div>
