@@ -205,7 +205,7 @@ export default function SE1001Page() {
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">Key Features</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">SE 1001 Key Features</h2>
             <div className="grid md:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <Card key={index} className="bg-white hover:shadow-lg transition-shadow">

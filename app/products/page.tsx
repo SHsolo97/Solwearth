@@ -183,7 +183,7 @@ export default function AllProductsPage() {
               </div>
               <div className="flex gap-4">
                 <Link href="/contact">
-                  <Button className="bg-green-600 hover:bg-green-700 text-white px-8 py-6">Contact Us</Button>
+                  <Button className="bg-green-600 hover:bg-green-700 text-white px-8 py-6">Request Information</Button>
                 </Link>
                 <a href="#" download>
                   <Button

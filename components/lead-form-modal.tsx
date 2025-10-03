@@ -61,7 +61,7 @@ export function LeadFormModal({ isOpen, onClose }: LeadFormModalProps) {
       <div className="bg-white rounded-lg shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto">
         <div className="sticky top-0 bg-white border-b border-gray-200 px-8 py-4 flex items-center justify-between">
           <div>
-            <h2 className="text-3xl font-bold text-gray-800">Get Your Free Quote</h2>
+            <h2 className="text-3xl font-bold text-gray-800">Request Product Quote</h2>
             <p className="text-gray-600 text-sm mt-1">Fill out the form below and we'll get back to you shortly.</p>
           </div>
           <button

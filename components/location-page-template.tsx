@@ -182,7 +182,7 @@ export function LocationPageTemplate({
                         variant="outline"
                         className="border-green-600 text-green-600 hover:bg-green-50 bg-transparent w-full"
                       >
-                        View Details
+                        Learn More
                       </Button>
                     </Link>
                   </CardContent>

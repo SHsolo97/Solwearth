@@ -13,7 +13,7 @@ const openSans = Open_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.solwearth.com'),
-  title: "Organic Waste Converter | Food Waste Management - Solwearth",
+  title: "Organic Waste Converter|Food Waste Management - Solwearth",
   description: "Leading manufacturer of automatic organic waste converters in India. Convert food waste to compost in 24 hours. Capacities 25kg to 1000kg.",
   keywords: "organic waste converter, food waste converter, OWC machine, automatic waste converter, compost machine, waste management India",
   openGraph: {

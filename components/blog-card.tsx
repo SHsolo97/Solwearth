@@ -42,7 +42,7 @@ export function BlogCard({
 
   return (
     <Card className="overflow-hidden hover:shadow-2xl transition-all duration-300 group bg-white border-0 shadow-lg">
-      <Link href={`/blog/${slug}`}>
+      <Link href={`/blog/${slug}`} aria-label={`Read article: ${title}`}>
         {/* Featured Image */}
         {featuredImage?.sourceUrl ? (
           <div className="relative h-56 overflow-hidden bg-gray-200">
