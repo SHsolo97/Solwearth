@@ -1,15 +1,12 @@
-"use client"
-
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 import Link from "next/link"
 
 interface ProductsSectionProps {
   showAll?: boolean
-  onRequestQuote?: () => void
 }
 
-export function ProductsSection({ showAll = false, onRequestQuote }: ProductsSectionProps) {
+export function ProductsSection({ showAll = false }: ProductsSectionProps) {
   const allProducts = [
     {
       id: "se-501",

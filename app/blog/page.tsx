@@ -1,5 +1,5 @@
 import { getAllPosts } from "@/lib/wordpress"
-import { BlogCard } from "@/components/blog-card"
+import { LoadMoreBlogs } from "@/components/load-more-blogs"
 import { Header } from "@/components/header"
 import { LeadFormSection } from "@/components/lead-form-section"
 import { Footer } from "@/components/footer"
@@ -8,11 +8,15 @@ import Link from "next/link"
 
 export default async function BlogPage() {
   let posts = []
+  let hasNextPage = false
+  let endCursor = null
   let error = null
 
   try {
-    const data = await getAllPosts(12)
+    const data = await getAllPosts(50) // Increase to 50 posts initially
     posts = data?.nodes || []
+    hasNextPage = data?.pageInfo?.hasNextPage || false
+    endCursor = data?.pageInfo?.endCursor || null
   } catch (err) {
     console.error("Error fetching posts:", err)
     error = "Failed to load blog posts. Please try again later."
@@ -59,29 +63,11 @@ export default async function BlogPage() {
               <p className="text-gray-600">Check back soon for updates and insights!</p>
             </div>
           ) : (
-            <>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {posts.map((post: any) => (
-                  <BlogCard
-                    key={post.id}
-                    title={post.title}
-                    excerpt={post.excerpt}
-                    slug={post.slug}
-                    date={post.date}
-                    author={post.author?.node}
-                    featuredImage={post.featuredImage?.node}
-                    categories={post.categories?.nodes}
-                  />
-                ))}
-              </div>
-
-              {/* Load More / Pagination */}
-              <div className="mt-12 text-center">
-                <p className="text-gray-600">
-                  Showing {posts.length} {posts.length === 1 ? "post" : "posts"}
-                </p>
-              </div>
-            </>
+            <LoadMoreBlogs 
+              initialPosts={posts}
+              hasNextPage={hasNextPage}
+              endCursor={endCursor}
+            />
           )}
         </div>
       </section>

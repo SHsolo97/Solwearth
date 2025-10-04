@@ -76,8 +76,8 @@ const categories = Array.from(new Set(clients.map(c => c.category)))
 
 export function ClientsSection() {
   const stats = [
-    { icon: Building2, label: "Projects Completed", value: "500+" },
-    { icon: Users, label: "Satisfied Clients", value: "60+" },
+    { icon: Building2, label: "Installations", value: "500+" },
+    { icon: Users, label: "Satisfied Clients", value: "300+" },
     { icon: Globe, label: "Countries Served", value: "10+" },
     { icon: Award, label: "Years of Excellence", value: "15+" },
   ]

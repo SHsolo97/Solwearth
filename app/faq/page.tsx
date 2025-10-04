@@ -1,16 +1,21 @@
-"use client"
-
-import { useState } from "react"
 import type { Metadata } from "next"
 import { Header } from "@/components/header"
 import { LeadFormSection } from "@/components/lead-form-section"
 import { Footer } from "@/components/footer"
-import { Card, CardContent } from "@/components/ui/card"
-import { ChevronDown } from "lucide-react"
+import { FAQAccordion } from "@/components/faq-accordion"
+
+export const metadata: Metadata = {
+  title: "FAQ - Organic Waste Converter Questions & Answers | Solwearth Ecotech",
+  description: "Get answers to frequently asked questions about organic waste converters, food waste management, installation, maintenance, and operation of OWC machines.",
+  keywords: "organic waste converter FAQ, OWC machine questions, food waste converter answers, waste management FAQ, compost machine queries",
+  openGraph: {
+    title: "FAQ - Organic Waste Converter Questions & Answers",
+    description: "Find answers to common questions about our organic waste converter machines, installation, operation, and maintenance.",
+    type: 'website',
+  },
+}
 
 export default function FAQPage() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null)
-
   const faqs = [
     {
       question: "What is the difference between the SE Food Waste Converter and other similar units on the market?",
@@ -124,28 +129,8 @@ export default function FAQPage() {
       {/* FAQ Section */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto space-y-4">
-            {faqs.map((faq, index) => (
-              <Card
-                key={index}
-                className="bg-white hover:shadow-lg transition-shadow cursor-pointer"
-                onClick={() => setOpenIndex(openIndex === index ? null : index)}
-              >
-                <CardContent className="p-6">
-                  <div className="flex items-start justify-between gap-4">
-                    <div className="flex-1">
-                      <h3 className="text-lg font-semibold text-gray-900 mb-2 pr-8">{faq.question}</h3>
-                      {openIndex === index && <p className="text-gray-600 leading-relaxed mt-4">{faq.answer}</p>}
-                    </div>
-                    <ChevronDown
-                      className={`w-6 h-6 text-green-600 flex-shrink-0 transition-transform ${
-                        openIndex === index ? "rotate-180" : ""
-                      }`}
-                    />
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="max-w-4xl mx-auto">
+            <FAQAccordion faqs={faqs} />
           </div>
         </div>
       </section>

@@ -1,6 +1,6 @@
 // WordPress GraphQL API utilities
 
-const API_URL = 'https://wpapi.hstechnopreneur.in/graphql'
+const API_URL = 'https://solwearth.com/graphql'
 
 async function fetchAPI(query: string, variables = {}) {
   const headers = { 'Content-Type': 'application/json' }

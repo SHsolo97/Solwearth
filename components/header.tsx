@@ -11,7 +11,6 @@ export function Header() {
   const [locationsDropdownOpen, setLocationsDropdownOpen] = useState(false)
 
   const productLinks = [
-    { label: "All Products", href: "/products" },
     { label: "SE-501 (25-50 KG)", href: "/products/se-501" },
     { label: "SE-1001 (75-100 KG)", href: "/products/se-1001" },
     { label: "SE-2001 (150-200 KG)", href: "/products/se-2001" },
@@ -21,7 +20,6 @@ export function Header() {
   ]
 
   const indianCities = [
-    { label: "India Overview", href: "/locations/india" },
     { label: "Bangalore", href: "/locations/india/bangalore" },
     { label: "Mumbai", href: "/locations/india/mumbai" },
     { label: "Chennai", href: "/locations/india/chennai" },
@@ -72,9 +70,9 @@ export function Header() {
               onMouseEnter={() => setProductsDropdownOpen(true)}
               onMouseLeave={() => setProductsDropdownOpen(false)}
             >
-              <button className="text-sm font-medium text-gray-700 hover:text-green-600 transition-colors flex items-center gap-1">
+              <Link href="/products" className="text-sm font-medium text-gray-700 hover:text-green-600 transition-colors flex items-center gap-1">
                 Products <ChevronDown className="w-4 h-4" />
-              </button>
+              </Link>
               {productsDropdownOpen && (
                 <div className="absolute top-full left-0 pt-2 z-50">
                   <div className="w-56 bg-white rounded-lg shadow-lg border border-gray-200 py-2">
@@ -110,12 +108,13 @@ export function Header() {
                       onMouseEnter={() => setIndiaDropdownOpen(true)}
                       onMouseLeave={() => setIndiaDropdownOpen(false)}
                     >
-                      <button 
+                      <Link 
+                        href="/locations/india"
                         className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-green-50 hover:text-green-600 transition-colors flex items-center justify-between"
-                        onClick={() => setIndiaDropdownOpen(!indiaDropdownOpen)}
+                        onMouseEnter={() => setIndiaDropdownOpen(true)}
                       >
                         India <ChevronDown className="w-4 h-4 -rotate-90" />
-                      </button>
+                      </Link>
                       {indiaDropdownOpen && (
                         <div className="absolute left-full top-0 pl-2 z-[60]">
                           <div className="w-56 bg-white rounded-lg shadow-xl border border-gray-200 py-2 max-h-96 overflow-y-auto">
@@ -195,12 +194,21 @@ export function Header() {
 
             {/* Mobile Products */}
             <div className="py-3">
-              <button
-                onClick={() => setProductsDropdownOpen(!productsDropdownOpen)}
-                className="flex items-center justify-between w-full text-sm font-medium text-gray-700 hover:text-green-600 transition-colors"
-              >
-                Products <ChevronDown className={`w-4 h-4 transition-transform ${productsDropdownOpen ? "rotate-180" : ""}`} />
-              </button>
+              <div className="flex items-center justify-between">
+                <Link
+                  href="/products"
+                  className="text-sm font-medium text-gray-700 hover:text-green-600 transition-colors"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Products
+                </Link>
+                <button
+                  onClick={() => setProductsDropdownOpen(!productsDropdownOpen)}
+                  className="text-gray-700 hover:text-green-600 transition-colors"
+                >
+                  <ChevronDown className={`w-4 h-4 transition-transform ${productsDropdownOpen ? "rotate-180" : ""}`} />
+                </button>
+              </div>
               {productsDropdownOpen && (
                 <div className="mt-2 ml-4 space-y-2">
                   {productLinks.map((link) => (
@@ -228,12 +236,21 @@ export function Header() {
               {locationsDropdownOpen && (
                 <div className="mt-2 ml-4 space-y-2">
                   <div>
-                    <button
-                      onClick={() => setIndiaDropdownOpen(!indiaDropdownOpen)}
-                      className="flex items-center justify-between w-full py-2 text-sm font-medium text-gray-600 hover:text-green-600 transition-colors"
-                    >
-                      India <ChevronDown className={`w-4 h-4 transition-transform ${indiaDropdownOpen ? "rotate-180" : ""}`} />
-                    </button>
+                    <div className="flex items-center justify-between py-2">
+                      <Link
+                        href="/locations/india"
+                        className="text-sm font-medium text-gray-600 hover:text-green-600 transition-colors"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        India
+                      </Link>
+                      <button
+                        onClick={() => setIndiaDropdownOpen(!indiaDropdownOpen)}
+                        className="text-gray-600 hover:text-green-600 transition-colors"
+                      >
+                        <ChevronDown className={`w-4 h-4 transition-transform ${indiaDropdownOpen ? "rotate-180" : ""}`} />
+                      </button>
+                    </div>
                     {indiaDropdownOpen && (
                       <div className="mt-2 ml-4 space-y-2">
                         {indianCities.map((city) => (

@@ -19,30 +19,51 @@ export function LeadFormSection() {
     const formData = new FormData(e.currentTarget)
     const data: Record<string, string> = {}
     
+    // Convert form data to the format expected by the backend
     formData.forEach((value, key) => {
-      const transformedKey = key
-        .split("_")
-        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-        .join(" ")
-      data[transformedKey === "Phone No" ? "Phone No." : transformedKey] = value.toString()
+      // Map form field names to backend expected format
+      let fieldName = key
+      if (key === "desired_capacity") fieldName = "capacity"
+      if (key === "phone_no") fieldName = "phone"
+      if (key === "company_name") fieldName = "company"
+      
+      data[fieldName] = value.toString()
     })
 
+    // The Google Apps Script endpoint URL
+    const API_ENDPOINT = 'https://script.google.com/macros/s/AKfycbw86Fntt9_m9lE8H7Wb_vfdtIf3BpLq1PaBKzor-h8nvCigtwkS_pi7Mz5EpOUIZZCQ/exec'
+
     try {
-      // Simulate form submission - replace with actual endpoint
-      await new Promise((resolve) => setTimeout(resolve, 1000))
+      const response = await fetch(API_ENDPOINT, {
+        method: 'POST',
+        // Google Apps Script requires redirect: 'follow' and plain text Content-Type
+        redirect: 'follow',
+        headers: {
+          'Content-Type': 'text/plain;charset=utf-8',
+        },
+        body: JSON.stringify(data),
+      })
       
-      setStatusMessage("Thank you! Your request has been sent successfully. We'll contact you soon.")
-      setMessageType("success")
-      ;(e.target as HTMLFormElement).reset()
-      
-      // Clear message after 5 seconds
-      setTimeout(() => {
-        setStatusMessage("")
-        setMessageType("")
-      }, 5000)
+      const result = await response.json()
+
+      if (result.status === 'success') {
+        setStatusMessage("Thank you! Your request has been sent successfully. We'll contact you soon.")
+        setMessageType("success")
+        ;(e.target as HTMLFormElement).reset()
+        
+        // Clear message after 5 seconds
+        setTimeout(() => {
+          setStatusMessage("")
+          setMessageType("")
+        }, 5000)
+      } else {
+        // Handle errors returned by the script (e.g., validation)
+        setStatusMessage(result.message || 'An error occurred. Please try again later.')
+        setMessageType("error")
+      }
     } catch (error) {
-      console.error("Error:", error)
-      setStatusMessage("An error occurred. Please try again later.")
+      console.error("Submission failed:", error)
+      setStatusMessage("An unexpected error occurred. Please try again.")
       setMessageType("error")
     } finally {
       setIsSubmitting(false)
@@ -52,7 +73,7 @@ export function LeadFormSection() {
   return (
     <section id="lead-form" className="bg-gradient-to-br from-green-50 to-blue-50 py-16 md:py-20 border-t border-green-200">
       <div className="container mx-auto px-4">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           {/* Header */}
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -63,131 +84,8 @@ export function LeadFormSection() {
             </p>
           </div>
 
-          {/* Two Column Layout */}
-          <div className="grid lg:grid-cols-5 gap-8 items-start">
-            {/* Left Section - Contact Information (3 columns width) */}
-            <div className="lg:col-span-3 space-y-8">
-              <div>
-                <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Why Choose Solwearth?</h3>
-                <p className="text-lg text-gray-600 leading-relaxed">
-                  Solwearth Ecotech Pvt. Ltd is committed to social responsibility and sustainable development. We offer
-                  technology and support for waste management needs across various industries.
-                </p>
-              </div>
-
-              {/* Office Cards in Grid */}
-              <div className="grid md:grid-cols-2 gap-6">
-                {/* Head Office */}
-                <Card className="bg-white shadow-lg hover:shadow-xl transition-shadow">
-                  <CardContent className="p-6">
-                    <div className="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2">
-                      <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
-                        <MapPin className="w-5 h-5 text-green-600" />
-                      </div>
-                      Head Office
-                    </div>
-                    <p className="text-sm text-gray-500 mb-3">Cochin, Kerala</p>
-                    <p className="text-gray-700 leading-relaxed text-sm">
-                      46/2861-A, 1st Floor,<br />
-                      Chakkaraparambu, Puthiya Road,<br />
-                      Vennala P.O., Cochin - 682028,<br />
-                      Kerala, India
-                    </p>
-                  </CardContent>
-                </Card>
-
-                {/* Factory Address */}
-                <Card className="bg-white shadow-lg hover:shadow-xl transition-shadow">
-                  <CardContent className="p-6">
-                    <div className="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2">
-                      <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
-                        <MapPin className="w-5 h-5 text-green-600" />
-                      </div>
-                      Factory
-                    </div>
-                    <p className="text-sm text-gray-500 mb-3">Bengaluru, Karnataka</p>
-                    <p className="text-gray-700 leading-relaxed text-sm">
-                      Sy No. 123-A, Heelalige Village,<br />
-                      Chandapura Post, Anekal Taluk,<br />
-                      Bengaluru Urban,<br />
-                      Karnataka - 560099, India
-                    </p>
-                  </CardContent>
-                </Card>
-              </div>
-
-              {/* Contact Details */}
-              <Card className="bg-gradient-to-br from-green-600 to-green-700 text-white shadow-xl">
-                <CardContent className="p-8">
-                  <div className="text-2xl font-bold mb-6">Contact Details</div>
-                  <div className="space-y-5">
-                    <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
-                        <Phone className="w-6 h-6" />
-                      </div>
-                      <div>
-                        <p className="text-sm text-green-100 mb-1">Call Us</p>
-                        <a href="tel:+919895044004" className="text-xl font-semibold hover:text-green-100 transition-colors block">
-                          +91 98950 44004
-                        </a>
-                        <a href="tel:+919746588804" className="text-lg hover:text-green-100 transition-colors block mt-1">
-                          +91 97465 88804
-                        </a>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
-                        <Mail className="w-6 h-6" />
-                      </div>
-                      <div>
-                        <p className="text-sm text-green-100 mb-1">Email Us</p>
-                        <a href="mailto:info@solwearth.com" className="text-xl font-semibold hover:text-green-100 transition-colors">
-                          info@solwearth.com
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              {/* Social Media */}
-              <div>
-                <div className="text-xl font-bold text-gray-900 mb-4">Follow Us</div>
-                <div className="flex gap-3">
-                  <a
-                    href="https://www.facebook.com/Solwearth"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-12 h-12 bg-green-600 hover:bg-green-700 rounded-full flex items-center justify-center text-white transition-all transform hover:scale-110 shadow-lg"
-                    aria-label="Facebook"
-                  >
-                    <Facebook className="w-5 h-5" />
-                  </a>
-                  <a
-                    href="https://www.instagram.com/solwearth_ecotech/?hl=en"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-12 h-12 bg-green-600 hover:bg-green-700 rounded-full flex items-center justify-center text-white transition-all transform hover:scale-110 shadow-lg"
-                    aria-label="Instagram"
-                  >
-                    <Instagram className="w-5 h-5" />
-                  </a>
-                  <a
-                    href="https://www.linkedin.com/company/solwearth-ecotech-pvt-ltd/?originalSubdomain=in"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-12 h-12 bg-green-600 hover:bg-green-700 rounded-full flex items-center justify-center text-white transition-all transform hover:scale-110 shadow-lg"
-                    aria-label="LinkedIn"
-                  >
-                    <Linkedin className="w-5 h-5" />
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            {/* Right Section - Contact Form (2 columns width) */}
-            <div className="lg:col-span-2">
-              <Card className="bg-white shadow-2xl sticky top-4">
+          {/* Centered Form */}
+          <Card className="bg-white shadow-2xl mx-auto max-w-2xl">
                 <CardContent className="p-6">
                   <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Quick Quote</h3>
                   <form onSubmit={handleSubmit} className="space-y-4">
@@ -327,9 +225,7 @@ export function LeadFormSection() {
                     </p>
                   </form>
                 </CardContent>
-              </Card>
-            </div>
-          </div>
+          </Card>
         </div>
       </div>
     </section>

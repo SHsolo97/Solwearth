@@ -1,11 +1,8 @@
 import { Button } from "@/components/ui/button"
+import { ScrollToFormButton } from "@/components/scroll-to-form-button"
 import Link from "next/link"
 
-interface HeroSectionProps {
-  onRequestQuote?: () => void
-}
-
-export function HeroSection({ onRequestQuote }: HeroSectionProps) {
+export function HeroSection() {
   return (
     <section className="bg-gray-100 py-16 md:py-24 overflow-hidden">
       <div className="container mx-auto px-4">
@@ -26,15 +23,12 @@ export function HeroSection({ onRequestQuote }: HeroSectionProps) {
                   SEE OUR PRODUCTS
                 </Button>
               </Link>
-              <Button
-                onClick={() => {
-                  document.getElementById('lead-form')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
-                }}
+              <ScrollToFormButton
                 variant="outline"
                 className="border-green-600 text-green-600 hover:bg-green-50 px-6 py-6 text-base bg-transparent transition-all duration-300 hover:scale-105 hover:shadow-lg active:scale-95"
               >
                 Enquire Now!
-              </Button>
+              </ScrollToFormButton>
             </div>
           </div>
 
