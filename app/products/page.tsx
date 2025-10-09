@@ -3,6 +3,7 @@ import { LeadFormSection } from "@/components/lead-form-section"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
+import { ScrollToFormButton } from "@/components/scroll-to-form-button"
 import Link from "next/link"
 import { Metadata } from "next"
 
@@ -182,9 +183,9 @@ export default function AllProductsPage() {
                 </p>
               </div>
               <div className="flex gap-4">
-                <Link href="/contact">
-                  <Button className="bg-green-600 hover:bg-green-700 text-white px-8 py-6">Request Information</Button>
-                </Link>
+                <ScrollToFormButton className="bg-green-600 hover:bg-green-700 text-white px-8 py-6" variant="default">
+                  Request Information
+                </ScrollToFormButton>
                 <a href="#" download>
                   <Button
                     variant="outline"

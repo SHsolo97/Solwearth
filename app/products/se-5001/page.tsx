@@ -4,6 +4,7 @@ import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle, Package, Zap, Settings, Shield, Leaf } from "lucide-react"
+import { ScrollToFormButton } from "@/components/scroll-to-form-button"
 import Link from "next/link"
 import { Metadata } from "next"
 
@@ -163,9 +164,9 @@ export default function SE5001Page() {
                   capacity.
                 </p>
                 <div className="flex flex-wrap gap-4">
-                  <Button className="bg-green-600 hover:bg-green-700 text-white px-8 py-6">
+                  <ScrollToFormButton className="bg-green-600 hover:bg-green-700 text-white px-8 py-6" variant="default">
                     Request Quote
-                  </Button>
+                  </ScrollToFormButton>
                   <Button
                     variant="outline"
                     className="border-green-600 text-green-600 hover:bg-green-50 px-8 py-6 bg-transparent"
@@ -267,9 +268,9 @@ export default function SE5001Page() {
                   </a>
                 </p>
               </div>
-              <Link href="/contact">
-                <Button className="bg-white text-green-600 hover:bg-gray-100 px-8 py-6">Get SE 5001 Quote</Button>
-              </Link>
+              <ScrollToFormButton className="bg-white text-green-600 hover:bg-gray-100 px-8 py-6" variant="default">
+                Get SE 5001 Quote
+              </ScrollToFormButton>
             </div>
           </div>
         </div>

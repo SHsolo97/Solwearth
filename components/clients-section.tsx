@@ -1,5 +1,7 @@
-import { Building2, Award, Globe, Users } from "lucide-react"
-import Link from "next/link"
+'use client'
+
+import { Building2, Award, Globe, Scale } from "lucide-react"
+import { ScrollToFormButton } from "@/components/scroll-to-form-button"
 
 interface ClientLogo {
   name: string
@@ -77,7 +79,7 @@ const categories = Array.from(new Set(clients.map(c => c.category)))
 export function ClientsSection() {
   const stats = [
     { icon: Building2, label: "Installations", value: "500+" },
-    { icon: Users, label: "Satisfied Clients", value: "300+" },
+    { icon: Scale, label: "Tonnes Processed Annually", value: "45,000+" },
     { icon: Globe, label: "Countries Served", value: "10+" },
     { icon: Award, label: "Years of Excellence", value: "15+" },
   ]
@@ -155,12 +157,9 @@ export function ClientsSection() {
                 Become part of the sustainable waste management revolution. 
                 Get your free consultation today.
               </p>
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-green-50 transition-all hover:scale-105 shadow-lg"
-              >
+              <ScrollToFormButton className="inline-flex items-center gap-2 bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-green-50 transition-all hover:scale-105 shadow-lg" variant="default">
                 Get Started Now
-              </Link>
+              </ScrollToFormButton>
             </div>
           </div>
         </div>

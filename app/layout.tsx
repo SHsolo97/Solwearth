@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import { Open_Sans } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
+import { PopupLeadForm } from "@/components/popup-lead-form"
 import "./globals.css"
 
 const openSans = Open_Sans({
@@ -73,6 +74,7 @@ export default function RootLayout({
             })
           }}
         />
+        <PopupLeadForm />
         <Suspense fallback={null}>{children}</Suspense>
         <Analytics />
       </body>

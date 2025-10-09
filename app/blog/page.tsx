@@ -3,6 +3,7 @@ import { LoadMoreBlogs } from "@/components/load-more-blogs"
 import { Header } from "@/components/header"
 import { LeadFormSection } from "@/components/lead-form-section"
 import { Footer } from "@/components/footer"
+import { ScrollToFormButton } from "@/components/scroll-to-form-button"
 import { ArrowRight } from "lucide-react"
 import Link from "next/link"
 
@@ -86,12 +87,9 @@ export default async function BlogPage() {
               <p className="text-xl mb-8 text-green-50 max-w-2xl mx-auto">
                 Get in touch with us to discover how our organic waste converters can benefit your organization.
               </p>
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-green-50 transition-all hover:scale-105 shadow-lg"
-              >
+              <ScrollToFormButton className="inline-flex items-center gap-2 bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-green-50 transition-all hover:scale-105 shadow-lg" variant="default">
                 Contact Us <ArrowRight className="w-5 h-5" />
-              </Link>
+              </ScrollToFormButton>
             </div>
           </div>
         </div>

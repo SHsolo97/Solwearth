@@ -1,5 +1,8 @@
+'use client'
+
 import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { ScrollToFormButton } from "@/components/scroll-to-form-button"
 import Link from "next/link"
 
 export function Footer() {
@@ -157,11 +160,12 @@ export function Footer() {
 
       {/* Floating Contact Button */}
       <div className="fixed bottom-8 right-8 z-50">
-        <Link href="/contact" aria-label="Contact Solwearth for Waste Management Solutions">
-          <Button className="bg-green-600 hover:bg-green-700 text-white rounded-full w-14 h-14 shadow-lg">
-            <Phone className="w-6 h-6" />
-          </Button>
-        </Link>
+        <ScrollToFormButton 
+          className="bg-green-600 hover:bg-green-700 text-white rounded-full w-14 h-14 shadow-lg"
+          variant="default"
+        >
+          <Phone className="w-6 h-6" />
+        </ScrollToFormButton>
       </div>
     </footer>
   )
