@@ -49,7 +49,7 @@ export default function ContactPage() {
             {/* Contact Information */}
             <div className="space-y-8">
               <div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">Send Us a Message</h2>
+                <h2 className="text-3xl font-bold text-gray-900 mb-6">Get in Touch</h2>
                 <p className="text-lg text-gray-600 mb-8">
                   Solwearth Ecotech Pvt. Ltd is committed to social responsibility and sustainable development. We offer
                   technology and support for waste management needs across various industries.

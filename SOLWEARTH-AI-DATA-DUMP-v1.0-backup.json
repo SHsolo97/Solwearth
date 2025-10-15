@@ -1,0 +1,717 @@
+{
+  "company": {
+    "legal_name": "Solwearth Ecotech Private Limited",
+    "brand_name": "Solwearth",
+    "tagline": "Fully Automatic Organic Waste Converter (OWC)",
+    "founded": "2010",
+    "industry": "Waste Management & Environmental Technology",
+    "headquarters": {
+      "address": "46/2861-A, 1st Floor, Chakkaraparambu, Puthiya Road",
+      "city": "Vennala",
+      "state": "Kerala",
+      "postal_code": "682028",
+      "country": "India"
+    },
+    "contact": {
+      "phone_primary": "+91-98950-44004",
+      "email_primary": "info@solwearth.com",
+      "website": "https://www.solwearth.com"
+    },
+    "social_media": {
+      "facebook": "https://www.facebook.com/Solwearth",
+      "instagram": "https://www.instagram.com/solwearth_ecotech/",
+      "linkedin": "https://www.linkedin.com/company/solwearth-ecotech-pvt-ltd/"
+    },
+    "certifications": [
+      "ISO Certified"
+    ],
+    "mission": "Our Mission is to create a reliable and cost-effective food waste management system",
+    "core_values": [
+      "Social commitment",
+      "Sustainable development",
+      "Robust technology",
+      "Dedicated support",
+      "Customer satisfaction"
+    ]
+  },
+  "company_description": {
+    "overview": "Solwearth Ecotech Pvt. Ltd. is India's leading manufacturer of automatic organic waste converters. The company focuses on social commitment and sustainable development, combining robust technology, expertise, and dedicated support to provide revolutionary food waste management solutions.",
+    "value_proposition": "We have developed revolutionary food waste converter machines that meet the diverse waste management needs of businesses, from small restaurants to large-scale kitchens.",
+    "experience": "Over 6 years of proven track record in organic waste management",
+    "market_position": "Leading manufacturer of organic waste converters in India and Middle East"
+  },
+  "technology": {
+    "name": "Organic Waste Converter (OWC)",
+    "type": "Fully Automatic Food Waste Management System",
+    "process": "Multi-stage indirect heat and dry decomposition",
+    "method": "Aerobic and anaerobic bacterial decomposition",
+    "key_features": [
+      "Requires minimal space, power, and labor",
+      "Easy to install and maintain",
+      "Fully automatic operation with one-touch control",
+      "Reduces waste volume by up to 90%",
+      "Processes waste in less than 24 hours",
+      "Operates without emissions, smoke, or odor",
+      "No need for bacteria, additives, or water",
+      "PLC (Programmable Logic Controller) controlled",
+      "Integrated deodorization system",
+      "Humidity control technology",
+      "Self-cleaning operation",
+      "Safety interlocks - impeller stops when door opens"
+    ],
+    "advantages": [
+      "83-90% wet waste volume reduction in 12-30 hours",
+      "Converts organic waste into valuable soil supplements/compost",
+      "Methane-free processing",
+      "Reduces greenhouse gas emissions",
+      "No chemical additives required",
+      "Energy-efficient operation",
+      "Durable stainless steel construction",
+      "Portable and stand-alone units",
+      "Easy integration with existing systems"
+    ],
+    "environmental_benefits": [
+      "Significantly reduces landfill waste",
+      "Prevents methane emissions from organic waste decomposition",
+      "Creates healthier ecosystems",
+      "Reduces transportation costs and carbon footprint",
+      "Produces natural alternative to chemical fertilizers",
+      "Improves soil health",
+      "Promotes sustainable waste management practices"
+    ]
+  },
+  "products": [
+    {
+      "model": "SE-501",
+      "name": "SE 501 Organic Waste Converter",
+      "category": "Small Scale",
+      "capacity": "25-50 KG",
+      "description": "Compact and efficient organic waste converter designed for small to medium-sized operations. Perfect for small restaurants, apartments, canteens, and institutions looking for a reliable waste management solution.",
+      "specifications": {
+        "capacity": "25-50 KG",
+        "input_per_batch": "50 Kg",
+        "processing_time": "12-16 hours",
+        "power_consumption": "2.8 Kw",
+        "dimensions_wxdxh": "1150×900×950 mm",
+        "weight": "300 Kg",
+        "tank_volume": "3 Cu. Feet",
+        "material": "Stainless Steel",
+        "average_waste_reduction": "83-90%",
+        "warranty": "1 year"
+      },
+      "ideal_for": [
+        "Small Restaurants",
+        "Medium Apartments",
+        "Small Canteens",
+        "Educational Institutions",
+        "Small Hotels"
+      ],
+      "key_features": [
+        "Fully Automatic PLC Controlled",
+        "Safety First - Impeller stops when door opens",
+        "Integrated Odour Treatment",
+        "Easy Installation - No special requirements",
+        "Portable Stand-alone Design",
+        "Multi-stage Indirect Heat & Dry Decomposition"
+      ]
+    },
+    {
+      "model": "SE-1001",
+      "name": "SE 1001 Organic Waste Converter",
+      "category": "Medium Scale",
+      "capacity": "75-100 KG",
+      "description": "Robust organic waste converter designed for larger operations. Ideal for restaurants, institutions, cafeterias, and hospitals that require efficient and reliable waste processing capabilities.",
+      "specifications": {
+        "capacity": "75-100 KG",
+        "input_per_batch": "100 Kg",
+        "processing_time": "16-18 hours",
+        "power_consumption": "4 Kw",
+        "dimensions_wxdxh": "1240×1140×1350 mm",
+        "weight": "420 Kg",
+        "tank_volume": "5 Cu. Feet",
+        "material": "Stainless Steel",
+        "average_waste_reduction": "83-90%",
+        "warranty": "1 year"
+      },
+      "ideal_for": [
+        "Restaurants",
+        "Institutions",
+        "Cafeterias",
+        "Hospitals",
+        "Medium Hotels",
+        "Corporate Offices"
+      ],
+      "key_features": [
+        "Fully Automatic PLC Controlled",
+        "Safety First - Impeller stops when door opens",
+        "Integrated Odour Treatment",
+        "Easy Installation",
+        "Portable Stand-alone Design",
+        "Multi-stage Indirect Heat & Dry Decomposition"
+      ]
+    },
+    {
+      "model": "SE-2001",
+      "name": "SE 2001 Organic Waste Converter",
+      "category": "Medium-Large Scale",
+      "capacity": "150-200 KG",
+      "description": "Medium capacity fully automatic organic waste converter for commercial food waste management. Ideal for hotels, large restaurants, and commercial facilities.",
+      "specifications": {
+        "capacity": "150-200 KG",
+        "input_per_batch": "200 Kg",
+        "processing_time": "16-22 hours",
+        "power_consumption": "6 Kw",
+        "dimensions_wxdxh": "1475×1190×1170 mm",
+        "weight": "650 Kg",
+        "tank_volume": "9 Cu. Feet",
+        "material": "Stainless Steel",
+        "average_waste_reduction": "83-90%",
+        "warranty": "1 year"
+      },
+      "ideal_for": [
+        "Large Hotels",
+        "Large Restaurants",
+        "Commercial Facilities",
+        "Food Courts",
+        "Large Hospitals",
+        "Corporate Campuses"
+      ],
+      "key_features": [
+        "Fully Automatic PLC Controlled",
+        "Safety First - Impeller stops when door opens",
+        "Integrated Odour Treatment",
+        "Easy Installation",
+        "Portable Stand-alone Design",
+        "Multi-stage Indirect Heat & Dry Decomposition"
+      ]
+    },
+    {
+      "model": "SE-3501",
+      "name": "SE 3501 Organic Waste Converter",
+      "category": "Large Scale",
+      "capacity": "350-375 KG",
+      "description": "High-performance organic waste converter designed for very large operations. Perfect for corporate offices, large hotels, and industrial facilities.",
+      "specifications": {
+        "capacity": "350-375 KG",
+        "input_per_batch": "350 Kg",
+        "processing_time": "21-25 hours",
+        "power_consumption": "8 Kw",
+        "dimensions_wxdxh": "2142×1312×1500 mm",
+        "weight": "900 Kg",
+        "tank_volume": "14 Cu. Feet",
+        "material": "Stainless Steel",
+        "average_waste_reduction": "83-90%",
+        "warranty": "1 year"
+      },
+      "ideal_for": [
+        "Corporate Offices",
+        "Large Hotels & Resorts",
+        "Industrial Facilities",
+        "Large Food Processing Units",
+        "Commercial Complexes",
+        "Large Hospitals"
+      ],
+      "key_features": [
+        "Fully Automatic PLC Controlled",
+        "Safety First - Impeller stops when door opens",
+        "Integrated Odour Treatment",
+        "Easy Installation",
+        "Robust Construction",
+        "Multi-stage Indirect Heat & Dry Decomposition"
+      ]
+    },
+    {
+      "model": "SE-5001",
+      "name": "SE 5001 Organic Waste Converter",
+      "category": "Heavy Duty/Industrial",
+      "capacity": "400-500 KG",
+      "description": "Heavy duty fully automatic organic waste converter for industrial food waste management. Industrial strength solution for factories, large corporations and institutions.",
+      "specifications": {
+        "capacity": "400-500 KG",
+        "input_per_batch": "500 Kg",
+        "processing_time": "22-26 hours",
+        "power_consumption": "9 Kw",
+        "dimensions_wxdxh": "2342×1442×1600 mm",
+        "weight": "1100 Kg",
+        "tank_volume": "21 Cu. Feet",
+        "material": "Stainless Steel",
+        "average_waste_reduction": "83-90%",
+        "warranty": "1 year"
+      },
+      "ideal_for": [
+        "Large Factories",
+        "Large Corporations",
+        "Large Institutions",
+        "Industrial Kitchens",
+        "Major Food Processing Units",
+        "Large Manufacturing Units"
+      ],
+      "key_features": [
+        "Heavy Duty Construction",
+        "Fully Automatic PLC Controlled",
+        "Safety First - Impeller stops when door opens",
+        "Integrated Odour Treatment",
+        "Robust Industrial Design",
+        "Multi-stage Indirect Heat & Dry Decomposition"
+      ]
+    },
+    {
+      "model": "SE-1H",
+      "name": "SE 1H Organic Waste Converter",
+      "category": "Commercial Grade/Maximum Capacity",
+      "capacity": "1000 KG (1 Ton)",
+      "description": "Commercial grade fully automatic organic waste converter for maximum capacity food waste management. Maximum capacity solution for large industries, municipalities and commercial complexes.",
+      "specifications": {
+        "capacity": "1000 KG (1 Ton)",
+        "input_per_batch": "1000 Kg",
+        "processing_time": "27-30 hours",
+        "power_consumption": "12 Kw",
+        "dimensions_wxdxh": "2942×1642×1800 mm",
+        "weight": "2100 Kg",
+        "tank_volume": "41 Cu. Feet",
+        "material": "Stainless Steel",
+        "average_waste_reduction": "83-90%",
+        "warranty": "1 year"
+      },
+      "ideal_for": [
+        "Large Industries",
+        "Municipalities",
+        "Large Commercial Complexes",
+        "Major Hotels & Resorts",
+        "Large Food Processing Plants",
+        "Major Manufacturing Facilities",
+        "Large Government Institutions"
+      ],
+      "key_features": [
+        "Commercial Grade Construction",
+        "Heavy Duty PLC Controlled",
+        "Safety First - Impeller stops when door opens",
+        "Integrated Odour Treatment",
+        "Maximum Capacity Design",
+        "Multi-stage Indirect Heat & Dry Decomposition"
+      ]
+    }
+  ],
+  "product_range_summary": {
+    "total_models": 6,
+    "capacity_range": "25 KG to 1000 KG (1 Ton)",
+    "processing_time_range": "12-30 hours",
+    "power_consumption_range": "2.8 Kw to 12 Kw",
+    "waste_reduction": "83-90% volume reduction",
+    "material": "Stainless Steel construction across all models",
+    "warranty": "1 year standard warranty on all models",
+    "control_system": "PLC (Programmable Logic Controller) on all models"
+  },
+  "target_markets": {
+    "hospitality": [
+      "Hotels & Resorts",
+      "Restaurants & Cloud Kitchens",
+      "Food Courts",
+      "Catering Services",
+      "Luxury Resorts"
+    ],
+    "residential": [
+      "Apartments & Residential Towers",
+      "Residential Societies",
+      "Townships",
+      "Gated Communities"
+    ],
+    "institutional": [
+      "Hospitals & Healthcare Facilities",
+      "Educational Institutions",
+      "Government Offices",
+      "Corporate Offices",
+      "IT Parks & Tech Campuses"
+    ],
+    "commercial": [
+      "Malls & Shopping Centers",
+      "Commercial Buildings",
+      "Commercial Complexes",
+      "Office Buildings"
+    ],
+    "industrial": [
+      "Food Processing Units",
+      "Manufacturing Facilities",
+      "Industrial Kitchens",
+      "Factories"
+    ],
+    "other": [
+      "Canteens",
+      "Hostels",
+      "Municipalities",
+      "Religious Institutions"
+    ]
+  },
+  "geographic_presence": {
+    "primary_market": "India",
+    "india_cities": [
+      {
+        "city": "Mumbai",
+        "state": "Maharashtra",
+        "description": "India's financial capital with high-density residential and commercial sectors"
+      },
+      {
+        "city": "Delhi",
+        "state": "Delhi NCR",
+        "description": "India's capital city with government, corporate and commercial sectors"
+      },
+      {
+        "city": "Bangalore",
+        "state": "Karnataka",
+        "description": "India's IT capital with thriving tech, restaurant, and hotel sectors"
+      },
+      {
+        "city": "Chennai",
+        "state": "Tamil Nadu",
+        "description": "Major metropolitan city with industrial and commercial presence"
+      },
+      {
+        "city": "Pune",
+        "state": "Maharashtra",
+        "description": "Cultural capital and IT hub with tech-driven development"
+      },
+      {
+        "city": "Hyderabad",
+        "state": "Telangana",
+        "description": "Major IT and pharmaceutical hub"
+      },
+      {
+        "city": "Goa",
+        "state": "Goa",
+        "description": "Tourism hub with extensive hospitality sector"
+      },
+      {
+        "city": "Kerala",
+        "state": "Kerala",
+        "description": "Tourism and healthcare destination"
+      },
+      {
+        "city": "Gurgaon",
+        "state": "Haryana",
+        "description": "Corporate and IT hub in Delhi NCR"
+      },
+      {
+        "city": "Noida",
+        "state": "Uttar Pradesh",
+        "description": "Planned city and IT industry center"
+      },
+      {
+        "city": "Andhra Pradesh",
+        "state": "Andhra Pradesh",
+        "description": "Diverse industrial and agricultural base"
+      }
+    ],
+    "international_markets": [
+      {
+        "country": "United Arab Emirates (UAE)",
+        "description": "Rapid urban development with substantial organic waste from institutions, hotels, and restaurants"
+      },
+      {
+        "country": "Saudi Arabia",
+        "description": "Vision 2030 sustainability initiatives and urban development"
+      },
+      {
+        "country": "Oman",
+        "description": "Committed to environmental conservation and sustainable development"
+      },
+      {
+        "country": "Bahrain",
+        "description": "Modern infrastructure with focus on sustainability"
+      },
+      {
+        "country": "Qatar",
+        "description": "Rapid development with sustainability focus"
+      },
+      {
+        "country": "Kuwait",
+        "description": "Urban development and sustainability initiatives"
+      },
+      {
+        "country": "Malaysia",
+        "description": "Southeast Asian market with sustainability focus"
+      },
+      {
+        "country": "Bangladesh",
+        "description": "Growing urban centers with waste management needs"
+      },
+      {
+        "country": "Maldives",
+        "description": "Tourism-driven economy with environmental focus"
+      }
+    ]
+  },
+  "competitive_advantages": [
+    "Fully automatic operation with minimal manual intervention",
+    "No bacteria, additives, chemicals, or water required",
+    "Fastest processing time (12-30 hours depending on capacity)",
+    "Highest waste reduction (83-90% volume reduction)",
+    "Complete range of capacities from 25 KG to 1 Ton",
+    "PLC controlled for precise automation",
+    "Integrated deodorization for odor-free operation",
+    "Stainless steel construction for durability",
+    "Portable and stand-alone units requiring no special installation",
+    "Safety features including automatic impeller stop",
+    "Proven track record of over 6 years",
+    "ISO certified quality standards",
+    "Comprehensive after-sales support and maintenance",
+    "Energy-efficient operation",
+    "Emission-free and environmentally friendly"
+  ],
+  "customer_benefits": {
+    "economic": [
+      "Reduces waste management costs by up to 80%",
+      "Lowers transportation and disposal costs",
+      "Creates additional income source through compost production",
+      "Long-term cost-effective solution",
+      "Reduces landfill fees",
+      "Minimal operational costs"
+    ],
+    "environmental": [
+      "Significantly reduces landfill waste",
+      "Prevents methane emissions",
+      "Reduces greenhouse gas emissions",
+      "Creates valuable soil supplements",
+      "Promotes sustainable practices",
+      "Improves air quality",
+      "Supports green initiatives and certifications"
+    ],
+    "operational": [
+      "Minimal space requirement",
+      "Low labor requirement",
+      "Easy to install and maintain",
+      "Fully automatic one-touch operation",
+      "Fast processing (less than 24 hours)",
+      "Odorless operation",
+      "Self-cleaning system",
+      "No manual waste handling"
+    ],
+    "compliance": [
+      "Meets highest quality standards",
+      "Helps achieve sustainability goals",
+      "Supports government waste management initiatives",
+      "Complies with environmental regulations",
+      "Supports Swachh Bharat goals (Clean India initiative)"
+    ]
+  },
+  "waste_types_processed": [
+    "Food waste (cooked and raw)",
+    "Vegetable waste",
+    "Fruit waste",
+    "Yard waste and garden waste",
+    "Paper products (biodegradable)",
+    "General organic waste",
+    "Restaurant and kitchen waste",
+    "Hotel and catering waste",
+    "Canteen waste"
+  ],
+  "output_product": {
+    "name": "Compost / Soil Supplement",
+    "characteristics": [
+      "High-quality compost",
+      "Natural fertilizer",
+      "Suitable for landscaping",
+      "Improves soil health",
+      "Eco-friendly alternative to chemical fertilizers",
+      "Rich in nutrients"
+    ],
+    "applications": [
+      "Landscaping",
+      "Gardening",
+      "Agriculture",
+      "Horticulture",
+      "Soil enrichment"
+    ]
+  },
+  "certifications_and_achievements": [
+    {
+      "type": "Certification",
+      "name": "ISO Certified",
+      "description": "Company meets international quality standards"
+    },
+    {
+      "type": "Experience",
+      "name": "6+ Years Track Record",
+      "description": "Proven experience in organic waste management"
+    },
+    {
+      "type": "Quality",
+      "name": "Rigorous Testing",
+      "description": "All products undergo rigorous testing and meet industry standards"
+    },
+    {
+      "type": "Recognition",
+      "name": "Leading Manufacturer",
+      "description": "Recognized as leading manufacturer in India and Middle East"
+    }
+  ],
+  "sustainability_alignment": {
+    "un_sdgs": [
+      "SDG 11: Sustainable Cities and Communities",
+      "SDG 12: Responsible Consumption and Production",
+      "SDG 13: Climate Action",
+      "SDG 15: Life on Land"
+    ],
+    "national_initiatives": [
+      "Swachh Bharat Mission (Clean India)",
+      "Waste Management Rules compliance",
+      "Green India initiatives"
+    ],
+    "regional_initiatives": {
+      "uae": "UAE Vision 2021 and sustainability goals",
+      "saudi_arabia": "Saudi Vision 2030 sustainability initiatives",
+      "india": "Smart Cities Mission and Swachh Bharat Abhiyan"
+    }
+  },
+  "service_and_support": {
+    "pre_sales": [
+      "Free consultation",
+      "Site assessment",
+      "Capacity recommendation",
+      "Custom solutions",
+      "Free quotation"
+    ],
+    "installation": [
+      "Quick installation",
+      "No special installation requirements",
+      "On-site setup assistance",
+      "Training provided"
+    ],
+    "post_sales": [
+      "1 year warranty on all products",
+      "Ongoing maintenance services",
+      "Repair services",
+      "Technical support",
+      "Dependable after-sales support",
+      "Spare parts availability"
+    ],
+    "response_time": "24 hours for quote requests",
+    "contact_methods": [
+      "Phone: +91-98950-44004",
+      "Email: info@solwearth.com",
+      "Website contact form",
+      "Quote request form"
+    ]
+  },
+  "pricing_information": {
+    "pricing_model": "Contact for quote",
+    "factors_affecting_price": [
+      "Capacity requirement",
+      "Model selection",
+      "Installation location",
+      "Volume discounts",
+      "Customization requirements"
+    ],
+    "quote_process": "Fill online form or call for free consultation and customized quote"
+  },
+  "marketing_messages": {
+    "primary_tagline": "Fully Automatic Organic Waste Converter (OWC)",
+    "value_propositions": [
+      "Transform Food Waste into Compost in 24 Hours",
+      "Reduce Waste Volume by 90%",
+      "Eco-Friendly and Emission-Free",
+      "Fully Automatic One-Touch Operation",
+      "No Bacteria or Additives Required"
+    ],
+    "target_audience_messages": {
+      "restaurants": "Efficient waste management for restaurants - convert 25 KG to 1000 KG daily",
+      "hotels": "Perfect for hotels and resorts - handle organic waste efficiently and sustainably",
+      "apartments": "Ideal for residential apartments - reduce waste management costs by 80%",
+      "hospitals": "Healthcare facility waste management - hygienic and odorless operation",
+      "corporates": "Corporate sustainability - achieve green building certifications",
+      "industries": "Industrial scale waste management - from 25 KG to 1 Ton capacity"
+    }
+  },
+  "seo_keywords": [
+    "organic waste converter",
+    "food waste converter",
+    "OWC machine",
+    "automatic waste converter",
+    "compost machine",
+    "waste management India",
+    "food waste management",
+    "organic waste composter",
+    "kitchen waste converter",
+    "biodegradable waste machine",
+    "commercial waste converter",
+    "industrial waste converter",
+    "restaurant waste management",
+    "hotel waste management",
+    "apartment waste management"
+  ],
+  "frequently_asked_questions": [
+    {
+      "question": "How long does it take to convert waste to compost?",
+      "answer": "Depending on the model and capacity, our machines process waste in 12-30 hours. Most models complete the process in less than 24 hours."
+    },
+    {
+      "question": "What types of waste can be processed?",
+      "answer": "Our machines handle all types of organic waste including food waste (cooked and raw), vegetables, fruits, yard waste, garden waste, and biodegradable paper products."
+    },
+    {
+      "question": "Do I need to add bacteria or additives?",
+      "answer": "No. Our machines use multi-stage indirect heat and dry decomposition technology and do not require any bacteria, additives, chemicals, or water."
+    },
+    {
+      "question": "How much waste reduction can I expect?",
+      "answer": "Our machines achieve 83-90% volume reduction of wet organic waste."
+    },
+    {
+      "question": "Is there any odor during operation?",
+      "answer": "No. All models have integrated deodorization systems ensuring odor-free operation."
+    },
+    {
+      "question": "What is the power consumption?",
+      "answer": "Power consumption varies by model from 2.8 Kw (SE-501) to 12 Kw (SE-1H)."
+    },
+    {
+      "question": "What is the warranty period?",
+      "answer": "All models come with a standard 1-year warranty with ongoing maintenance and support available."
+    },
+    {
+      "question": "Do I need special installation?",
+      "answer": "No. Our machines are portable stand-alone units that require no special installation."
+    },
+    {
+      "question": "What is the output product?",
+      "answer": "The output is high-quality compost suitable for landscaping, gardening, and agriculture - a natural alternative to chemical fertilizers."
+    },
+    {
+      "question": "Which model is right for my facility?",
+      "answer": "Model selection depends on your daily waste generation. Contact us for a free consultation and we'll recommend the right capacity for your needs."
+    }
+  ],
+  "content_use_cases": {
+    "for_ai_agents": [
+      "Customer inquiry responses",
+      "Product recommendations based on capacity needs",
+      "Technical specification queries",
+      "Pricing and quote information",
+      "Location-specific information",
+      "Comparison between models",
+      "Environmental benefits calculation",
+      "Cost savings estimation"
+    ],
+    "for_content_creation": [
+      "Blog articles on waste management",
+      "Case studies and success stories",
+      "Social media posts",
+      "Email marketing campaigns",
+      "Video scripts",
+      "Brochure content",
+      "Website copy",
+      "Press releases"
+    ],
+    "for_sales_support": [
+      "Product presentations",
+      "Proposal generation",
+      "Customer objection handling",
+      "ROI calculations",
+      "Competitive positioning",
+      "Industry-specific pitches"
+    ]
+  },
+  "data_last_updated": "2025-10-10",
+  "data_version": "1.0",
+  "data_format": "JSON",
+  "data_structure": "Hierarchical for AI agent consumption"
+}
