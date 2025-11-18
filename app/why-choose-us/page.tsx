@@ -26,8 +26,8 @@ export default function WhyChooseUsPage() {
   const features = [
     {
       icon: TrendingUp,
-      title: "45000+ Tonnes Processed",
-      description: "Proven annual processing capacity",
+      title: "Best in class processing time",
+      description: "Unmatched Speed and Efficiency",
       gradient: "from-green-500 to-emerald-600"
     },
     {
@@ -132,7 +132,7 @@ export default function WhyChooseUsPage() {
   ]
 
   const stats = [
-    { number: "45K+", label: "Tonnes Processed Annually", icon: TrendingUp },
+    { number: "45000+", label: "Tonnes Processed Annually", icon: TrendingUp },
     { number: "90%", label: "Waste Reduction", icon: Recycle },
     { number: "500+", label: "Happy Clients", icon: Award },
     { number: "14", label: "Countries Served", icon: Leaf }
@@ -313,7 +313,7 @@ export default function WhyChooseUsPage() {
 
                 <ul className="space-y-4">
                   {[
-                    "45,000+ tonnes processed annually",
+                    "Best in class batch processing time",
                     "90% waste reduction efficiency",
                     "Multi-stage decomposition technology",
                     "Water recycling system included",
