@@ -141,23 +141,40 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       {/* Article Content */}
       <article className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto">
+          {/* Decorative element */}
+          <div className="w-20 h-1 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full mb-12" />
+          
           {/* Content with enhanced styling */}
           <div
-            className="prose prose-xl max-w-none 
-              prose-headings:font-bold prose-headings:text-gray-900 prose-headings:tracking-tight
-              prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:border-b prose-h2:border-green-100 prose-h2:pb-4
-              prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-4
-              prose-h4:text-xl prose-h4:mt-6 prose-h4:mb-3 prose-h4:text-green-700
-              prose-p:text-gray-700 prose-p:leading-relaxed prose-p:mb-6
-              prose-a:text-green-600 prose-a:no-underline prose-a:font-semibold hover:prose-a:underline hover:prose-a:text-green-700
-              prose-strong:text-gray-900 prose-strong:font-bold
-              prose-ul:my-6 prose-ul:space-y-2
-              prose-ol:my-6 prose-ol:space-y-2
-              prose-li:text-gray-700 prose-li:leading-relaxed
-              prose-blockquote:border-l-4 prose-blockquote:border-green-600 prose-blockquote:bg-green-50 prose-blockquote:py-4 prose-blockquote:px-6 prose-blockquote:rounded-r-lg prose-blockquote:my-8
-              prose-img:rounded-2xl prose-img:shadow-2xl prose-img:my-12
-              prose-pre:bg-gray-900 prose-pre:text-gray-100 prose-pre:rounded-xl prose-pre:shadow-lg prose-pre:p-6
-              prose-code:text-green-600 prose-code:font-semibold prose-code:bg-green-50 prose-code:px-2 prose-code:py-1 prose-code:rounded"
+            className="prose prose-xl max-w-none
+              [&>*:first-child]:text-2xl [&>*:first-child]:text-gray-600 [&>*:first-child]:leading-relaxed [&>*:first-child]:mb-8 [&>*:first-child]:font-normal
+              prose-headings:font-bold prose-headings:text-gray-900 prose-headings:tracking-tight prose-headings:scroll-mt-24
+              prose-h2:text-4xl prose-h2:mt-16 prose-h2:mb-8 prose-h2:pb-4 prose-h2:border-b-2 prose-h2:border-gradient-to-r prose-h2:from-green-600 prose-h2:to-emerald-600 prose-h2:relative
+              prose-h2:before:content-[''] prose-h2:before:absolute prose-h2:before:left-0 prose-h2:before:-bottom-[2px] prose-h2:before:w-24 prose-h2:before:h-[2px] prose-h2:before:bg-gradient-to-r prose-h2:before:from-green-600 prose-h2:before:to-emerald-600 prose-h2:before:rounded-full
+              prose-h3:text-2xl prose-h3:mt-12 prose-h3:mb-6 prose-h3:text-green-700 prose-h3:flex prose-h3:items-center prose-h3:gap-3
+              prose-h3:before:content-['▸'] prose-h3:before:text-green-600 prose-h3:before:font-bold
+              prose-h4:text-xl prose-h4:mt-8 prose-h4:mb-4 prose-h4:text-green-600 prose-h4:font-semibold
+              prose-p:text-lg prose-p:text-gray-700 prose-p:leading-[1.8] prose-p:mb-6
+              prose-a:text-green-600 prose-a:no-underline prose-a:font-semibold prose-a:border-b-2 prose-a:border-green-200 hover:prose-a:border-green-600 hover:prose-a:text-green-700 prose-a:transition-all prose-a:duration-300
+              prose-strong:text-gray-900 prose-strong:font-bold prose-strong:bg-green-50 prose-strong:px-1 prose-strong:py-0.5 prose-strong:rounded
+              prose-em:text-gray-800 prose-em:not-italic prose-em:font-medium prose-em:bg-yellow-50 prose-em:px-1 prose-em:py-0.5 prose-em:rounded
+              prose-ul:my-8 prose-ul:space-y-3 prose-ul:pl-0
+              prose-ol:my-8 prose-ol:space-y-3 prose-ol:pl-0
+              prose-li:text-lg prose-li:text-gray-700 prose-li:leading-relaxed prose-li:pl-2 prose-li:relative
+              prose-li:before:absolute prose-li:before:left-[-1.5rem] prose-li:before:text-green-600 prose-li:before:font-bold
+              [&_ul>li]:before:content-['✓'] [&_ul>li]:pl-8 [&_ul>li]:bg-gradient-to-r [&_ul>li]:from-green-50/50 [&_ul>li]:to-transparent [&_ul>li]:py-3 [&_ul>li]:px-4 [&_ul>li]:rounded-lg [&_ul>li]:mb-2 [&_ul>li]:border-l-4 [&_ul>li]:border-green-500
+              [&_ol>li]:pl-8 [&_ol>li]:bg-gradient-to-r [&_ol>li]:from-blue-50/50 [&_ol>li]:to-transparent [&_ol>li]:py-3 [&_ol>li]:px-4 [&_ol>li]:rounded-lg [&_ol>li]:mb-2 [&_ol>li]:border-l-4 [&_ol>li]:border-blue-500
+              prose-blockquote:border-l-[6px] prose-blockquote:border-green-600 prose-blockquote:bg-gradient-to-r prose-blockquote:from-green-50 prose-blockquote:to-emerald-50 prose-blockquote:py-6 prose-blockquote:px-8 prose-blockquote:rounded-r-2xl prose-blockquote:my-10 prose-blockquote:shadow-lg prose-blockquote:italic prose-blockquote:text-gray-800 prose-blockquote:font-medium
+              prose-img:rounded-3xl prose-img:shadow-2xl prose-img:my-12 prose-img:ring-1 prose-img:ring-gray-200 prose-img:hover:shadow-green-200 prose-img:transition-all prose-img:duration-300
+              prose-figure:my-12 prose-figcaption:text-center prose-figcaption:text-sm prose-figcaption:text-gray-500 prose-figcaption:mt-4 prose-figcaption:italic
+              prose-pre:bg-gradient-to-br prose-pre:from-gray-900 prose-pre:to-gray-800 prose-pre:text-gray-100 prose-pre:rounded-2xl prose-pre:shadow-2xl prose-pre:p-8 prose-pre:my-10 prose-pre:border prose-pre:border-gray-700 prose-pre:overflow-x-auto
+              prose-code:text-green-700 prose-code:font-semibold prose-code:bg-green-50 prose-code:px-2.5 prose-code:py-1 prose-code:rounded-md prose-code:text-base prose-code:border prose-code:border-green-200
+              prose-table:my-10 prose-table:w-full prose-table:border-collapse prose-table:shadow-xl prose-table:rounded-xl prose-table:overflow-hidden
+              prose-thead:bg-gradient-to-r prose-thead:from-green-600 prose-thead:to-emerald-600 prose-thead:text-white
+              prose-th:py-4 prose-th:px-6 prose-th:text-left prose-th:font-bold prose-th:text-base
+              prose-td:py-4 prose-td:px-6 prose-td:border-b prose-td:border-gray-200 prose-td:text-gray-700
+              prose-tr:even:bg-gray-50 prose-tr:hover:bg-green-50 prose-tr:transition-colors
+              prose-hr:my-16 prose-hr:border-0 prose-hr:h-px prose-hr:bg-gradient-to-r prose-hr:from-transparent prose-hr:via-green-300 prose-hr:to-transparent"
             dangerouslySetInnerHTML={{ __html: cleanContent }}
           />
 
