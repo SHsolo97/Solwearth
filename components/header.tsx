@@ -149,6 +149,10 @@ export function Header() {
               )}
             </div>
 
+            <Link href="/why-choose-us" className="text-sm font-medium text-gray-700 hover:text-green-600 transition-colors">
+              Why Choose Us
+            </Link>
+
             <Link href="/clients" className="text-sm font-medium text-gray-700 hover:text-green-600 transition-colors">
               Clients
             </Link>
@@ -280,6 +284,14 @@ export function Header() {
                 </div>
               )}
             </div>
+
+            <Link
+              href="/why-choose-us"
+              className="block py-3 text-sm font-medium text-gray-700 hover:text-green-600 transition-colors"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Why Choose Us
+            </Link>
 
             <Link
               href="/clients"
