@@ -1,4 +1,16 @@
 import { LocationPageTemplate } from "@/components/location-page-template"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "OWC Machine in Maldives | Organic Waste Converter Resort Suppliers - Solwearth",
+  description: "Premium OWC machines for Maldives resorts. Organic waste converters for island hotels. Protect marine ecosystems. Zero emission. Perfect for tropical climate. 90% waste reduction.",
+  keywords: "OWC machine Maldives, organic waste converter Maldives, food waste machine Maldives, resort waste management Maldives, OWC suppliers Maldives, island waste converter Maldives, hotel waste management Maldives",
+  openGraph: {
+    title: "Organic Waste Converter (OWC) Machines in Maldives - Solwearth",
+    description: "Eco-friendly OWC machines designed for Maldives resorts. Protect paradise with sustainable waste management.",
+    type: 'website',
+  },
+}
 
 export default function MaldivesPage() {
   return (

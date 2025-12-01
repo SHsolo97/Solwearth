@@ -22,12 +22,12 @@ export const metadata: Metadata = {
 
 export default function SE5001Page() {
   const specifications = [
-    { label: "Capacity", value: "400–500 KG" },
-    { label: "Input per Batch", value: "500 Kg" },
+    { label: "Capacity", value: "450–500 KG" },
+    { label: "Input per Batch", value: "450-500 Kg" },
     { label: "Processing Time", value: "22–26 hrs" },
     { label: "Power Consumption", value: "9 Kw" },
-    { label: "Dimension (W×D×H)", value: "2342×1442×1600 mm" },
-    { label: "Weight", value: "1100 Kg" },
+    { label: "Dimension (W×D×H)", value: "1550×2540×1450 mm" },
+    { label: "Weight", value: "1030 Kg" },
     { label: "Tank Volume", value: "21 Cu. Feet" },
     { label: "Material", value: "Stainless Steel" },
     { label: "Average Reduction", value: "83–90%" },

@@ -1,4 +1,16 @@
 import { LocationPageTemplate } from "@/components/location-page-template"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "OWC Machine in Oman | Organic Waste Converter Suppliers Muscat - Solwearth",
+  description: "Premium OWC machines in Oman. Organic waste converters for Muscat, Salalah. Hotel and restaurant waste management. Zero emission technology. 90% waste reduction.",
+  keywords: "OWC machine Oman, organic waste converter Oman, food waste machine Muscat, waste management Oman, OWC suppliers Oman, composting machine Oman, waste converter Muscat, organic waste management Oman",
+  openGraph: {
+    title: "Organic Waste Converter (OWC) Machines in Oman - Solwearth",
+    description: "Advanced OWC machines for Oman's hospitality and commercial sectors. Sustainable waste management solutions.",
+    type: 'website',
+  },
+}
 
 export default function OmanPage() {
   return (

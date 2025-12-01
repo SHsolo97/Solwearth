@@ -43,9 +43,9 @@ export default function WhyChooseUsPage() {
       gradient: "from-teal-500 to-cyan-600"
     },
     {
-      icon: Droplet,
-      title: "Water Recycling Technology",
-      description: "Faster, greener operation",
+      icon: Wind,
+      title: "Zero Emission (No Exhaust)",
+      description: "Completely emission-free operation",
       gradient: "from-cyan-500 to-blue-600"
     },
     {
@@ -96,7 +96,7 @@ export default function WhyChooseUsPage() {
     {
       icon: Cpu,
       title: "Advanced Technology Integration",
-      description: "Solwearth's machines use a multi-stage indirect heat & dry decomposition process, with both aerobic and anaerobic methods deployed for optimal, odor-free conversion. Water recycling technology uses condensate to control humidity and boost processing speed—an innovative feature not found in typical machines worldwide.",
+      description: "Solwearth's machines use a multi-stage indirect heat & dry decomposition process, with both aerobic and anaerobic methods deployed for optimal, odor-free conversion. Our zero-emission design ensures completely exhaust-free operation with no harmful emissions—an innovative feature not found in typical machines worldwide.",
       color: "emerald"
     },
     {
@@ -316,7 +316,7 @@ export default function WhyChooseUsPage() {
                     "Best in class batch processing time",
                     "90% waste reduction efficiency",
                     "Multi-stage decomposition technology",
-                    "Water recycling system included",
+                    "Zero emission (No exhaust system)",
                     "Zero chemicals or additives needed",
                     "Fully automatic PLC controls",
                     "Compact & portable design",
@@ -346,7 +346,7 @@ export default function WhyChooseUsPage() {
                     "Several days processing time",
                     "70-80% waste reduction (typical)",
                     "Basic composting methods",
-                    "Manual water management",
+                    "Requires exhaust system",
                     "Requires chemicals & additives",
                     "Semi-automatic or manual controls",
                     "Bulky installation required",

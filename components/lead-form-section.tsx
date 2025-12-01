@@ -101,11 +101,11 @@ export function LeadFormSection() {
                         className="w-full px-3 py-2.5 bg-gray-50 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm"
                       >
                         <option value="">Select Capacity</option>
-                        <option value="25-50 KG">25-50 KG (SE-501)</option>
-                        <option value="75-100 KG">75-100 KG (SE-1001)</option>
-                        <option value="150-200 KG">150-200 KG (SE-2001)</option>
+                        <option value="40-50 KG">40-50 KG (SE-501)</option>
+                        <option value="70-100 KG">70-100 KG (SE-1001)</option>
+                        <option value="150-250 KG">150-250 KG (SE-2001)</option>
                         <option value="350-375 KG">350-375 KG (SE-3501)</option>
-                        <option value="400-500 KG">400-500 KG (SE-5001)</option>
+                        <option value="450-500 KG">450-500 KG (SE-5001)</option>
                         <option value="1000 KG (1 Ton)">1000 KG - 1 Ton (SE-1H)</option>
                       </select>
                     </div>

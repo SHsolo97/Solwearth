@@ -1,4 +1,16 @@
 import { LocationPageTemplate } from "@/components/location-page-template"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "OWC Machine in India | Organic Waste Converter Manufacturers & Suppliers - Solwearth",
+  description: "Leading OWC machine manufacturers in India. Buy organic waste converters for food waste management across India. 40-1000 KG capacity. Zero emission technology. Contact +91 98950 44004.",
+  keywords: "OWC machine India, organic waste converter India, food waste machine India, waste management solutions India, OWC suppliers India, organic waste management India, composting machine India, waste converter manufacturers India",
+  openGraph: {
+    title: "Organic Waste Converter (OWC) Machines in India - Solwearth",
+    description: "Premium OWC machines for sustainable waste management in India. 90% waste reduction. Zero emission technology. Serving hotels, hospitals, restaurants across India.",
+    type: 'website',
+  },
+}
 
 export default function IndiaPage() {
   return (
@@ -34,7 +46,7 @@ export default function IndiaPage() {
         "Multi-stage indirect heat and dry decomposition technology",
         "Processing time: 12-30 hours depending on capacity",
         "83-90% average waste reduction",
-        "Water recycling technology maintains chamber humidity",
+        "Zero emission - No exhaust system required",
         "No emissions, smoke, or odor during operation",
         "Easy installation with no special requirements",
         "Durable stainless steel construction",

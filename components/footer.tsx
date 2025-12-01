@@ -73,6 +73,41 @@ export function Footer() {
                   Bangladesh
                 </Link>
               </li>
+              <li>
+                <Link href="/locations/thailand" className="text-sm text-gray-300 hover:text-green-400 transition-colors">
+                  Thailand
+                </Link>
+              </li>
+              <li>
+                <Link href="/locations/indonesia" className="text-sm text-gray-300 hover:text-green-400 transition-colors">
+                  Indonesia
+                </Link>
+              </li>
+              <li>
+                <Link href="/locations/ghana" className="text-sm text-gray-300 hover:text-green-400 transition-colors">
+                  Ghana
+                </Link>
+              </li>
+              <li>
+                <Link href="/locations/kenya" className="text-sm text-gray-300 hover:text-green-400 transition-colors">
+                  Kenya
+                </Link>
+              </li>
+              <li>
+                <Link href="/locations/lebanon" className="text-sm text-gray-300 hover:text-green-400 transition-colors">
+                  Lebanon
+                </Link>
+              </li>
+              <li>
+                <Link href="/locations/seychelles" className="text-sm text-gray-300 hover:text-green-400 transition-colors">
+                  Seychelles
+                </Link>
+              </li>
+              <li>
+                <Link href="/locations/mauritius" className="text-sm text-gray-300 hover:text-green-400 transition-colors">
+                  Mauritius
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -86,9 +121,6 @@ export function Footer() {
                 <div>
                   <a href="tel:+919895044004" className="text-sm text-gray-300 hover:text-green-400 transition-colors block">
                     +91 98950 44004
-                  </a>
-                  <a href="tel:+919746588804" className="text-sm text-gray-300 hover:text-green-400 transition-colors block">
-                    +91 97465 88804
                   </a>
                 </div>
               </div>

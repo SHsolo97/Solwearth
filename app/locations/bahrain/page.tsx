@@ -1,4 +1,16 @@
 import { LocationPageTemplate } from "@/components/location-page-template"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "OWC Machine in Bahrain | Organic Waste Converter Suppliers Manama - Solwearth",
+  description: "Buy OWC machines in Bahrain. Organic waste converters for Manama businesses, hotels, restaurants. Sustainable waste management. Zero emission. Best prices in Bahrain.",
+  keywords: "OWC machine Bahrain, organic waste converter Bahrain, food waste machine Manama, waste management Bahrain, OWC suppliers Bahrain, composting machine Bahrain, waste converter Manama, organic waste management Bahrain",
+  openGraph: {
+    title: "Organic Waste Converter (OWC) Machines in Bahrain - Solwearth",
+    description: "Eco-friendly OWC machines for Bahrain. Perfect for hotels, restaurants, and commercial establishments.",
+    type: 'website',
+  },
+}
 
 export default function BahrainPage() {
   return (

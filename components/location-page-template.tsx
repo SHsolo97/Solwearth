@@ -27,11 +27,11 @@ export function LocationPageTemplate({
   location,
 }: LocationPageProps) {
   const allProducts = [
-    { name: "SE 501", capacity: "25-50 KG", link: "/products/se-501", image: "/images/machine/small/se501.png" },
-    { name: "SE 1001", capacity: "75-100 KG", link: "/products/se-1001", image: "/images/machine/small/se1001.png" },
-    { name: "SE 2001", capacity: "150-200 KG", link: "/products/se-2001", image: "/images/machine/small/se2001.png" },
+    { name: "SE 501", capacity: "40-50 KG", link: "/products/se-501", image: "/images/machine/small/se501.png" },
+    { name: "SE 1001", capacity: "70-100 KG", link: "/products/se-1001", image: "/images/machine/small/se1001.png" },
+    { name: "SE 2001", capacity: "150-250 KG", link: "/products/se-2001", image: "/images/machine/small/se2001.png" },
     { name: "SE 3501", capacity: "350-375 KG", link: "/products/se-3501", image: "/images/machine/small/se3501.png" },
-    { name: "SE 5001", capacity: "400-500 KG", link: "/products/se-5001", image: "/images/machine/small/se5001.png" },
+    { name: "SE 5001", capacity: "450-500 KG", link: "/products/se-5001", image: "/images/machine/small/se5001.png" },
     { name: "SE 1H", capacity: "1000 KG", link: "/products/se-1h", image: "/images/machine/small/se10001.png" },
   ]
 

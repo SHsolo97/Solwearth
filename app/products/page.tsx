@@ -23,7 +23,7 @@ export default function AllProductsPage() {
     {
       id: "se-501",
       name: "SE 501",
-      capacity: "25-50KG",
+      capacity: "40-50KG",
       description: "Perfect for medium restaurants, apartments, canteens, and institutions",
       specs: "Input: 50 Kg | Processing: 12-16 hrs | Power: 2.8 Kw",
       link: "/products/se-501",
@@ -32,18 +32,18 @@ export default function AllProductsPage() {
     {
       id: "se-1001",
       name: "SE 1001",
-      capacity: "75-100KG",
+      capacity: "70-100KG",
       description: "Ideal for restaurants, institutions, cafeterias, and hospitals",
-      specs: "Input: 100 Kg | Processing: 16-18 hrs | Power: 4 Kw",
+      specs: "Input: 70-100 Kg | Processing: 16-18 hrs | Power: 4 Kw",
       link: "/products/se-1001",
       image: "/images/machine/small/se1001.png",
     },
     {
       id: "se-2001",
       name: "SE 2001",
-      capacity: "150-200KG",
+      capacity: "150-250KG",
       description: "Perfect for large food courts, IT campuses, and hospitals",
-      specs: "Input: 200 Kg | Processing: 16-22 hrs | Power: 6 Kw",
+      specs: "Input: 150-250 Kg | Processing: 16-22 hrs | Power: 6 Kw",
       link: "/products/se-2001",
       image: "/images/machine/small/se2001.png",
     },
@@ -59,9 +59,9 @@ export default function AllProductsPage() {
     {
       id: "se-5001",
       name: "SE 5001",
-      capacity: "400-500KG",
+      capacity: "450-500KG",
       description: "For large-scale operations and convention centres",
-      specs: "Input: 500 Kg | Processing: 22-26 hrs | Power: 9 Kw",
+      specs: "Input: 450-500 Kg | Processing: 22-26 hrs | Power: 9 Kw",
       link: "/products/se-5001",
       image: "/images/machine/small/se5001.png",
     },
@@ -186,7 +186,7 @@ export default function AllProductsPage() {
                 <ScrollToFormButton className="bg-green-600 hover:bg-green-700 text-white px-8 py-6" variant="default">
                   Request Information
                 </ScrollToFormButton>
-                <a href="#" download>
+                <a href="/Solwearth Ecotech - Brochure.pdf" download="Solwearth-Brochure.pdf">
                   <Button
                     variant="outline"
                     className="border-green-600 text-green-600 hover:bg-green-50 px-8 py-6 bg-transparent"

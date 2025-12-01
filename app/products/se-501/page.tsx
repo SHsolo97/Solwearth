@@ -22,12 +22,12 @@ export const metadata: Metadata = {
 
 export default function SE501Page() {
   const specifications = [
-    { label: "Capacity", value: "25–50 KG" },
+    { label: "Capacity", value: "40–50 KG" },
     { label: "Input per Batch", value: "50 Kg" },
     { label: "Processing Time", value: "12–16 hrs" },
     { label: "Power Consumption", value: "2.8 Kw" },
-    { label: "Dimension (W×D×H)", value: "1150×900×950 mm" },
-    { label: "Weight", value: "300 Kg" },
+    { label: "Dimension (W×D×H)", value: "1140×900×1100 mm" },
+    { label: "Weight", value: "365 Kg" },
     { label: "Tank Volume", value: "3 Cu. Feet" },
     { label: "Material", value: "Stainless Steel" },
     { label: "Average Reduction", value: "83–90%" },
@@ -71,7 +71,7 @@ export default function SE501Page() {
     "@context": "https://schema.org",
     "@type": "Product",
     "name": "SE 501 Organic Waste Converter",
-    "description": "Fully automatic organic waste converter for small to medium scale food waste management. Processes 25-50 KG daily with PLC control system.",
+    "description": "Fully automatic organic waste converter for small to medium scale food waste management. Processes 40-50 KG daily with PLC control system.",
     "image": "https://www.solwearth.com/images/machine/SE-501-front-view.png",
     "brand": {
       "@type": "Brand",
@@ -87,7 +87,7 @@ export default function SE501Page() {
       "priceCurrency": "INR"
     },
     "additionalProperty": [
-      {"@type": "PropertyValue", "name": "Capacity", "value": "25-50 KG"},
+      {"@type": "PropertyValue", "name": "Capacity", "value": "40-50 KG"},
       {"@type": "PropertyValue", "name": "Processing Time", "value": "12-16 hours"},
       {"@type": "PropertyValue", "name": "Power Consumption", "value": "2.8 Kw"},
       {"@type": "PropertyValue", "name": "Material", "value": "Stainless Steel"},
@@ -156,7 +156,7 @@ export default function SE501Page() {
               <div className="order-1 md:order-2 space-y-6">
                 <div>
                   <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-2">SE-501</h1>
-                  <p className="text-xl text-green-600 font-semibold">Capacity: 25–50 KG</p>
+                  <p className="text-xl text-green-600 font-semibold">Capacity: 40–50 KG</p>
                 </div>
                 <p className="text-lg text-gray-600 leading-relaxed">
                   The SE-501 is a compact and efficient organic waste converter designed for medium-sized operations.

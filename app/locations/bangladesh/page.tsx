@@ -1,4 +1,16 @@
 import { LocationPageTemplate } from "@/components/location-page-template"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "OWC Machine in Bangladesh | Organic Waste Converter Dhaka - Solwearth",
+  description: "Leading OWC machine suppliers in Bangladesh. Organic waste converters for Dhaka, Chittagong. Hotel and restaurant waste management. Zero emission. Best prices in Bangladesh.",
+  keywords: "OWC machine Bangladesh, organic waste converter Bangladesh, food waste machine Dhaka, waste management Bangladesh, OWC suppliers Bangladesh, composting machine Bangladesh, waste converter Dhaka, organic waste management Bangladesh",
+  openGraph: {
+    title: "Organic Waste Converter (OWC) Machines in Bangladesh - Solwearth",
+    description: "Advanced OWC machines for Bangladesh. Sustainable waste management for hotels, hospitals, and institutions.",
+    type: 'website',
+  },
+}
 
 export default function BangladeshPage() {
   return (

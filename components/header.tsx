@@ -11,11 +11,11 @@ export function Header() {
   const [locationsDropdownOpen, setLocationsDropdownOpen] = useState(false)
 
   const productLinks = [
-    { label: "SE-501 (25-50 KG)", href: "/products/se-501" },
-    { label: "SE-1001 (75-100 KG)", href: "/products/se-1001" },
-    { label: "SE-2001 (150-200 KG)", href: "/products/se-2001" },
+    { label: "SE-501 (40-50 KG)", href: "/products/se-501" },
+    { label: "SE-1001 (70-100 KG)", href: "/products/se-1001" },
+    { label: "SE-2001 (150-250 KG)", href: "/products/se-2001" },
     { label: "SE-3501 (350-375 KG)", href: "/products/se-3501" },
-    { label: "SE-5001 (400-500 KG)", href: "/products/se-5001" },
+    { label: "SE-5001 (450-500 KG)", href: "/products/se-5001" },
     { label: "SE-1H (1000 KG)", href: "/products/se-1h" },
   ]
 
@@ -43,6 +43,13 @@ export function Header() {
     { label: "Kuwait", href: "/locations/kuwait" },
     { label: "Malaysia", href: "/locations/malaysia" },
     { label: "Bangladesh", href: "/locations/bangladesh" },
+    { label: "Thailand", href: "/locations/thailand" },
+    { label: "Indonesia", href: "/locations/indonesia" },
+    { label: "Ghana", href: "/locations/ghana" },
+    { label: "Kenya", href: "/locations/kenya" },
+    { label: "Lebanon", href: "/locations/lebanon" },
+    { label: "Seychelles", href: "/locations/seychelles" },
+    { label: "Mauritius", href: "/locations/mauritius" },
   ]
 
   return (

@@ -87,6 +87,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'kuwait',
     'malaysia',
     'bangladesh',
+    'thailand',
+    'ghana',
+    'kenya',
+    'indonesia',
+    'lebanon',
+    'seychelles',
+    'mauritius',
   ]
   
   const locationRoutes = locations.map((location) => ({

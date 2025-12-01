@@ -1,4 +1,16 @@
 import { LocationPageTemplate } from "@/components/location-page-template"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "OWC Machine in Kuwait | Organic Waste Converter Suppliers Kuwait City - Solwearth",
+  description: "Premium OWC machines in Kuwait. Organic waste converters for Kuwait City businesses. Hotel and restaurant waste management. Zero emission technology. Best prices.",
+  keywords: "OWC machine Kuwait, organic waste converter Kuwait, food waste machine Kuwait City, waste management Kuwait, OWC suppliers Kuwait, composting machine Kuwait, waste converter Kuwait City, organic waste management Kuwait",
+  openGraph: {
+    title: "Organic Waste Converter (OWC) Machines in Kuwait - Solwearth",
+    description: "Advanced OWC machines for Kuwait's commercial and hospitality sectors. Sustainable waste management solutions.",
+    type: 'website',
+  },
+}
 
 export default function KuwaitPage() {
   return (
