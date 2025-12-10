@@ -27,7 +27,7 @@ export default function SE1HPage() {
     { label: "Processing Time", value: "26–30 hrs" },
     { label: "Power Consumption", value: "12 Kw" },
     { label: "Dimension (W×D×H)", value: "1700×3212×1700 mm" },
-    { label: "Weight", value: "1650 Kg" },
+    { label: "Weight", value: "1800 Kg" },
     { label: "Tank Volume", value: "41 Cu. Feet" },
     { label: "Material", value: "Stainless Steel" },
     { label: "Average Reduction", value: "83–90%" },

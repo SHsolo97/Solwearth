@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 
 export default function SE2001Page() {
   const specifications = [
-    { label: "Capacity", value: "150–250 KG" },
+    { label: "Capacity", value: "150–200 KG" },
     { label: "Input per Batch", value: "150-250 Kg" },
     { label: "Processing Time", value: "16–22 hrs" },
     { label: "Power Consumption", value: "6 Kw" },
