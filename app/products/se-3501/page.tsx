@@ -167,12 +167,14 @@ export default function SE3501Page() {
                   <ScrollToFormButton className="bg-green-600 hover:bg-green-700 text-white px-8 py-6" variant="default">
                     Request Quote
                   </ScrollToFormButton>
-                  <Button
-                    variant="outline"
-                    className="border-green-600 text-green-600 hover:bg-green-50 px-8 py-6 bg-transparent"
-                  >
-                    Download Brochure
-                  </Button>
+                  <a href="https://drive.google.com/file/d/13In5rIl2FBqbW2m5DrODB7Wz0AGh3lVe/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                    <Button
+                      variant="outline"
+                      className="border-green-600 text-green-600 hover:bg-green-50 px-8 py-6 bg-transparent"
+                    >
+                      Download Brochure
+                    </Button>
+                  </a>
                 </div>
               </div>
             </div>

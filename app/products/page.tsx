@@ -186,7 +186,7 @@ export default function AllProductsPage() {
                 <ScrollToFormButton className="bg-green-600 hover:bg-green-700 text-white px-8 py-6" variant="default">
                   Request Information
                 </ScrollToFormButton>
-                <a href="/Solwearth Ecotech - Brochure.pdf" download="Solwearth-Brochure.pdf">
+                <a href="https://drive.google.com/file/d/13In5rIl2FBqbW2m5DrODB7Wz0AGh3lVe/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                   <Button
                     variant="outline"
                     className="border-green-600 text-green-600 hover:bg-green-50 px-8 py-6 bg-transparent"
