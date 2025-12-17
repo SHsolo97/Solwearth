@@ -50,7 +50,7 @@ export default function WhyChooseUsPage() {
     },
     {
       icon: Wind,
-      title: "Zero Chemicals Required",
+      title: "Zero Additives Required",
       description: "No additives, bacteria, or dilution needed",
       gradient: "from-blue-500 to-indigo-600"
     },
@@ -291,27 +291,37 @@ export default function WhyChooseUsPage() {
       {/* Comparison Section */}
       <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
+          <div className="max-w-5xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                <span className="text-green-600">Solwearth</span> vs Global Competitors
+                Why <span className="text-green-600">Solwearth</span> is the Definitive Global Choice for World-Class Results
               </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                 See why we're the preferred choice for world-class waste management
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8">
-              {/* Solwearth - Superior */}
-              <Card className="p-8 bg-gradient-to-br from-green-600 to-emerald-600 text-white border-0 shadow-2xl transform hover:scale-105 transition-all duration-500">
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center">
-                    <Award className="w-8 h-8 text-green-600" />
+            {/* Solwearth Excellence - Centered Full Width */}
+            <Card className="p-10 md:p-12 bg-gradient-to-br from-green-600 via-emerald-600 to-teal-600 text-white border-0 shadow-2xl transform hover:scale-[1.02] transition-all duration-500 relative overflow-hidden">
+              {/* Background Pattern */}
+              <div className="absolute inset-0 opacity-10">
+                <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)', backgroundSize: '40px 40px' }} />
+              </div>
+
+              <div className="relative z-10">
+                {/* Header */}
+                <div className="flex items-center justify-center gap-4 mb-10">
+                  <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-xl">
+                    <Award className="w-10 h-10 text-green-600" />
                   </div>
-                  <h3 className="text-3xl font-bold">Solwearth</h3>
+                  <div className="text-center">
+                    <h3 className="text-4xl md:text-5xl font-bold">Solwearth Excellence</h3>
+                    <p className="text-white/80 text-lg mt-1">World-Class Features</p>
+                  </div>
                 </div>
 
-                <ul className="space-y-4">
+                {/* Features Grid */}
+                <div className="grid md:grid-cols-2 gap-x-8 gap-y-5 max-w-4xl mx-auto">
                   {[
                     "Best in class batch processing time",
                     "90% waste reduction efficiency",
@@ -324,44 +334,22 @@ export default function WhyChooseUsPage() {
                     "Integrated odor control system",
                     "End-to-end support & warranty"
                   ].map((item, i) => (
-                    <li key={i} className="flex items-start gap-3">
-                      <CheckCircle2 className="w-6 h-6 text-white flex-shrink-0 mt-0.5" />
-                      <span className="text-lg">{item}</span>
+                    <li key={i} className="flex items-start gap-3 group">
+                      <CheckCircle2 className="w-7 h-7 text-white flex-shrink-0 mt-0.5 group-hover:scale-110 transition-transform duration-300" />
+                      <span className="text-lg md:text-xl font-medium leading-relaxed">{item}</span>
                     </li>
                   ))}
-                </ul>
-              </Card>
-
-              {/* Global Competitors - Standard */}
-              <Card className="p-8 bg-white border-2 border-gray-200 shadow-md">
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center">
-                    <Volume2 className="w-8 h-8 text-gray-400" />
-                  </div>
-                  <h3 className="text-3xl font-bold text-gray-900">Global Competitors</h3>
                 </div>
 
-                <ul className="space-y-4">
-                  {[
-                    "Several days processing time",
-                    "70-80% waste reduction (typical)",
-                    "Basic composting methods",
-                    "Requires exhaust system",
-                    "Requires chemicals & additives",
-                    "Semi-automatic or manual controls",
-                    "Bulky installation required",
-                    "Noise and heat emissions",
-                    "Odor control challenges",
-                    "Limited support options"
-                  ].map((item, i) => (
-                    <li key={i} className="flex items-start gap-3">
-                      <div className="w-6 h-6 rounded-full border-2 border-gray-300 flex-shrink-0 mt-0.5" />
-                      <span className="text-lg text-gray-600">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </Card>
-            </div>
+                {/* Bottom Badge */}
+                <div className="mt-10 text-center">
+                  <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full border-2 border-white/30">
+                    <Leaf className="w-5 h-5" />
+                    <span className="font-semibold text-lg">Proudly Made in India</span>
+                  </div>
+                </div>
+              </div>
+            </Card>
           </div>
         </div>
       </section>

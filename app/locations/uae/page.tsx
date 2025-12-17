@@ -43,8 +43,8 @@ export default function UAEPage() {
         "Industrial Facilities",
       ]}
       features={[
-        "Manual and Automatic models available",
-        "Automatic recommended for bulk generators",
+        "Fully automatic models for all applications",
+        "Suitable for bulk waste generators",
         "Residential and Commercial variants",
         "Automated mixing and grinding",
         "Advanced heating technology",
