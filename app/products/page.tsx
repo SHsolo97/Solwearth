@@ -41,7 +41,7 @@ export default function AllProductsPage() {
     {
       id: "se-2001",
       name: "SE 2001",
-      capacity: "150-250KG",
+      capacity: "150-200KG",
       description: "Perfect for large food courts, IT campuses, and hospitals",
       specs: "Input: 150-250 Kg | Processing: 16-22 hrs | Power: 6 Kw",
       link: "/products/se-2001",
