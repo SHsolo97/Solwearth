@@ -4,6 +4,7 @@ import { Open_Sans } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
 import { PopupLeadForm } from "@/components/popup-lead-form"
+import { GoogleAnalytics } from "@/components/google-analytics"
 import "./globals.css"
 
 const openSans = Open_Sans({
@@ -39,6 +40,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
+      <head>
+        {/* Google Analytics */}
+        {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
+          <GoogleAnalytics GA_MEASUREMENT_ID={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID} />
+        )}
+      </head>
       <body className={`${openSans.variable} font-sans antialiased`}>
         {/* Organization Schema */}
         <script

@@ -100,30 +100,35 @@ export function PopupLeadForm() {
     <>
       {/* Backdrop with blur effect */}
       <div
-        className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4 animate-in fade-in duration-300"
+        className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[100] flex items-center justify-center p-4 animate-in fade-in duration-300"
         onClick={closePopup}
       >
         {/* Popup Card */}
         <Card
-          className="w-full max-w-lg max-h-[90vh] overflow-y-auto relative animate-in zoom-in-95 duration-300"
+          className="w-full max-w-lg max-h-[90vh] overflow-y-auto relative animate-in zoom-in-95 duration-300 shadow-2xl"
           onClick={(e) => e.stopPropagation()}
         >
-          {/* Close Button */}
-          <button
-            onClick={closePopup}
-            className="absolute top-4 right-4 p-2 rounded-full hover:bg-gray-100 transition-colors z-10"
-            aria-label="Close popup"
-          >
-            <X className="w-5 h-5 text-gray-600" />
-          </button>
-
-          <CardHeader className="space-y-2 pb-4">
-            <CardTitle className="text-2xl md:text-3xl font-bold text-gray-900 pr-8">
-              Get Your Free Quote Today
-            </CardTitle>
-            <p className="text-gray-600">
-              Fill out the form and our team will get back to you within 24 hours with a customized solution.
-            </p>
+          {/* Header with Close Button */}
+          <CardHeader className="space-y-2 pb-4 pt-4">
+            <div className="flex items-start justify-between gap-4">
+              <div className="flex-1 pr-2">
+                <CardTitle className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
+                  Get Your Free Quote Today
+                </CardTitle>
+                <p className="text-gray-600 text-sm md:text-base">
+                  Fill out the form and our team will get back to you within 24 hours with a customized solution.
+                </p>
+              </div>
+              
+              {/* Close Button */}
+              <button
+                onClick={closePopup}
+                className="flex-shrink-0 p-2 rounded-full hover:bg-gray-100 transition-colors bg-white shadow-md hover:shadow-lg"
+                aria-label="Close popup"
+              >
+                <X className="w-5 h-5 text-gray-600" />
+              </button>
+            </div>
           </CardHeader>
 
           <CardContent>
