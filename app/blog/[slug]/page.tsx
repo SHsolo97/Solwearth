@@ -1,4 +1,4 @@
-import { getPostBySlug, getRecentPosts } from "@/lib/wordpress"
+import { getPostBySlug, getRecentPosts, getAllPostSlugs } from "@/lib/wordpress"
 import { notFound } from "next/navigation"
 import Link from "next/link"
 import { Calendar, User, ArrowLeft, Tag } from "lucide-react"
@@ -10,6 +10,19 @@ import { Footer } from "@/components/footer"
 interface BlogPostPageProps {
   params: {
     slug: string
+  }
+}
+
+// Generate static params for all blog posts at build time
+export async function generateStaticParams() {
+  try {
+    const posts = await getAllPostSlugs()
+    return posts.map((post: { slug: string }) => ({
+      slug: post.slug,
+    }))
+  } catch (error) {
+    console.error("Error generating static params:", error)
+    return []
   }
 }
 

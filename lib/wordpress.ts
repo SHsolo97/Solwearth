@@ -12,7 +12,7 @@ async function fetchAPI(query: string, variables = {}) {
       query,
       variables,
     }),
-    next: { revalidate: 60 }, // Revalidate every 60 seconds
+    next: { revalidate: false }, // Infinite cache - use on-demand revalidation via /api/revalidate
   })
 
   const json = await res.json()
@@ -218,4 +218,21 @@ export async function getRecentPosts(first = 6) {
   )
 
   return data?.posts?.nodes
+}
+
+// Get all post slugs for static generation
+export async function getAllPostSlugs() {
+  const data = await fetchAPI(
+    `
+    query AllPostSlugs {
+      posts(first: 1000, where: { orderby: { field: DATE, order: DESC } }) {
+        nodes {
+          slug
+        }
+      }
+    }
+  `
+  )
+
+  return data?.posts?.nodes || []
 }
