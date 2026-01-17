@@ -86,7 +86,7 @@ export default function AboutPage() {
           <div className="max-w-4xl mx-auto text-center text-white">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Mission</h2>
             <p className="text-2xl font-light italic">
-              "Our Mission is to create a reliable and cost-effective food waste management system"
+              "Solving waste management problems through innovative and sustainable technology solutions that significantly reduce environmental impact, paving the way for a cleaner and healthier planet."
             </p>
           </div>
         </div>

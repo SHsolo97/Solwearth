@@ -91,26 +91,6 @@ export default function ClientsPage() {
       {/* Client Logos Section */}
       <ClientsSection />
 
-      {/* Testimonial Highlight */}
-      <section className="py-20 bg-gradient-to-br from-green-50 to-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white rounded-3xl p-12 shadow-2xl border border-gray-100">
-              <div className="text-6xl text-green-600 mb-6">"</div>
-              <p className="text-2xl text-gray-700 leading-relaxed mb-8 italic">
-                Solwearth's organic waste converters have revolutionized our waste management system. 
-                The technology is reliable, efficient, and has significantly reduced our environmental footprint. 
-                Their support team is exceptional.
-              </p>
-              <div className="border-t border-gray-200 pt-6">
-                <p className="font-bold text-gray-900 text-lg">Leading Hospitality Group</p>
-                <p className="text-gray-600">Operations Manager</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Industries We Serve */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
