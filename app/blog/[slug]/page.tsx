@@ -6,11 +6,12 @@ import { Card } from "@/components/ui/card"
 import { Header } from "@/components/header"
 import { LeadFormSection } from "@/components/lead-form-section"
 import { Footer } from "@/components/footer"
+import { Metadata } from "next"
 
 interface BlogPostPageProps {
-  params: {
+  params: Promise<{
     slug: string
-  }
+  }>
 }
 
 // Generate static params for all blog posts at build time
@@ -26,8 +27,40 @@ export async function generateStaticParams() {
   }
 }
 
+export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
+  const { slug } = await params
+  const post = await getPostBySlug(slug)
+
+  if (!post) {
+    return {
+      title: "Post Not Found",
+    }
+  }
+
+  // Fallback description from excerpt or content
+  const description = post.excerpt?.replace(/<[^>]*>/g, '').slice(0, 160) || 
+                     post.content?.replace(/<[^>]*>/g, '').slice(0, 160) || 
+                     `Read ${post.title} on Solwearth Blog`
+
+  return {
+    title: `${post.title} | Solwearth Blog`,
+    description: description,
+    openGraph: {
+      title: post.title,
+      description: description,
+      type: 'article',
+      publishedTime: post.date,
+      authors: [post.author?.node?.name || 'Solwearth Team'],
+      images: post.featuredImage?.node?.sourceUrl ? [post.featuredImage.node.sourceUrl] : [],
+    },
+    alternates: {
+      canonical: `/blog/${slug}`,
+    }
+  }
+}
+
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
-  const { slug } = params
+  const { slug } = await params
   
   let post = null
   let recentPosts = []

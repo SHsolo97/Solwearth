@@ -6,6 +6,18 @@ import { Footer } from "@/components/footer"
 import { ScrollToFormButton } from "@/components/scroll-to-form-button"
 import { ArrowRight, Tag } from "lucide-react"
 import Link from "next/link"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Waste Management Blog | Insights & News - Solwearth Ecotech",
+  description: "Stay updated with the latest in organic waste management, sustainability tips, and Solwearth Ecotech news. Read our expert articles.",
+  openGraph: {
+    title: "Solwearth Ecotech Blog - Waste Management Insights",
+    description: "Expert articles on food waste recycling, composting technology, and sustainable business practices.",
+    url: 'https://www.solwearth.com/blog',
+    type: 'website',
+  },
+}
 
 export default async function BlogPage() {
   let posts = []
