@@ -384,6 +384,16 @@ const nextConfig = {
         destination: '/locations/bangladesh',
         permanent: true,
       },
+
+      // ==========================================
+      // CATEGORY REDIRECTS (301 Permanent)
+      // Legacy WordPress category URLs to /blog/category/*
+      // ==========================================
+      {
+        source: '/category/:slug*',
+        destination: '/blog/category/:slug*',
+        permanent: true,
+      },
     ]
   },
 

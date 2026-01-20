@@ -103,5 +103,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }))
 
-  return [...routes, ...productRoutes, ...locationRoutes]
+  // Category pages (for WordPress blog categories - now under /blog/category/)
+  const categories = [
+    'organic-waste-management-machine',
+  ]
+  
+  const categoryRoutes = categories.map((category) => ({
+    url: `${baseUrl}/blog/category/${category}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly' as const,
+    priority: 0.6,
+  }))
+
+  return [...routes, ...productRoutes, ...locationRoutes, ...categoryRoutes]
 }

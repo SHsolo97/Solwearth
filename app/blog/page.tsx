@@ -1,10 +1,10 @@
-import { getAllPosts } from "@/lib/wordpress"
+import { getAllPosts, getAllCategories } from "@/lib/wordpress"
 import { LoadMoreBlogs } from "@/components/load-more-blogs"
 import { Header } from "@/components/header"
 import { LeadFormSection } from "@/components/lead-form-section"
 import { Footer } from "@/components/footer"
 import { ScrollToFormButton } from "@/components/scroll-to-form-button"
-import { ArrowRight } from "lucide-react"
+import { ArrowRight, Tag } from "lucide-react"
 import Link from "next/link"
 
 export default async function BlogPage() {
@@ -12,12 +12,20 @@ export default async function BlogPage() {
   let hasNextPage = false
   let endCursor = null
   let error = null
+  let categories: { id: string; name: string; slug: string; count: number }[] = []
 
   try {
-    const data = await getAllPosts(50) // Increase to 50 posts initially
+    const [data, allCategories] = await Promise.all([
+      getAllPosts(50),
+      getAllCategories()
+    ])
     posts = data?.nodes || []
     hasNextPage = data?.pageInfo?.hasNextPage || false
     endCursor = data?.pageInfo?.endCursor || null
+    // Filter out uncategorized
+    categories = allCategories?.filter(
+      (cat: { slug: string; count: number }) => cat.slug !== 'uncategorized' && cat.count > 0
+    ) || []
   } catch (err) {
     console.error("Error fetching posts:", err)
     error = "Failed to load blog posts. Please try again later."
@@ -46,9 +54,28 @@ export default async function BlogPage() {
             <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight">
               Insights & <span className="text-green-600">Innovation</span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-gray-600 leading-relaxed max-w-3xl mx-auto mb-8">
               Explore the latest in waste management technology, sustainability practices, and environmental solutions that are shaping a greener future.
             </p>
+
+            {/* Categories */}
+            {categories.length > 0 && (
+              <div className="flex flex-wrap justify-center gap-3">
+                {categories.map((cat) => (
+                  <Link
+                    key={cat.id}
+                    href={`/blog/category/${cat.slug}`}
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-sm text-gray-700 rounded-full hover:bg-green-600 hover:text-white transition-all shadow-sm hover:shadow-md font-medium text-sm"
+                  >
+                    <Tag className="w-3.5 h-3.5" />
+                    {cat.name}
+                    <span className="text-xs bg-gray-100 group-hover:bg-white/20 px-2 py-0.5 rounded-full">
+                      {cat.count}
+                    </span>
+                  </Link>
+                ))}
+              </div>
+            )}
           </div>
         </div>
 
