@@ -1,8 +1,18 @@
 import type { MetadataRoute } from 'next'
+import { getAllPostSlugs, getAllCategories } from '@/lib/wordpress'
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = 'https://www.solwearth.com'
   
+  // Fetch all blog posts
+  const blogPosts = await getAllPostSlugs()
+  const blogRoutes = blogPosts.map((post: { slug: string }) => ({
+    url: `${baseUrl}/blog/${post.slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }))
+
   // Static pages
   const routes = [
     {
@@ -104,16 +114,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }))
 
   // Category pages (for WordPress blog categories - now under /blog/category/)
-  const categories = [
-    'organic-waste-management-machine',
-  ]
-  
-  const categoryRoutes = categories.map((category) => ({
-    url: `${baseUrl}/blog/category/${category}`,
+  const categories = await getAllCategories()
+  const categoryRoutes = (categories || []).map((category: { slug: string }) => ({
+    url: `${baseUrl}/blog/category/${category.slug}`,
     lastModified: new Date(),
     changeFrequency: 'weekly' as const,
     priority: 0.6,
   }))
 
-  return [...routes, ...productRoutes, ...locationRoutes, ...categoryRoutes]
+  return [...routes, ...productRoutes, ...locationRoutes, ...categoryRoutes, ...blogRoutes]
 }
