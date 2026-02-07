@@ -41,15 +41,16 @@ export function LocationPageTemplate({
 
   return (
     <main className="min-h-screen bg-white">
-      {/* Local Business Schema */}
+      {/* Local Business & Service Schema */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            "name": `Solwearth Ecotech - ${cityName}`,
-            "description": `Organic waste converter supplier in ${cityName}`,
+            "@type": ["LocalBusiness", "Service"],
+            "name": `Organic Waste Converter Solutions in ${cityName}`,
+            "description": `Professional organic waste converter solutions and services in ${cityName}. Request a quote for waste management machines tailored to your needs.`,
+            "serviceType": "Waste Management",
             "address": {
               "@type": "PostalAddress",
               "addressLocality": cityName,
@@ -58,27 +59,13 @@ export function LocationPageTemplate({
             },
             "telephone": "+91-98950-44004",
             "email": "info@solwearth.com",
-            "priceRange": "$$",
             "areaServed": {
               "@type": "City",
               "name": cityName
             },
-            "parentOrganization": {
+            "provider": {
               "@type": "Organization",
               "name": "Solwearth Ecotech Private Limited"
-            },
-            "hasOfferCatalog": {
-              "@type": "OfferCatalog",
-              "name": "Organic Waste Converters",
-              "itemListElement": [
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Product",
-                    "name": "Organic Waste Converter"
-                  }
-                }
-              ]
             }
           })
         }}
