@@ -3,6 +3,7 @@
 import { useState } from "react"
 import { Menu, X, ChevronDown } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -58,9 +59,12 @@ export function Header() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <img 
+            <Image 
               src="/images/logo/solwearth-ecotech.png" 
               alt="Solwearth Ecotech Private Limited"
+              width={180}
+              height={64}
+              priority
               className="h-16 w-auto object-contain"
             />
           </Link>
@@ -184,7 +188,7 @@ export function Header() {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden p-2"
+            className="lg:hidden p-3 min-w-[48px] min-h-[48px] flex items-center justify-center"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -215,7 +219,8 @@ export function Header() {
                 </Link>
                 <button
                   onClick={() => setProductsDropdownOpen(!productsDropdownOpen)}
-                  className="text-gray-700 hover:text-green-600 transition-colors"
+                  className="text-gray-700 hover:text-green-600 transition-colors p-3 min-w-[48px] min-h-[48px] flex items-center justify-center"
+                  aria-label="Toggle products submenu"
                 >
                   <ChevronDown className={`w-4 h-4 transition-transform ${productsDropdownOpen ? "rotate-180" : ""}`} />
                 </button>
@@ -257,7 +262,8 @@ export function Header() {
                       </Link>
                       <button
                         onClick={() => setIndiaDropdownOpen(!indiaDropdownOpen)}
-                        className="text-gray-600 hover:text-green-600 transition-colors"
+                        className="text-gray-600 hover:text-green-600 transition-colors p-3 min-w-[48px] min-h-[48px] flex items-center justify-center"
+                        aria-label="Toggle India cities submenu"
                       >
                         <ChevronDown className={`w-4 h-4 transition-transform ${indiaDropdownOpen ? "rotate-180" : ""}`} />
                       </button>

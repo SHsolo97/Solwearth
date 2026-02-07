@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { ChevronLeft, ChevronRight } from "lucide-react"
+import Image from "next/image"
 
 export function AchievementsSection() {
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -100,22 +101,21 @@ export function AchievementsSection() {
             {getVisibleSlides().map((achievement, index) => (
               <div
                 key={index}
-                className={`bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-700 ease-in-out transform ${
+                className={`bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-700 ease-in-out transform animate-fade-in-slide ${
                   index === 1 
                     ? 'scale-105 z-10 shadow-2xl' 
                     : 'opacity-90 hover:opacity-100 hover:scale-102'
                 }`}
-                style={{
-                  animation: 'fadeInSlide 0.7s ease-out',
-                }}
               >
                 <div className="relative h-64 bg-gradient-to-br from-green-50 to-blue-50">
-                  <img
+                  <Image
                     src={achievement.image}
                     alt={achievement.title}
-                    className="w-full h-full object-contain p-4 transition-transform duration-500 hover:scale-110"
+                    width={400}
+                    height={256}
+                    className="w-full h-full object-contain p-4"
                   />
-                  <div className="absolute top-4 right-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold shadow-md animate-pulse">
+                  <div className="absolute top-4 right-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold shadow-md">
                     {achievement.year}
                   </div>
                 </div>
@@ -130,18 +130,17 @@ export function AchievementsSection() {
           {/* Mobile View - 1 slide */}
           <div className="md:hidden">
             <div 
-              className="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-700 ease-in-out"
-              style={{
-                animation: 'fadeInSlide 0.7s ease-out',
-              }}
+              className="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-700 ease-in-out animate-fade-in-slide"
             >
               <div className="relative h-80 bg-gradient-to-br from-green-50 to-blue-50">
-                <img
+                <Image
                   src={achievements[currentIndex].image}
                   alt={achievements[currentIndex].title}
-                  className="w-full h-full object-contain p-6 transition-transform duration-500"
+                  width={400}
+                  height={320}
+                  className="w-full h-full object-contain p-6"
                 />
-                <div className="absolute top-4 right-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold shadow-md animate-pulse">
+                <div className="absolute top-4 right-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold shadow-md">
                   {achievements[currentIndex].year}
                 </div>
               </div>
@@ -174,11 +173,15 @@ export function AchievementsSection() {
               <button
                 key={index}
                 onClick={() => setCurrentIndex(index)}
-                className={`h-3 rounded-full transition-all duration-500 ease-in-out hover:bg-green-500 ${
-                  index === currentIndex ? 'bg-green-600 w-8 shadow-md' : 'bg-gray-300 w-3 hover:w-5'
+                className={`h-3 rounded-full transition-colors duration-300 ease-in-out hover:bg-green-500 min-w-[44px] min-h-[44px] flex items-center justify-center relative ${
+                  index === currentIndex ? 'bg-transparent' : 'bg-transparent'
                 }`}
                 aria-label={`Go to achievement ${index + 1}`}
-              />
+              >
+                <span className={`block h-3 rounded-full transition-colors duration-300 ${
+                  index === currentIndex ? 'bg-green-600 w-8 shadow-md' : 'bg-gray-300 w-3'
+                }`} />
+              </button>
             ))}
           </div>
         </div>

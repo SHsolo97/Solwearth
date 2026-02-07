@@ -31,10 +31,10 @@ export function TechnologySection() {
                 height="100%"
                 src="https://www.youtube.com/embed/a5wJfYbmTbE"
                 title="Solwearth Technology - Organic Waste Converter"
-                frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
-                className="w-full h-full"
+                loading="lazy"
+                className="w-full h-full border-0"
               ></iframe>
             </div>
             <p className="text-center text-sm text-gray-500 mt-4">Watch our technology in action</p>

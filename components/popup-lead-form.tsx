@@ -136,13 +136,13 @@ export function PopupLeadForm() {
               {/* Desired Capacity */}
               <div>
                 <label
-                  htmlFor="desired_capacity"
+                  htmlFor="popup-desired_capacity"
                   className="block text-sm font-semibold text-gray-700 mb-1"
                 >
                   Capacity*
                 </label>
                 <select
-                  id="desired_capacity"
+                  id="popup-desired_capacity"
                   name="desired_capacity"
                   required
                   className="w-full px-3 py-2.5 bg-gray-50 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm"
@@ -159,12 +159,12 @@ export function PopupLeadForm() {
 
               {/* Name */}
               <div>
-                <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-1">
+                <label htmlFor="popup-name" className="block text-sm font-semibold text-gray-700 mb-1">
                   Name*
                 </label>
                 <input
                   type="text"
-                  id="name"
+                  id="popup-name"
                   name="name"
                   required
                   className="w-full px-3 py-2.5 bg-gray-50 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm"
@@ -173,12 +173,12 @@ export function PopupLeadForm() {
 
               {/* Phone No. */}
               <div>
-                <label htmlFor="phone_no" className="block text-sm font-semibold text-gray-700 mb-1">
+                <label htmlFor="popup-phone_no" className="block text-sm font-semibold text-gray-700 mb-1">
                   Phone*
                 </label>
                 <input
                   type="tel"
-                  id="phone_no"
+                  id="popup-phone_no"
                   name="phone_no"
                   required
                   className="w-full px-3 py-2.5 bg-gray-50 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm"
@@ -187,12 +187,12 @@ export function PopupLeadForm() {
 
               {/* Email */}
               <div>
-                <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-1">
+                <label htmlFor="popup-email" className="block text-sm font-semibold text-gray-700 mb-1">
                   Email*
                 </label>
                 <input
                   type="email"
-                  id="email"
+                  id="popup-email"
                   name="email"
                   required
                   className="w-full px-3 py-2.5 bg-gray-50 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm"
@@ -201,12 +201,12 @@ export function PopupLeadForm() {
 
               {/* City */}
               <div>
-                <label htmlFor="city" className="block text-sm font-semibold text-gray-700 mb-1">
+                <label htmlFor="popup-city" className="block text-sm font-semibold text-gray-700 mb-1">
                   City*
                 </label>
                 <input
                   type="text"
-                  id="city"
+                  id="popup-city"
                   name="city"
                   required
                   className="w-full px-3 py-2.5 bg-gray-50 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm"
@@ -215,12 +215,12 @@ export function PopupLeadForm() {
 
               {/* Company Name */}
               <div>
-                <label htmlFor="company_name" className="block text-sm font-semibold text-gray-700 mb-1">
+                <label htmlFor="popup-company_name" className="block text-sm font-semibold text-gray-700 mb-1">
                   Company
                 </label>
                 <input
                   type="text"
-                  id="company_name"
+                  id="popup-company_name"
                   name="company_name"
                   className="w-full px-3 py-2.5 bg-gray-50 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm"
                 />
@@ -228,11 +228,11 @@ export function PopupLeadForm() {
 
               {/* Message */}
               <div>
-                <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-1">
+                <label htmlFor="popup-message" className="block text-sm font-semibold text-gray-700 mb-1">
                   Message
                 </label>
                 <textarea
-                  id="message"
+                  id="popup-message"
                   name="message"
                   rows={3}
                   className="w-full px-3 py-2.5 bg-gray-50 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent text-sm resize-none"

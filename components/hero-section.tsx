@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { ScrollToFormButton } from "@/components/scroll-to-form-button"
 import Link from "next/link"
+import Image from "next/image"
 
 export function HeroSection() {
   return (
@@ -8,7 +9,7 @@ export function HeroSection() {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <div className="space-y-6" style={{ animation: 'slideInFromLeft 0.8s ease-out' }}>
+          <div className="space-y-6 animate-slide-in-left">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
               FULLY AUTOMATIC ORGANIC WASTE CONVERTER (OWC)
             </h1>
@@ -19,25 +20,28 @@ export function HeroSection() {
             </p>
             <div className="flex flex-wrap gap-4">
               <Link href="/products">
-                <Button className="bg-green-600 hover:bg-green-700 text-white px-6 py-6 text-base transition-all duration-300 hover:scale-105 hover:shadow-lg active:scale-95">
+                <Button className="bg-green-600 hover:bg-green-700 text-white px-6 py-6 text-base transition-colors duration-300 hover:shadow-lg">
                   SEE OUR PRODUCTS
                 </Button>
               </Link>
               <ScrollToFormButton
                 variant="outline"
-                className="border-green-600 text-green-600 hover:bg-green-50 px-6 py-6 text-base bg-transparent transition-all duration-300 hover:scale-105 hover:shadow-lg active:scale-95"
+                className="border-green-600 text-green-600 hover:bg-green-50 px-6 py-6 text-base bg-transparent transition-colors duration-300 hover:shadow-lg"
               >
                 Enquire Now!
               </ScrollToFormButton>
             </div>
           </div>
 
-          {/* Right Content - Product Image */}
-          <div className="relative" style={{ animation: 'slideInFromRight 0.8s ease-out' }}>
-            <img
+          {/* Right Content - Product Image (LCP element) */}
+          <div className="relative animate-slide-in-right">
+            <Image
               src="/images/machine/automatic-waste-convertor-hero.png"
               alt="Fully automatic organic waste converter machine by Solwearth Ecotech for commercial food waste management"
-              className="w-full h-auto object-contain max-h-80 transition-transform duration-500 hover:scale-105"
+              width={600}
+              height={400}
+              priority
+              className="w-full h-auto object-contain max-h-80"
             />
           </div>
         </div>

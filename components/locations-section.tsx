@@ -1,4 +1,5 @@
 import { MapPin } from "lucide-react"
+import Image from "next/image"
 
 export function LocationsSection() {
   const locations = [
@@ -34,7 +35,7 @@ export function LocationsSection() {
                 {locations.map((location, index) => (
                   <div
                     key={index}
-                    className="text-lg font-light hover:text-green-400 transition-colors cursor-pointer flex items-center justify-start md:justify-center gap-2"
+                    className="text-lg font-normal hover:text-green-400 transition-colors cursor-pointer flex items-center justify-start md:justify-center gap-2"
                   >
                     <MapPin className="w-4 h-4 flex-shrink-0 opacity-70" />
                     <span className="whitespace-nowrap">{location}</span>
@@ -47,9 +48,11 @@ export function LocationsSection() {
           {/* Right - Globe Illustration */}
           <div className="flex justify-center">
             <div className="relative w-full max-w-lg">
-              <img
+              <Image
                 src="/images/locations/locations-waste-management.png"
                 alt="Global Locations - Waste Management Solutions"
+                width={500}
+                height={400}
                 className="w-full h-auto object-contain"
               />
             </div>

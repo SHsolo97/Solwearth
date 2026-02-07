@@ -148,34 +148,34 @@ export function Footer() {
               
               {/* Social Media */}
               <div>
-                <p className="text-xs text-gray-400 mb-2">Follow Us</p>
+                <p className="text-xs text-gray-300 mb-2">Follow Us</p>
                 <div className="flex gap-3">
                   <a
                     href="https://www.facebook.com/Solwearth"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-9 h-9 bg-white/10 rounded-full flex items-center justify-center hover:bg-green-600 transition-colors"
+                    className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-green-600 transition-colors"
                     aria-label="Facebook"
                   >
-                    <Facebook className="w-4 h-4" />
+                    <Facebook className="w-5 h-5" />
                   </a>
                   <a
                     href="https://www.instagram.com/solwearth_ecotech/?hl=en"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-9 h-9 bg-white/10 rounded-full flex items-center justify-center hover:bg-green-600 transition-colors"
+                    className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-green-600 transition-colors"
                     aria-label="Instagram"
                   >
-                    <Instagram className="w-4 h-4" />
+                    <Instagram className="w-5 h-5" />
                   </a>
                   <a
                     href="https://www.linkedin.com/company/solwearth-ecotech-pvt-ltd/?originalSubdomain=in"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-9 h-9 bg-white/10 rounded-full flex items-center justify-center hover:bg-green-600 transition-colors"
+                    className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-green-600 transition-colors"
                     aria-label="LinkedIn"
                   >
-                    <Linkedin className="w-4 h-4" />
+                    <Linkedin className="w-5 h-5" />
                   </a>
                 </div>
               </div>
@@ -184,7 +184,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-white/10 pt-8 text-center">
-          <p className="text-sm text-gray-400">
+          <p className="text-sm text-gray-300">
             © {new Date().getFullYear()} Solwearth Ecotech Private Limited. All rights reserved.
           </p>
         </div>
@@ -195,8 +195,10 @@ export function Footer() {
         <ScrollToFormButton 
           className="bg-green-600 hover:bg-green-700 text-white rounded-full w-14 h-14 shadow-lg"
           variant="default"
+          aria-label="Contact us"
         >
           <Phone className="w-6 h-6" />
+          <span className="sr-only">Contact us</span>
         </ScrollToFormButton>
       </div>
     </footer>

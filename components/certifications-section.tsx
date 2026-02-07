@@ -1,3 +1,5 @@
+import Image from "next/image"
+
 export function CertificationsSection() {
   const certifications = [
     { name: "CE", label: "CE Marking", image: "/images/certifications/CE.jpg" },
@@ -21,13 +23,15 @@ export function CertificationsSection() {
           {certifications.map((cert, index) => (
             <div key={index} className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
               <div className="w-32 h-32 flex items-center justify-center">
-                <img
+                <Image
                   src={cert.image}
                   alt={cert.label}
+                  width={128}
+                  height={128}
                   className="max-w-full max-h-full object-contain"
                 />
               </div>
-              <p className="text-xs text-gray-500 text-center mt-2">{cert.label}</p>
+              <p className="text-xs text-gray-600 text-center mt-2">{cert.label}</p>
             </div>
           ))}
         </div>

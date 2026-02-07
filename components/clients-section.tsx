@@ -2,6 +2,7 @@
 
 import { Building2, Award, Globe, Scale } from "lucide-react"
 import { ScrollToFormButton } from "@/components/scroll-to-form-button"
+import Image from "next/image"
 
 interface ClientLogo {
   name: string
@@ -231,9 +232,11 @@ export function ClientsSection() {
                     className="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 flex items-center justify-center group border border-gray-100 hover:border-green-200"
                   >
                     <div className="relative w-full h-24 flex items-center justify-center">
-                      <img
+                      <Image
                         src={client.image}
                         alt={client.name}
+                        width={120}
+                        height={96}
                         className="max-w-full max-h-full object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
                         loading="lazy"
                       />

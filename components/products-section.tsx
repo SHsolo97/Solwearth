@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 import Link from "next/link"
+import Image from "next/image"
 
 interface ProductsSectionProps {
   showAll?: boolean
@@ -79,9 +80,11 @@ export function ProductsSection({ showAll = false }: ProductsSectionProps) {
             <Card key={product.id} className="bg-white hover:shadow-xl transition-shadow">
               <CardHeader className="text-center">
                 <div className="bg-gradient-to-br from-green-50 to-blue-50 rounded-lg flex items-center justify-center mb-4 p-3 h-40">
-                  <img
+                  <Image
                     src={product.image}
                     alt={product.description}
+                    width={200}
+                    height={160}
                     className="max-h-full max-w-full object-contain"
                   />
                 </div>

@@ -182,9 +182,22 @@
   transform: scale(1.02);
 }
 
-/* Smooth transitions for all interactive elements */
+/* Smooth transitions for interactive elements - only composited properties */
 button, a {
-  transition: all 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Animation utility classes */
+.animate-slide-in-left {
+  animation: slideInFromLeft 0.8s ease-out;
+}
+
+.animate-slide-in-right {
+  animation: slideInFromRight 0.8s ease-out;
+}
+
+.animate-fade-in-slide {
+  animation: fadeInSlide 0.7s ease-out;
 }
 
 /* Blob Animation for Hero Section */

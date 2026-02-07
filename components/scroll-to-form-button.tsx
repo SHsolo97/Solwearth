@@ -6,9 +6,10 @@ interface ScrollToFormButtonProps {
   children: React.ReactNode
   className?: string
   variant?: "default" | "outline" | "ghost" | "link" | "destructive" | "secondary"
+  "aria-label"?: string
 }
 
-export function ScrollToFormButton({ children, className, variant = "outline" }: ScrollToFormButtonProps) {
+export function ScrollToFormButton({ children, className, variant = "outline", "aria-label": ariaLabel }: ScrollToFormButtonProps) {
   return (
     <Button
       onClick={() => {
@@ -16,6 +17,7 @@ export function ScrollToFormButton({ children, className, variant = "outline" }:
       }}
       variant={variant}
       className={className}
+      aria-label={ariaLabel}
     >
       {children}
     </Button>
