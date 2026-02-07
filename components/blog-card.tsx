@@ -1,5 +1,4 @@
 import Link from "next/link"
-import Image from "next/image"
 import { Calendar, User, ArrowRight } from "lucide-react"
 import { Card } from "./ui/card"
 
@@ -52,11 +51,12 @@ export function BlogCard({
             {/* Featured Image */}
             {featuredImage?.sourceUrl ? (
               <div className="relative h-80 md:h-auto overflow-hidden bg-gray-200">
-                <Image
+                <img
                   src={featuredImage.sourceUrl}
                   alt={featuredImage.altText || title}
                   width={800}
                   height={500}
+                  loading="lazy"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
                 {/* Featured Badge */}
@@ -133,11 +133,12 @@ export function BlogCard({
         {/* Featured Image */}
         {featuredImage?.sourceUrl ? (
           <div className="relative h-56 overflow-hidden bg-gray-200">
-            <Image
+            <img
               src={featuredImage.sourceUrl}
               alt={featuredImage.altText || title}
               width={600}
               height={350}
+              loading="lazy"
               className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
             />
             {/* Category Badge */}
