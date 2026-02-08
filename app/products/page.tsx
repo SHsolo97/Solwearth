@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 import { ScrollToFormButton } from "@/components/scroll-to-form-button"
 import Link from "next/link"
+import Image from "next/image"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -101,11 +102,13 @@ export default function AllProductsPage() {
               {products.map((product) => (
                 <Card key={product.id} className="bg-white hover:shadow-xl transition-shadow flex flex-col">
                   <CardHeader className="text-center">
-                    <div className="bg-gradient-to-br from-green-50 to-blue-50 rounded-lg flex items-center justify-center mb-4 p-3 h-40">
-                      <img
-                        src={product.image}
+                    <div className="bg-gradient-to-br from-green-50 to-blue-50 rounded-lg flex items-center justify-center mb-4 p-3 h-40 relative">
+                      <Image
+                        src={product.image || "/placeholder.svg"}
                         alt={`${product.name} Waste Converter`}
-                        className="max-h-full max-w-full object-contain"
+                        fill
+                        className="object-contain p-2"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       />
                     </div>
                   </CardHeader>
