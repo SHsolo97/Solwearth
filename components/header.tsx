@@ -65,6 +65,7 @@ export function Header() {
               width={180}
               height={64}
               priority
+              sizes="180px"
               className="h-16 w-auto object-contain"
             />
           </Link>
@@ -198,35 +199,35 @@ export function Header() {
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <nav className="lg:hidden py-4 border-t border-gray-200">
+          <nav className="lg:hidden py-2 border-t border-gray-200 max-h-[80vh] overflow-y-auto">
             <Link
               href="/about"
-              className="block py-3 text-sm font-medium text-gray-700 hover:text-green-600 transition-colors"
+              className="block py-3 text-sm font-medium text-gray-700 border-b border-gray-100 hover:text-green-600 transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
               About Us
             </Link>
 
             {/* Mobile Products */}
-            <div className="py-3">
+            <div className="border-b border-gray-100">
               <div className="flex items-center justify-between">
                 <Link
                   href="/products"
-                  className="text-sm font-medium text-gray-700 hover:text-green-600 transition-colors"
+                  className="flex-1 py-3 text-sm font-medium text-gray-700 hover:text-green-600 transition-colors"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Products
                 </Link>
                 <button
                   onClick={() => setProductsDropdownOpen(!productsDropdownOpen)}
-                  className="text-gray-700 hover:text-green-600 transition-colors p-3 min-w-[48px] min-h-[48px] flex items-center justify-center"
+                  className="p-3 text-gray-700 hover:text-green-600 transition-colors"
                   aria-label="Toggle products submenu"
                 >
                   <ChevronDown className={`w-4 h-4 transition-transform ${productsDropdownOpen ? "rotate-180" : ""}`} />
                 </button>
               </div>
               {productsDropdownOpen && (
-                <div className="mt-2 ml-4 space-y-2">
+                <div className="pl-4 pb-3 space-y-2">
                   {productLinks.map((link) => (
                     <Link
                       key={link.href}
@@ -242,34 +243,34 @@ export function Header() {
             </div>
 
             {/* Mobile Locations */}
-            <div className="py-3">
+            <div className="border-b border-gray-100">
               <button
                 onClick={() => setLocationsDropdownOpen(!locationsDropdownOpen)}
-                className="flex items-center justify-between w-full text-sm font-medium text-gray-700 hover:text-green-600 transition-colors"
+                className="flex items-center justify-between w-full py-3 text-sm font-medium text-gray-700 hover:text-green-600 transition-colors"
               >
                 Locations <ChevronDown className={`w-4 h-4 transition-transform ${locationsDropdownOpen ? "rotate-180" : ""}`} />
               </button>
               {locationsDropdownOpen && (
-                <div className="mt-2 ml-4 space-y-2">
+                <div className="pl-4 pb-3 space-y-2">
                   <div>
-                    <div className="flex items-center justify-between py-2">
+                    <div className="flex items-center justify-between">
                       <Link
                         href="/locations/india"
-                        className="text-sm font-medium text-gray-600 hover:text-green-600 transition-colors"
+                        className="flex-1 py-2 text-sm font-medium text-gray-600 hover:text-green-600 transition-colors"
                         onClick={() => setMobileMenuOpen(false)}
                       >
                         India
                       </Link>
                       <button
                         onClick={() => setIndiaDropdownOpen(!indiaDropdownOpen)}
-                        className="text-gray-600 hover:text-green-600 transition-colors p-3 min-w-[48px] min-h-[48px] flex items-center justify-center"
+                        className="p-3 text-gray-600 hover:text-green-600 transition-colors"
                         aria-label="Toggle India cities submenu"
                       >
                         <ChevronDown className={`w-4 h-4 transition-transform ${indiaDropdownOpen ? "rotate-180" : ""}`} />
                       </button>
                     </div>
                     {indiaDropdownOpen && (
-                      <div className="mt-2 ml-4 space-y-2">
+                      <div className="pl-4 border-l border-gray-200 ml-2 space-y-2 my-1">
                         {indianCities.map((city) => (
                           <Link
                             key={city.href}
@@ -283,7 +284,6 @@ export function Header() {
                       </div>
                     )}
                   </div>
-                  <div className="border-t border-gray-200 my-2"></div>
                   {internationalLocations.map((location) => (
                     <Link
                       key={location.href}
@@ -300,7 +300,7 @@ export function Header() {
 
             <Link
               href="/why-choose-us"
-              className="block py-3 text-sm font-medium text-gray-700 hover:text-green-600 transition-colors"
+              className="block py-3 text-sm font-medium text-gray-700 border-b border-gray-100 hover:text-green-600 transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
               Why Choose Us
@@ -308,7 +308,7 @@ export function Header() {
 
             <Link
               href="/clients"
-              className="block py-3 text-sm font-medium text-gray-700 hover:text-green-600 transition-colors"
+              className="block py-3 text-sm font-medium text-gray-700 border-b border-gray-100 hover:text-green-600 transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
               Clients
@@ -316,7 +316,7 @@ export function Header() {
 
             <Link
               href="/blog"
-              className="block py-3 text-sm font-medium text-gray-700 hover:text-green-600 transition-colors"
+              className="block py-3 text-sm font-medium text-gray-700 border-b border-gray-100 hover:text-green-600 transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
               Blog
@@ -324,21 +324,23 @@ export function Header() {
 
             <Link
               href="/faq"
-              className="block py-3 text-sm font-medium text-gray-700 hover:text-green-600 transition-colors"
+              className="block py-3 text-sm font-medium text-gray-700 border-b border-gray-100 hover:text-green-600 transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
               FAQ
             </Link>
 
-            <button
-              onClick={() => {
-                setMobileMenuOpen(false)
-                document.getElementById('lead-form')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
-              }}
-              className="w-full mt-2 px-5 py-3 bg-green-600 text-white text-sm font-medium rounded-lg hover:bg-green-700 transition-colors shadow-sm"
-            >
-              Get Free Quote
-            </button>
+            <div className="pt-4 pb-2">
+              <button
+                onClick={() => {
+                  setMobileMenuOpen(false)
+                  document.getElementById('lead-form')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                }}
+                className="w-full px-5 py-3 bg-green-600 text-white text-sm font-medium rounded-lg hover:bg-green-700 transition-colors shadow-sm"
+              >
+                Get Free Quote
+              </button>
+            </div>
           </nav>
         )}
       </div>

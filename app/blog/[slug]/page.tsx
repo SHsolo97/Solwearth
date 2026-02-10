@@ -103,6 +103,40 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
   return (
     <div className="min-h-screen bg-white">
+      {/* Article Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "headline": post.title,
+            "image": post.featuredImage?.node?.sourceUrl || "https://www.solwearth.com/images/logo/solwearth-ecotech.png",
+            "author": {
+              "@type": "Person",
+              "name": post.author?.node?.name || "Solwearth Team",
+              "url": "https://www.solwearth.com/about"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Solwearth Ecotech Private Limited",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.solwearth.com/images/logo/solwearth-ecotech.png"
+              }
+            },
+            "datePublished": post.date,
+            "dateModified": post.modified || post.date,
+            "description": post.excerpt?.replace(/<[^>]*>/g, '').slice(0, 160) || `Read ${post.title} on Solwearth Blog`,
+            "mainEntityOf Page": {
+              "@type": "WebPage",
+              "@id": `https://www.solwearth.com/blog/${slug}`
+            },
+            "articleSection": post.categories?.nodes?.[0]?.name || "Waste Management",
+            "keywords": post.categories?.nodes?.map((cat: any) => cat.name).join(", ") || "organic waste management",
+          })
+        }}
+      />
       <Header />
       
       {/* Hero Section with Featured Image */}

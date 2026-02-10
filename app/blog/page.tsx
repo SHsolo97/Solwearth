@@ -17,6 +17,9 @@ export const metadata: Metadata = {
     url: 'https://www.solwearth.com/blog',
     type: 'website',
   },
+  alternates: {
+    canonical: 'https://www.solwearth.com/blog',
+  },
 }
 
 export default async function BlogPage() {

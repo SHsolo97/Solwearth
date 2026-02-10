@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button"
-import { Play } from "lucide-react"
+import { YouTubeFacade } from "@/components/youtube-facade"
 import Link from "next/link"
 
 export function TechnologySection() {
@@ -23,19 +23,13 @@ export function TechnologySection() {
             </Link>
           </div>
 
-          {/* Right - Video */}
+          {/* Right - Video (Lite YouTube Facade) */}
           <div className="relative">
             <div className="rounded-lg overflow-hidden shadow-xl aspect-video">
-              <iframe
-                width="100%"
-                height="100%"
-                src="https://www.youtube.com/embed/a5wJfYbmTbE"
+              <YouTubeFacade
+                videoId="a5wJfYbmTbE"
                 title="Solwearth Technology - Organic Waste Converter"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                loading="lazy"
-                className="w-full h-full border-0"
-              ></iframe>
+              />
             </div>
             <p className="text-center text-sm text-gray-500 mt-4">Watch our technology in action</p>
           </div>

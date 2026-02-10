@@ -86,6 +86,7 @@ export function ProductsSection({ showAll = false }: ProductsSectionProps) {
                     width={200}
                     height={160}
                     className="max-h-full max-w-full object-contain"
+                    sizes="(max-width: 768px) 100vw, 33vw"
                   />
                 </div>
               </CardHeader>

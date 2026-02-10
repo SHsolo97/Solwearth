@@ -54,6 +54,8 @@ export function LocationsSection() {
                 width={500}
                 height={400}
                 className="w-full h-auto object-contain"
+                loading="lazy"
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
           </div>

@@ -114,6 +114,7 @@ export function AchievementsSection() {
                     width={400}
                     height={256}
                     className="w-full h-full object-contain p-4"
+                    sizes="(max-width: 768px) 100vw, 33vw"
                   />
                   <div className="absolute top-4 right-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold shadow-md">
                     {achievement.year}
@@ -154,14 +155,14 @@ export function AchievementsSection() {
           {/* Navigation Buttons */}
           <button
             onClick={prevSlide}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white rounded-full p-3 shadow-lg hover:bg-green-600 hover:text-white transition-all duration-300 hover:scale-110 z-20 active:scale-95"
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white rounded-full p-3 shadow-lg hover:bg-green-600 hover:text-white transition-all duration-300 hover:scale-110 z-20 active:scale-95 min-w-[48px] min-h-[48px] flex items-center justify-center"
             aria-label="Previous achievement"
           >
             <ChevronLeft className="w-6 h-6" />
           </button>
           <button
             onClick={nextSlide}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white rounded-full p-3 shadow-lg hover:bg-green-600 hover:text-white transition-all duration-300 hover:scale-110 z-20 active:scale-95"
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white rounded-full p-3 shadow-lg hover:bg-green-600 hover:text-white transition-all duration-300 hover:scale-110 z-20 active:scale-95 min-w-[48px] min-h-[48px] flex items-center justify-center"
             aria-label="Next achievement"
           >
             <ChevronRight className="w-6 h-6" />

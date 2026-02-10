@@ -13,6 +13,9 @@ export const metadata: Metadata = {
     description: "Find answers to common questions about our organic waste converter machines, installation, operation, and maintenance.",
     type: 'website',
   },
+  alternates: {
+    canonical: 'https://www.solwearth.com/faq',
+  },
 }
 
 export default function FAQPage() {

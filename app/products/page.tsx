@@ -17,6 +17,9 @@ export const metadata: Metadata = {
     description: "Choose from 6 models of organic waste converters, from small 25KG units to industrial 1000KG capacity machines.",
     type: 'website',
   },
+  alternates: {
+    canonical: 'https://www.solwearth.com/products',
+  },
 }
 
 export default function AllProductsPage() {

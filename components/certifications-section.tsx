@@ -31,7 +31,7 @@ export function CertificationsSection() {
                   className="max-w-full max-h-full object-contain"
                 />
               </div>
-              <p className="text-xs text-gray-600 text-center mt-2">{cert.label}</p>
+              <p className="text-xs text-gray-700 text-center mt-2">{cert.label}</p>
             </div>
           ))}
         </div>

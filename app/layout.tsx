@@ -2,9 +2,14 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Open_Sans } from "next/font/google"
 import { Suspense } from "react"
-import { PopupLeadForm } from "@/components/popup-lead-form"
+import dynamic from "next/dynamic"
 import { GoogleAnalytics } from "@/components/google-analytics"
 import "./globals.css"
+
+const PopupLeadForm = dynamic(
+  () => import("@/components/popup-lead-form").then(mod => ({ default: mod.PopupLeadForm })),
+  { ssr: false }
+)
 
 const openSans = Open_Sans({
   subsets: ["latin"],
@@ -39,6 +44,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
+      <head>
+        {/* DNS prefetch and preconnect for critical third-party origins */}
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
+      </head>
       <body className={`${openSans.variable} font-sans antialiased`}>
         {/* Google Analytics */}
         {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (

@@ -20,6 +20,9 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://www.solwearth.com/why-choose-us",
   },
+  alternates: {
+    canonical: 'https://www.solwearth.com/why-choose-us',
+  },
 }
 
 export default function WhyChooseUsLayout({

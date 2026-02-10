@@ -14,6 +14,9 @@ export const metadata: Metadata = {
     description: "Discover how Solwearth Ecotech is revolutionizing waste management across India and the Middle East with innovative organic waste converters.",
     type: 'website',
   },
+  alternates: {
+    canonical: 'https://www.solwearth.com/about',
+  },
 }
 
 export default function AboutPage() {
