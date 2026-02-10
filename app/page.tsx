@@ -4,6 +4,13 @@ import { HeroSection } from "@/components/hero-section"
 import { AboutSection } from "@/components/about-section"
 import { ProductsSection } from "@/components/products-section"
 import { Footer } from "@/components/footer"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: 'https://www.solwearth.com',
+  },
+}
 
 // Dynamic imports for below-fold sections to reduce initial JS bundle
 const QuoteSection = dynamic(() => import("@/components/quote-section").then(mod => ({ default: mod.QuoteSection })), {
