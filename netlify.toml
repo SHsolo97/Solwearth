@@ -1,11 +1,11 @@
 [[redirects]]
-  from = "https://solwearth.com/*"
-  to = "https://www.solwearth.com/:splat"
+  from = "http://solwearth.com/*"
+  to = "https://solwearth.com/:splat"
   status = 301
   force = true
 
 [[redirects]]
-  from = "http://solwearth.com/*"
+  from = "http://www.solwearth.com/*"
   to = "https://www.solwearth.com/:splat"
   status = 301
   force = true
