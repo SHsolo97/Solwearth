@@ -1,6 +1,6 @@
 'use client'
 
-import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin } from "lucide-react"
+import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin, Twitter } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { ScrollToFormButton } from "@/components/scroll-to-form-button"
 import Link from "next/link"
@@ -176,6 +176,15 @@ export function Footer() {
                     aria-label="LinkedIn"
                   >
                     <Linkedin className="w-5 h-5" />
+                  </a>
+                  <a
+                    href="https://x.com/solwearth"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-green-600 transition-colors"
+                    aria-label="X (Twitter)"
+                  >
+                    <Twitter className="w-5 h-5" />
                   </a>
                 </div>
               </div>

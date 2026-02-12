@@ -16,13 +16,28 @@ export function PopupLeadForm() {
     const hasShownPopup = sessionStorage.getItem("leadFormPopupShown")
 
     if (!hasShownPopup) {
-      // Show popup after 3 seconds delay
-      const timer = setTimeout(() => {
-        setIsVisible(true)
-        sessionStorage.setItem("leadFormPopupShown", "true")
-      }, 3000)
+      // Use requestIdleCallback to avoid blocking main thread / hurting INP
+      const showPopup = () => {
+        const timer = setTimeout(() => {
+          setIsVisible(true)
+          sessionStorage.setItem("leadFormPopupShown", "true")
+        }, 3000)
+        return timer
+      }
 
-      return () => clearTimeout(timer)
+      let timer: ReturnType<typeof setTimeout>
+      if ('requestIdleCallback' in window) {
+        const idleId = requestIdleCallback(() => {
+          timer = showPopup()
+        })
+        return () => {
+          cancelIdleCallback(idleId)
+          clearTimeout(timer)
+        }
+      } else {
+        timer = showPopup()
+        return () => clearTimeout(timer)
+      }
     }
   }, [])
 

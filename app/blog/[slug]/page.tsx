@@ -54,7 +54,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       images: post.featuredImage?.node?.sourceUrl ? [post.featuredImage.node.sourceUrl] : [],
     },
     alternates: {
-      canonical: `/blog/${slug}`,
+      canonical: `https://www.solwearth.com/blog/${slug}`,
     }
   }
 }

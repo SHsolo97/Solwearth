@@ -39,11 +39,21 @@ export default function Home() {
       <HeroSection />
       <AboutSection />
       <ProductsSection />
-      <QuoteSection />
-      <AchievementsSection />
-      <CertificationsSection />
-      <LocationsSection />
-      <TechnologySection />
+      <div className="cv-auto">
+        <QuoteSection />
+      </div>
+      <div className="cv-auto">
+        <AchievementsSection />
+      </div>
+      <div className="cv-auto">
+        <CertificationsSection />
+      </div>
+      <div className="cv-auto">
+        <LocationsSection />
+      </div>
+      <div className="cv-auto">
+        <TechnologySection />
+      </div>
       <LeadFormSection />
       <Footer />
     </main>

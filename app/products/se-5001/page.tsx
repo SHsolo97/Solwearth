@@ -18,6 +18,9 @@ export const metadata: Metadata = {
     images: ['/images/machine/SE-5001-front-view.png'],
     type: 'website',
   },
+  alternates: {
+    canonical: 'https://www.solwearth.com/products/se-5001',
+  },
 }
 
 export default function SE5001Page() {

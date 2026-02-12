@@ -20,7 +20,7 @@ const openSans = Open_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.solwearth.com'),
   title: "Organic Waste Converter|Food Waste Management - Solwearth",
-  description: "Leading manufacturer of automatic organic waste converters in India. Convert food waste to compost in 24 hours. Capacities 25kg to 1000kg.",
+  description: "Leading organic waste converter manufacturer in India. Fully automatic OWC converts food waste to compost in 24 hours.",
   keywords: "organic waste converter, food waste converter, OWC machine, automatic waste converter, compost machine, waste management India",
   openGraph: {
     title: "Automatic Organic Waste Converter - Solwearth Ecotech",
@@ -49,6 +49,9 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
         <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
+        {/* Hreflang tags for search engines */}
+        <link rel="alternate" hrefLang="en" href="https://www.solwearth.com" />
+        <link rel="alternate" hrefLang="x-default" href="https://www.solwearth.com" />
       </head>
       <body className={`${openSans.variable} font-sans antialiased`}>
         {/* Google Analytics */}
@@ -84,7 +87,8 @@ export default function RootLayout({
               "sameAs": [
                 "https://www.facebook.com/Solwearth",
                 "https://www.instagram.com/solwearth_ecotech/",
-                "https://www.linkedin.com/company/solwearth-ecotech-pvt-ltd/"
+                "https://www.linkedin.com/company/solwearth-ecotech-pvt-ltd/",
+                "https://x.com/solwearth"
               ]
             })
           }}

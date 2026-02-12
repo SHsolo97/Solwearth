@@ -123,6 +123,54 @@
   }
 }
 
+/* ===== MOBILE FRIENDLINESS IMPROVEMENTS ===== */
+
+/* Ensure minimum readable font size on mobile */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  /* Ensure all tap targets meet 44x44px minimum */
+  a, button, [role="button"], input, select, textarea {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Inline links don't need min-height - only standalone ones */
+  p a, li a, span a {
+    min-height: auto;
+    min-width: auto;
+    padding-block: 4px;
+  }
+
+  /* Increase footer link tap areas on mobile */
+  footer li a {
+    display: inline-block;
+    padding-block: 6px;
+  }
+}
+
+/* ===== INP / PAGE SPEED OPTIMIZATIONS ===== */
+
+/* Content containment for below-fold sections */
+section {
+  contain: layout style;
+}
+
+/* Use content-visibility auto for below-fold heavy sections */
+.cv-auto {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 500px;
+}
+
+/* Optimize touch interactions */
+a, button, [role="button"] {
+  touch-action: manipulation;
+}
+
 /* Smooth Carousel Animations */
 @keyframes fadeInSlide {
   0% {
@@ -184,7 +232,7 @@
 
 /* Smooth transitions for interactive elements - only composited properties */
 button, a {
-  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, opacity 0.2s ease-in-out;
 }
 
 /* Animation utility classes */
