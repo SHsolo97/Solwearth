@@ -83,8 +83,27 @@ export default function SE5001Page() {
     },
     "offers": {
       "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "priceValidUntil": "2026-12-31",
       "availability": "https://schema.org/InStock",
-      "priceCurrency": "INR"
+      "hasMerchantReturnPolicy": {
+        "@type": "MerchantReturnPolicy",
+        "applicableCountry": "IN",
+        "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+      },
+      "shippingDetails": {
+        "@type": "OfferShippingDetails",
+        "shippingRate": {
+          "@type": "MonetaryAmount",
+          "value": 0,
+          "currency": "USD"
+        },
+        "shippingDestination": {
+          "@type": "DefinedRegion",
+          "addressCountry": "IN"
+        }
+      }
     },
     "additionalProperty": [
       {"@type": "PropertyValue", "name": "Capacity", "value": "400-500 KG"},

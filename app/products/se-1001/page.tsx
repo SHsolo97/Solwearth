@@ -81,6 +81,7 @@ export default function SE1001Page() {
             "@type": "Product",
             "name": "SE 1001 Organic Waste Converter",
             "description": "Automatic food waste converter with 75-100 KG daily capacity. Perfect for restaurants, hotels, and medium-scale commercial kitchens.",
+            "image": "https://www.solwearth.com/images/machine/small/se1001.png",
             "brand": {
               "@type": "Brand",
               "name": "Solwearth"
@@ -89,10 +90,28 @@ export default function SE1001Page() {
             "category": "Organic Waste Converter",
             "offers": {
               "@type": "Offer",
-              "price": "Contact for quote",
-              "priceCurrency": "INR",
+              "price": "0",
+              "priceCurrency": "USD",
+              "priceValidUntil": "2026-12-31",
               "availability": "https://schema.org/InStock",
               "url": "https://www.solwearth.com/products/se-1001",
+              "hasMerchantReturnPolicy": {
+                "@type": "MerchantReturnPolicy",
+                "applicableCountry": "IN",
+                "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+              },
+              "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "shippingRate": {
+                  "@type": "MonetaryAmount",
+                  "value": 0,
+                  "currency": "USD"
+                },
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "IN"
+                }
+              },
               "seller": {
                 "@type": "Organization",
                 "name": "Solwearth Ecotech Private Limited"
