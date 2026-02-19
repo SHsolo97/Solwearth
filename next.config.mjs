@@ -451,6 +451,19 @@ const nextConfig = {
         ],
       },
       {
+        // Cache RSC (React Server Component) payload responses
+        // These are generated when Next.js App Router does client-side navigation (?_rsc=...)
+        // Without this, crawlers executing JavaScript cause every page nav to hit the server function
+        source: '/(.*)',
+        has: [{ type: 'query', key: '_rsc' }],
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, s-maxage=31536000, stale-while-revalidate=86400',
+          },
+        ],
+      },
+      {
         // Cache static assets aggressively
         source: '/images/(.*)',
         headers: [

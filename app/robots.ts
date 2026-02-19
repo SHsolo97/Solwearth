@@ -6,6 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
       disallow: ['/api/'],
+      crawlDelay: 10,
     },
     sitemap: 'https://solwearth.com/sitemap.xml',
   }

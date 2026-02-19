@@ -1,3 +1,13 @@
+# Tell Netlify CDN to cache RSC payload requests (?_rsc=...) from Next.js App Router.
+# Without this, every client-side navigation request from crawlers/users hits the
+# server function instead of being served from CDN cache.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Netlify-specific CDN cache header (separate from browser Cache-Control)
+    # 'durable' stores in Netlify's persistent edge cache across deploys
+    Netlify-CDN-Cache-Control = "public, s-maxage=31536000, stale-while-revalidate=86400, durable"
+
 [[redirects]]
   from = "https://www.solwearth.com/*"
   to = "https://solwearth.com/:splat"
