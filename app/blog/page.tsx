@@ -8,6 +8,10 @@ import { ArrowRight, Tag } from "lucide-react"
 import Link from "next/link"
 import { Metadata } from "next"
 
+// Cache blog listing indefinitely - use /api/revalidate to refresh when new posts are published
+// On Netlify this uses On-Demand Builder (ODB) which caches after first render, not the server function
+export const revalidate = false
+
 export const metadata: Metadata = {
   title: "Waste Management Blog | Insights & News - Solwearth Ecotech",
   description: "Stay updated with the latest in organic waste management, sustainability tips, and Solwearth Ecotech news. Read our expert articles.",

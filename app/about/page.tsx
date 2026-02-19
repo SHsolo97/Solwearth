@@ -5,6 +5,9 @@ import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle, Target, Zap, Users, Globe, Award } from "lucide-react"
 import { Metadata } from "next"
 
+// About page is fully static - force pre-render at build time, serve from CDN
+export const dynamic = 'force-static'
+
 export const metadata: Metadata = {
   title: "About Solwearth Ecotech | Leading Organic Waste Converter Manufacturer in India",
   description: "Learn about Solwearth Ecotech, India's leading manufacturer of organic waste converters. ISO certified company specializing in sustainable food waste management solutions since 2010.",

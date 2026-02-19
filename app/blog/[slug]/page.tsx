@@ -14,7 +14,8 @@ interface BlogPostPageProps {
   }>
 }
 
-export const dynamicParams = false // Prevent dynamic rendering of unknown slugs (stops bots from invoking functions)
+export const dynamicParams = false // Prevent dynamic rendering of unknown slugs - 404 for unknown slugs, no function invocation
+export const revalidate = false // Cache indefinitely - use /api/revalidate to refresh when posts change
 
 // Generate static params for all blog posts at build time
 export async function generateStaticParams() {

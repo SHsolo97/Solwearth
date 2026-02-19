@@ -1,5 +1,8 @@
 import type { Metadata } from "next"
 
+// Why Choose Us page is fully static - force pre-render at build time, serve from CDN
+export const dynamic = 'force-static'
+
 export const metadata: Metadata = {
   title: "Why Choose Us | Solwearth - World-Class Organic Waste Converters",
   description: "Discover why Solwearth organic waste converters stand out globally. Unmatched speed (12-15 hours), 90% waste reduction, advanced technology, fully automatic operation, and comprehensive support. Made in India for the world.",

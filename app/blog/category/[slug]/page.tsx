@@ -14,7 +14,8 @@ interface CategoryPageProps {
   }>
 }
 
-export const dynamicParams = false // Prevent dynamic rendering of unknown categories
+export const dynamicParams = false // Prevent dynamic rendering of unknown categories - 404 for unknown slugs, no function invocation
+export const revalidate = false // Cache indefinitely - use /api/revalidate to refresh when categories change
 
 // Generate static params for all categories at build time
 export async function generateStaticParams() {

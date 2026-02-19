@@ -6,6 +6,9 @@ import { ProductsSection } from "@/components/products-section"
 import { Footer } from "@/components/footer"
 import type { Metadata } from "next"
 
+// Homepage is fully static - force pre-render at build time, serve from CDN
+export const dynamic = 'force-static'
+
 export const metadata: Metadata = {
   alternates: {
     canonical: 'https://www.solwearth.com',

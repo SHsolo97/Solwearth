@@ -4,6 +4,9 @@ import { LeadFormSection } from "@/components/lead-form-section"
 import { Footer } from "@/components/footer"
 import { FAQAccordion } from "@/components/faq-accordion"
 
+// FAQ page is fully static - force pre-render at build time, serve from CDN
+export const dynamic = 'force-static'
+
 export const metadata: Metadata = {
   title: "FAQ - Organic Waste Converter Questions & Answers | Solwearth Ecotech",
   description: "Get answers to frequently asked questions about organic waste converters, food waste management, installation, maintenance, and operation of OWC machines.",

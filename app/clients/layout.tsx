@@ -1,5 +1,8 @@
 import type { Metadata } from "next"
 
+// Clients page is fully static - force pre-render at build time, serve from CDN
+export const dynamic = 'force-static'
+
 export const metadata: Metadata = {
   title: "Our Clients - Hotels, Corporates & Institutions | Solwearth Ecotech",
   description: "500+ satisfied clients trust Solwearth organic waste converters. From luxury hotels like Taj & Marriott to corporates like IKEA & Adani. Serving India & Middle East.",

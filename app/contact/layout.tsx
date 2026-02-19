@@ -1,5 +1,8 @@
 import type { Metadata } from "next"
 
+// Contact page is fully static - force pre-render at build time, serve from CDN
+export const dynamic = 'force-static'
+
 export const metadata: Metadata = {
   title: "Contact Solwearth Ecotech | Get Quote for Organic Waste Converters",
   description: "Contact Solwearth Ecotech for organic waste converter inquiries. Get expert advice, pricing, and support. Call +91-98950-44004 or email info@solwearth.com",
