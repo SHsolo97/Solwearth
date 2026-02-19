@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next'
 import { getAllPostSlugs, getAllCategories } from '@/lib/wordpress'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = 'https://www.solwearth.com'
+  const baseUrl = 'https://solwearth.com'
   
   // Fetch all blog posts
   const blogPosts = await getAllPostSlugs()

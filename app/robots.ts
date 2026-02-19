@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/'],
     },
-    sitemap: 'https://www.solwearth.com/sitemap.xml',
+    sitemap: 'https://solwearth.com/sitemap.xml',
   }
 }

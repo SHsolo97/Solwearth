@@ -18,7 +18,7 @@ const openSans = Open_Sans({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.solwearth.com'),
+  metadataBase: new URL('https://solwearth.com'),
   title: "Organic Waste Converter|Food Waste Management - Solwearth",
   description: "Leading organic waste converter manufacturer in India. Fully automatic OWC converts food waste to compost in 24 hours.",
   keywords: "organic waste converter, food waste converter, OWC machine, automatic waste converter, compost machine, waste management India",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     title: "Automatic Organic Waste Converter - Solwearth Ecotech",
     description: "Transform food waste into compost with our fully automatic organic waste converters. Available across India and Middle East.",
     images: ['/images/machine/automatic-waste-convertor-hero.png'],
-    url: 'https://www.solwearth.com',
+    url: 'https://solwearth.com',
     siteName: 'Solwearth Ecotech',
     type: 'website',
   },
