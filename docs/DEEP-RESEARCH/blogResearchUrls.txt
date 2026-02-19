@@ -1,0 +1,21 @@
+blog1: https://docs.google.com/document/d/1s7N42pcExfq_HF5krhKyC65yH7_XTZhuNETq5Rh1Qb0/edit?usp=sharing
+blog2: https://docs.google.com/document/d/1wCwXEJGWqbCsh6gOk_93R5HaoSmivyrXRHRBcWw7pdM/edit?usp=sharing
+blog3: https://docs.google.com/document/d/1IHTEIRnXNJdvkl3WLGRO750sRvryPkIBoXMXlnvCMWY/edit?usp=sharing
+blog4: https://docs.google.com/document/d/19B2uYnFkmPp-ol_mLeWt93m6lOI6uZZz0pBz7tF_YQA/edit?usp=sharing
+blog5: https://docs.google.com/document/d/1Ruzsv5vnHEyEtLkMa5mHVrcuZqmCrEy36By4VwVTydg/edit?usp=sharing
+blog6: https://docs.google.com/document/d/12ED2aUFxgcsg3IL7e0P3-izorJhaCnaarArPyc9qe7c/edit?usp=sharing
+blog7: https://docs.google.com/document/d/1a6MkSVrpymB2gbHC8DtZaeGMapvrjjQFIQXMbNwdNXU/edit?usp=sharing
+blog8: https://docs.google.com/document/d/1KWvF3tYBEjh1TWoZWRVEDjbuAeuxkLm0NyNMHgAFgTQ/edit?usp=sharing
+blog9: https://docs.google.com/document/d/13d6z3kssKqbYVz1nGsYvmbE8jsl3AXrR88AcfMuhCfo/edit?usp=sharing
+blog10: https://docs.google.com/document/d/1C0yM-HWp_tF_YHhljtAi5kNhbUqofFWy8OF96TmGzRc/edit?usp=sharing
+blog11: https://docs.google.com/document/d/1Je3oE5FtjMsfS13Cknatn45QB0X4UTeY0lW8zARp5_M/edit?usp=sharing
+blog12: https://docs.google.com/document/d/1c916Gc0Lr1164AmLr5k9u-CjUrAfWg5km3w9_LQeDvQ/edit?usp=sharing
+blog13: https://docs.google.com/document/d/1oD3iKxnPodBY9zbmyeSy0qG_iid1ORZTg5Qztjb0ucQ/edit?usp=sharing
+blog14: https://docs.google.com/document/d/1CRWhrCFHdXOHcdjyPfcA-dkXvPi8ob702vsVKfG-UAs/edit?usp=sharing
+blog15: https://docs.google.com/document/d/1y1xXx8i_aT_1aZpmte22nMqM_wCZdp3npnhf-Cib8pg/edit?usp=sharing
+blog16: https://docs.google.com/document/d/1ePNh7Zwh3wlZH5Cma3pGE2LG_KZwbU374wbQXI4HEho/edit?usp=sharing
+blog17: https://docs.google.com/document/d/1B2h3WGZSOlzjjGw_vb_XPTmVWuRDq_3sm7JtvZSuro0/edit?usp=sharing
+blog18: https://docs.google.com/document/d/1loFRODRBJx3dxH_n3k2Ke-ZuPC9gJX0V9bXnHf_MyQg/edit?usp=sharing
+blog19: https://docs.google.com/document/d/1O8Omh4qC91a-DBQMeobEE5H62o5Pcl03b_kr-EYklO0/edit?usp=sharing
+blog20: https://docs.google.com/document/d/1EX9LLAawbjR4YuXxmoVMbBpX_9ajHwO5XkiqurUuSx0/edit?usp=sharing
+

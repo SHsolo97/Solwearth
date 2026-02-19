@@ -14,17 +14,14 @@ interface BlogPostPageProps {
   }>
 }
 
+export const dynamicParams = false // Prevent dynamic rendering of unknown slugs (stops bots from invoking functions)
+
 // Generate static params for all blog posts at build time
 export async function generateStaticParams() {
-  try {
-    const posts = await getAllPostSlugs()
-    return posts.map((post: { slug: string }) => ({
-      slug: post.slug,
-    }))
-  } catch (error) {
-    console.error("Error generating static params:", error)
-    return []
-  }
+  const posts = await getAllPostSlugs()
+  return posts.map((post: { slug: string }) => ({
+    slug: post.slug,
+  }))
 }
 
 export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {

@@ -14,19 +14,16 @@ interface CategoryPageProps {
   }>
 }
 
+export const dynamicParams = false // Prevent dynamic rendering of unknown categories
+
 // Generate static params for all categories at build time
 export async function generateStaticParams() {
-  try {
-    const categories = await getAllCategories()
-    return categories
-      .filter((cat: { count: number; slug: string }) => cat.count > 0 && cat.slug !== 'uncategorized')
-      .map((category: { slug: string }) => ({
-        slug: category.slug,
-      }))
-  } catch (error) {
-    console.error("Error generating category static params:", error)
-    return []
-  }
+  const categories = await getAllCategories()
+  return categories
+    .filter((cat: { count: number; slug: string }) => cat.count > 0 && cat.slug !== 'uncategorized')
+    .map((category: { slug: string }) => ({
+      slug: category.slug,
+    }))
 }
 
 // Generate metadata for SEO
