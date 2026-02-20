@@ -1,4 +1,4 @@
-import dynamic from "next/dynamic"
+import dynamicImport from "next/dynamic"
 import { Header } from "@/components/header"
 import { HeroSection } from "@/components/hero-section"
 import { AboutSection } from "@/components/about-section"
@@ -16,22 +16,22 @@ export const metadata: Metadata = {
 }
 
 // Dynamic imports for below-fold sections to reduce initial JS bundle
-const QuoteSection = dynamic(() => import("@/components/quote-section").then(mod => ({ default: mod.QuoteSection })), {
+const QuoteSection = dynamicImport(() => import("@/components/quote-section").then(mod => ({ default: mod.QuoteSection })), {
   loading: () => <div className="bg-[#3E5F6F] py-8" />,
 })
-const AchievementsSection = dynamic(() => import("@/components/achievements-section").then(mod => ({ default: mod.AchievementsSection })), {
+const AchievementsSection = dynamicImport(() => import("@/components/achievements-section").then(mod => ({ default: mod.AchievementsSection })), {
   loading: () => <div className="py-16 md:py-24" />,
 })
-const CertificationsSection = dynamic(() => import("@/components/certifications-section").then(mod => ({ default: mod.CertificationsSection })), {
+const CertificationsSection = dynamicImport(() => import("@/components/certifications-section").then(mod => ({ default: mod.CertificationsSection })), {
   loading: () => <div className="py-16" />,
 })
-const LocationsSection = dynamic(() => import("@/components/locations-section").then(mod => ({ default: mod.LocationsSection })), {
+const LocationsSection = dynamicImport(() => import("@/components/locations-section").then(mod => ({ default: mod.LocationsSection })), {
   loading: () => <div className="py-16 md:py-24 bg-[#3E5F6F]" />,
 })
-const TechnologySection = dynamic(() => import("@/components/technology-section").then(mod => ({ default: mod.TechnologySection })), {
+const TechnologySection = dynamicImport(() => import("@/components/technology-section").then(mod => ({ default: mod.TechnologySection })), {
   loading: () => <div className="py-16 md:py-24" />,
 })
-const LeadFormSection = dynamic(() => import("@/components/lead-form-section").then(mod => ({ default: mod.LeadFormSection })), {
+const LeadFormSection = dynamicImport(() => import("@/components/lead-form-section").then(mod => ({ default: mod.LeadFormSection })), {
   loading: () => <div className="py-16 md:py-20" />,
 })
 
