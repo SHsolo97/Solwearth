@@ -69,51 +69,28 @@ export function PopupLeadForm() {
     const API_ENDPOINT =
       "https://script.google.com/macros/s/AKfycbw86Fntt9_m9lE8H7Wb_vfdtIf3BpLq1PaBKzor-h8nvCigtwkS_pi7Mz5EpOUIZZCQ/exec"
 
-    try {
-      const response = await fetch(API_ENDPOINT, {
-        method: "POST",
-        // Google Apps Script requires redirect: 'follow' and plain text Content-Type
-        redirect: "follow",
-        headers: {
-          "Content-Type": "text/plain;charset=utf-8",
-        },
-        body: JSON.stringify(data),
-      })
+    // Fire-and-forget: Google Apps Script records the lead regardless of redirect/CORS response
+    fetch(API_ENDPOINT, {
+      method: "POST",
+      redirect: "follow",
+      headers: {
+        "Content-Type": "text/plain;charset=utf-8",
+      },
+      body: JSON.stringify(data),
+    }).catch(() => {/* intentionally ignored */})
 
-      const text = await response.text()
-      let result: { status?: string; message?: string } = {}
-      try {
-        result = JSON.parse(text)
-      } catch {
-        // Google Apps Script may return non-JSON after redirect; treat as success
-        result = { status: "success" }
-      }
+    // Show success immediately without waiting for response
+    setStatusMessage(
+      "Thank you! Your request has been sent successfully. We'll contact you soon."
+    )
+    setMessageType("success")
+    ;(e.target as HTMLFormElement).reset()
+    setIsSubmitting(false)
 
-      if (result.status === "success") {
-        setStatusMessage(
-          "Thank you! Your request has been sent successfully. We'll contact you soon."
-        )
-        setMessageType("success")
-        ;(e.target as HTMLFormElement).reset()
-
-        // Close popup after 2 seconds on success
-        setTimeout(() => {
-          closePopup()
-        }, 2000)
-      } else {
-        // Handle errors returned by the script (e.g., validation)
-        setStatusMessage(
-          result.message || "An error occurred. Please try again later."
-        )
-        setMessageType("error")
-      }
-    } catch (error) {
-      console.error("Submission failed:", error)
-      setStatusMessage("An unexpected error occurred. Please try again.")
-      setMessageType("error")
-    } finally {
-      setIsSubmitting(false)
-    }
+    // Close popup after 2 seconds on success
+    setTimeout(() => {
+      closePopup()
+    }, 2000)
   }
 
   if (!isVisible) return null
