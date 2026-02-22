@@ -3,7 +3,7 @@ import { LeadFormSection } from "@/components/lead-form-section"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { CheckCircle, Package, Zap, Settings, Shield, Leaf } from "lucide-react"
+import { CheckCircle, Package, Zap, Settings, Shield, Leaf, Quote, Mountain } from "lucide-react"
 import { ScrollToFormButton } from "@/components/scroll-to-form-button"
 import Link from "next/link"
 import { Metadata } from "next"
@@ -115,7 +115,21 @@ export default function SE2001Page() {
       {"@type": "PropertyValue", "name": "Material", "value": "Stainless Steel"},
       {"@type": "PropertyValue", "name": "Warranty", "value": "1 year"}
     ],
-    "category": "Waste Management Equipment"
+    "category": "Waste Management Equipment",
+    "review": [
+      {
+        "@type": "Review",
+        "author": { "@type": "Organization", "name": "Fragrant Nature Hotels and Resorts" },
+        "reviewBody": "The Solwearth team was professional and courteous throughout the installation. The SE-2001 handles our daily waste effortlessly — we recommend Solwearth as a superior solution to anything else available in the market.",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
+      }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "1",
+      "bestRating": "5"
+    }
   }
 
   const breadcrumbSchema = {
@@ -267,6 +281,62 @@ export default function SE2001Page() {
                 ))}
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Case Study Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-4">
+              Proven in Demanding Environments
+            </h2>
+            <p className="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+              The SE-2001 delivers consistent, odour-free waste processing even in the most challenging operating conditions.
+            </p>
+
+            <Card className="bg-gradient-to-br from-gray-50 to-white border border-gray-100 overflow-hidden">
+              <CardContent className="p-0">
+                <div className="bg-green-600 px-8 py-4 flex items-center gap-3">
+                  <Mountain className="w-6 h-6 text-white" />
+                  <div>
+                    <h3 className="text-xl font-bold text-white">Fragrant Nature Hotels & Resorts, Munnar</h3>
+                    <p className="text-green-100 text-sm">Hill Station Luxury Resort</p>
+                  </div>
+                </div>
+                <div className="p-8">
+                  <div className="grid md:grid-cols-3 gap-6 mb-8">
+                    <div className="bg-gray-50 rounded-lg p-4">
+                      <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Challenge</p>
+                      <p className="text-sm text-gray-700 leading-relaxed">
+                        Hilltop resort with only 50 sq. ft. of available space, cold mountain temperatures, and 250 kg of daily food waste requiring odour-free processing.
+                      </p>
+                    </div>
+                    <div className="bg-gray-50 rounded-lg p-4">
+                      <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Solution</p>
+                      <p className="text-sm text-gray-700 leading-relaxed">
+                        SE-2001 was disassembled and reassembled on-site to overcome transport constraints. The system operates independently of ambient temperature, requiring no waste segregation.
+                      </p>
+                    </div>
+                    <div className="bg-gray-50 rounded-lg p-4">
+                      <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Result</p>
+                      <p className="text-sm text-gray-700 leading-relaxed">
+                        Complete processing in 12–15 hours with zero odour. Output converted into nutrient-rich soil supplement for the resort&apos;s landscaping.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="border-t border-gray-100 pt-6">
+                    <Quote className="w-6 h-6 text-green-400 mb-3" />
+                    <blockquote className="text-gray-700 italic leading-relaxed text-lg mb-3">
+                      &ldquo;The Solwearth team was professional and courteous throughout the installation. The SE-2001 handles our daily waste effortlessly — we recommend Solwearth as a superior solution to anything else available in the market.&rdquo;
+                    </blockquote>
+                    <p className="text-sm font-semibold text-gray-900">Fragrant Nature Hotels and Resorts</p>
+                    <p className="text-sm text-green-600">Munnar, Kerala</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
