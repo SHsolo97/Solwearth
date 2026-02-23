@@ -16,10 +16,10 @@ export const metadata: Metadata = {
     title: "SE 1001 - 75-100 KG Organic Waste Converter",
     description: "Compact automatic waste converter for medium-scale operations. Convert food waste to compost in 24 hours.",
     images: ['/images/machine/small/se1001.png'],
-    url: 'https://www.solwearth.com/products/se-1001',
+    url: 'https://solwearth.com/products/se-1001',
   },
   alternates: {
-    canonical: "https://www.solwearth.com/products/se-1001"
+    canonical: "https://solwearth.com/products/se-1001"
   }
 }
 
@@ -81,7 +81,7 @@ export default function SE1001Page() {
             "@type": "Product",
             "name": "SE 1001 Organic Waste Converter",
             "description": "Automatic food waste converter with 75-100 KG daily capacity. Perfect for restaurants, hotels, and medium-scale commercial kitchens.",
-            "image": "https://www.solwearth.com/images/machine/small/se1001.png",
+            "image": "https://solwearth.com/images/machine/small/se1001.png",
             "brand": {
               "@type": "Brand",
               "name": "Solwearth"
@@ -94,7 +94,7 @@ export default function SE1001Page() {
               "priceCurrency": "USD",
               "priceValidUntil": "2026-12-31",
               "availability": "https://schema.org/InStock",
-              "url": "https://www.solwearth.com/products/se-1001",
+              "url": "https://solwearth.com/products/se-1001",
               "hasMerchantReturnPolicy": {
                 "@type": "MerchantReturnPolicy",
                 "applicableCountry": "IN",
@@ -154,19 +154,19 @@ export default function SE1001Page() {
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Home",
-                "item": "https://www.solwearth.com"
+                "item": "https://solwearth.com"
               },
               {
                 "@type": "ListItem",
                 "position": 2,
                 "name": "Products",
-                "item": "https://www.solwearth.com/products"
+                "item": "https://solwearth.com/products"
               },
               {
                 "@type": "ListItem",
                 "position": 3,
                 "name": "SE 1001",
-                "item": "https://www.solwearth.com/products/se-1001"
+                "item": "https://solwearth.com/products/se-1001"
               }
             ]
           })

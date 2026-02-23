@@ -52,7 +52,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       images: post.featuredImage?.node?.sourceUrl ? [post.featuredImage.node.sourceUrl] : [],
     },
     alternates: {
-      canonical: `https://www.solwearth.com/blog/${slug}`,
+      canonical: `https://solwearth.com/blog/${slug}`,
     }
   }
 }
@@ -109,18 +109,18 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             "@context": "https://schema.org",
             "@type": "BlogPosting",
             "headline": post.title,
-            "image": post.featuredImage?.node?.sourceUrl || "https://www.solwearth.com/images/logo/solwearth-ecotech.png",
+            "image": post.featuredImage?.node?.sourceUrl || "https://solwearth.com/images/logo/solwearth-ecotech.png",
             "author": {
               "@type": "Person",
               "name": post.author?.node?.name || "Solwearth Team",
-              "url": "https://www.solwearth.com/about"
+              "url": "https://solwearth.com/about"
             },
             "publisher": {
               "@type": "Organization",
               "name": "Solwearth Ecotech Private Limited",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://www.solwearth.com/images/logo/solwearth-ecotech.png"
+                "url": "https://solwearth.com/images/logo/solwearth-ecotech.png"
               }
             },
             "datePublished": post.date,
@@ -128,7 +128,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             "description": post.excerpt?.replace(/<[^>]*>/g, '').slice(0, 160) || `Read ${post.title} on Solwearth Blog`,
             "mainEntityOf Page": {
               "@type": "WebPage",
-              "@id": `https://www.solwearth.com/blog/${slug}`
+              "@id": `https://solwearth.com/blog/${slug}`
             },
             "articleSection": post.categories?.nodes?.[0]?.name || "Waste Management",
             "keywords": post.categories?.nodes?.map((cat: any) => cat.name).join(", ") || "organic waste management",

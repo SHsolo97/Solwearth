@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   alternates: {
-    canonical: 'https://www.solwearth.com/faq',
+    canonical: 'https://solwearth.com/faq',
   },
 }
 

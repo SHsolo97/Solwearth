@@ -50,8 +50,8 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
         <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
         {/* Hreflang tags for search engines */}
-        <link rel="alternate" hrefLang="en" href="https://www.solwearth.com" />
-        <link rel="alternate" hrefLang="x-default" href="https://www.solwearth.com" />
+        <link rel="alternate" hrefLang="en" href="https://solwearth.com" />
+        <link rel="alternate" hrefLang="x-default" href="https://solwearth.com" />
       </head>
       <body className={`${openSans.variable} font-sans antialiased`}>
         {/* Google Analytics */}
@@ -66,8 +66,8 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Organization",
               "name": "Solwearth Ecotech Private Limited",
-              "url": "https://www.solwearth.com",
-              "logo": "https://www.solwearth.com/images/logo/solwearth-ecotech.png",
+              "url": "https://solwearth.com",
+              "logo": "https://solwearth.com/images/logo/solwearth-ecotech.png",
               "description": "Leading manufacturer of organic waste converters and food waste management solutions",
               "address": {
                 "@type": "PostalAddress",

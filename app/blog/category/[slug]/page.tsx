@@ -42,10 +42,10 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
       title: `${categoryName} Articles | Solwearth Blog`,
       description: `Explore our collection of articles about ${categoryName}. Expert insights on waste management and sustainability.`,
       type: 'website',
-      url: `https://www.solwearth.com/blog/category/${slug}`,
+      url: `https://solwearth.com/blog/category/${slug}`,
     },
     alternates: {
-      canonical: `https://www.solwearth.com/blog/category/${slug}`,
+      canonical: `https://solwearth.com/blog/category/${slug}`,
     },
   }
 }

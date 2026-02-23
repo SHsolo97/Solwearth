@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   alternates: {
-    canonical: "https://www.solwearth.com/locations/india/goa"
+    canonical: "https://solwearth.com/locations/india/goa"
   }
 }
 

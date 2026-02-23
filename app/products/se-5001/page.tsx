@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   alternates: {
-    canonical: 'https://www.solwearth.com/products/se-5001',
+    canonical: 'https://solwearth.com/products/se-5001',
   },
 }
 
@@ -75,7 +75,7 @@ export default function SE5001Page() {
     "@type": "Product",
     "name": "SE 5001 Organic Waste Converter",
     "description": "Heavy duty fully automatic organic waste converter for industrial food waste management. Processes 400-500 KG daily with robust PLC control system.",
-    "image": "https://www.solwearth.com/images/machine/SE-5001-front-view.png",
+    "image": "https://solwearth.com/images/machine/SE-5001-front-view.png",
     "brand": {
       "@type": "Brand",
       "name": "Solwearth Ecotech"
@@ -126,19 +126,19 @@ export default function SE5001Page() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://www.solwearth.com/"
+        "item": "https://solwearth.com/"
       },
       {
         "@type": "ListItem", 
         "position": 2,
         "name": "Products",
-        "item": "https://www.solwearth.com/#products"
+        "item": "https://solwearth.com/#products"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "SE 5001",
-        "item": "https://www.solwearth.com/products/se-5001"
+        "item": "https://solwearth.com/products/se-5001"
       }
     ]
   }

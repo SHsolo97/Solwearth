@@ -18,11 +18,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Solwearth Ecotech Blog - Waste Management Insights",
     description: "Expert articles on food waste recycling, composting technology, and sustainable business practices.",
-    url: 'https://www.solwearth.com/blog',
+    url: 'https://solwearth.com/blog',
     type: 'website',
   },
   alternates: {
-    canonical: 'https://www.solwearth.com/blog',
+    canonical: 'https://solwearth.com/blog',
   },
 }
 

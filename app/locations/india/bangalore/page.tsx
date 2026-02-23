@@ -8,10 +8,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Organic Waste Converter Machine in Bangalore - Solwearth Ecotech",
     description: "Leading supplier of organic waste converter machines in Bangalore. Eco-friendly thermal dehydration technology. Serving 100+ clients across Karnataka including IT parks, hotels, and residential communities.",
-    url: 'https://www.solwearth.com/locations/india/bangalore',
+    url: 'https://solwearth.com/locations/india/bangalore',
   },
   alternates: {
-    canonical: "https://www.solwearth.com/locations/india/bangalore"
+    canonical: "https://solwearth.com/locations/india/bangalore"
   }
 }
 

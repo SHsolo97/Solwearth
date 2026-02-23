@@ -21,10 +21,10 @@ export const metadata: Metadata = {
     title: "Why Choose Solwearth - World-Class Organic Waste Management",
     description: "12-15 hour processing, 90% waste reduction, zero chemicals, fully automatic. Discover the Solwearth advantage.",
     type: "website",
-    url: "https://www.solwearth.com/why-choose-us",
+    url: "https://solwearth.com/why-choose-us",
   },
   alternates: {
-    canonical: 'https://www.solwearth.com/why-choose-us',
+    canonical: 'https://solwearth.com/why-choose-us',
   },
 }
 

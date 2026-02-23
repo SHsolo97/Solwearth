@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   alternates: {
-    canonical: 'https://www.solwearth.com/products/se-2001',
+    canonical: 'https://solwearth.com/products/se-2001',
   },
 }
 
@@ -75,7 +75,7 @@ export default function SE2001Page() {
     "@type": "Product",
     "name": "SE 2001 Organic Waste Converter",
     "description": "Medium capacity fully automatic organic waste converter for commercial food waste management. Processes 150-200 KG daily with advanced PLC control.",
-    "image": "https://www.solwearth.com/images/machine/SE-2001-front-view.png",
+    "image": "https://solwearth.com/images/machine/SE-2001-front-view.png",
     "brand": {
       "@type": "Brand",
       "name": "Solwearth Ecotech"
@@ -126,19 +126,19 @@ export default function SE2001Page() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://www.solwearth.com/"
+        "item": "https://solwearth.com/"
       },
       {
         "@type": "ListItem", 
         "position": 2,
         "name": "Products",
-        "item": "https://www.solwearth.com/#products"
+        "item": "https://solwearth.com/#products"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "SE 2001",
-        "item": "https://www.solwearth.com/products/se-2001"
+        "item": "https://solwearth.com/products/se-2001"
       }
     ]
   }

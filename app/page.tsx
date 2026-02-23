@@ -11,7 +11,7 @@ export const dynamic = 'force-static'
 
 export const metadata: Metadata = {
   alternates: {
-    canonical: 'https://www.solwearth.com',
+    canonical: 'https://solwearth.com',
   },
 }
 
