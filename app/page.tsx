@@ -22,6 +22,9 @@ const QuoteSection = dynamicImport(() => import("@/components/quote-section").th
 const AchievementsSection = dynamicImport(() => import("@/components/achievements-section").then(mod => ({ default: mod.AchievementsSection })), {
   loading: () => <div className="py-16 md:py-24" />,
 })
+const TestimonialsSection = dynamicImport(() => import("@/components/testimonials-section").then(mod => ({ default: mod.TestimonialsSection })), {
+  loading: () => <div className="py-16" />,
+})
 const CertificationsSection = dynamicImport(() => import("@/components/certifications-section").then(mod => ({ default: mod.CertificationsSection })), {
   loading: () => <div className="py-16" />,
 })
@@ -47,6 +50,9 @@ export default function Home() {
       </div>
       <div className="cv-auto">
         <AchievementsSection />
+      </div>
+      <div className="cv-auto">
+        <TestimonialsSection />
       </div>
       <div className="cv-auto">
         <CertificationsSection />

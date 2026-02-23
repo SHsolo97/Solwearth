@@ -2,7 +2,7 @@ import { Header } from "@/components/header"
 import { LeadFormSection } from "@/components/lead-form-section"
 import { Footer } from "@/components/footer"
 import { ClientsSection } from "@/components/clients-section"
-import { CheckCircle2, Award, TrendingUp, Shield } from "lucide-react"
+import { CheckCircle2, Award, TrendingUp, Shield, Quote } from "lucide-react"
 
 export default function ClientsPage() {
   const trustFactors = [
@@ -90,6 +90,66 @@ export default function ClientsPage() {
 
       {/* Client Logos Section */}
       <ClientsSection />
+
+      {/* Client Testimonials */}
+      <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Hear directly from organisations that have transformed their waste management with Solwearth solutions.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {[
+              {
+                name: "Gokulam Medical Center",
+                type: "Healthcare",
+                quote: "We relocated the machine to our terrace and cleared out valuable floor space we could put to better use. Go for Solwearth — it is the most practical solution available.",
+                product: "SE-501"
+              },
+              {
+                name: "K R Bakes",
+                type: "Restaurant Chain",
+                quote: "Food waste management has turned into a completely hassle-free experience. The odour-free operation is critical for our customer-facing environment.",
+                product: "SE-501"
+              },
+              {
+                name: "Asset Builders",
+                type: "Residential Complex",
+                quote: "Our residents had been complaining about the foul smell from our old composting system. The Solwearth machine proved to be the most economical and effective alternative.",
+                product: "SE-501"
+              },
+              {
+                name: "Fragrant Nature Hotels & Resorts",
+                type: "Hospitality — Munnar, Kerala",
+                quote: "The Solwearth team was professional and courteous throughout the installation. We recommend Solwearth as a superior solution to anything else available in the market.",
+                product: "SE-2001"
+              }
+            ].map((testimonial, index) => (
+              <div
+                key={index}
+                className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:border-green-200"
+              >
+                <Quote className="w-8 h-8 text-green-200 mb-4" />
+                <p className="text-gray-700 leading-relaxed mb-6 italic">
+                  &ldquo;{testimonial.quote}&rdquo;
+                </p>
+                <div className="flex items-center justify-between border-t border-gray-100 pt-4">
+                  <div>
+                    <p className="font-bold text-gray-900">{testimonial.name}</p>
+                    <p className="text-sm text-gray-500">{testimonial.type}</p>
+                  </div>
+                  <span className="text-xs font-semibold text-green-600 bg-green-50 px-3 py-1 rounded-full">
+                    {testimonial.product}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Industries We Serve */}
       <section className="py-20 bg-white">

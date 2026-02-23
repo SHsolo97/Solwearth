@@ -3,7 +3,7 @@ import { LeadFormSection } from "@/components/lead-form-section"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { CheckCircle, Package, Zap, Settings, Shield, Leaf } from "lucide-react"
+import { CheckCircle, Package, Zap, Settings, Shield, Leaf, Quote, Building2, UtensilsCrossed, Home } from "lucide-react"
 import { ScrollToFormButton } from "@/components/scroll-to-form-button"
 import Link from "next/link"
 import { Metadata } from "next"
@@ -115,7 +115,33 @@ export default function SE501Page() {
       {"@type": "PropertyValue", "name": "Material", "value": "Stainless Steel"},
       {"@type": "PropertyValue", "name": "Warranty", "value": "1 year"}
     ],
-    "category": "Waste Management Equipment"
+    "category": "Waste Management Equipment",
+    "review": [
+      {
+        "@type": "Review",
+        "author": { "@type": "Organization", "name": "Gokulam Medical Center" },
+        "reviewBody": "We relocated the machine to our terrace and cleared out valuable floor space. Go for Solwearth.",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
+      },
+      {
+        "@type": "Review",
+        "author": { "@type": "Organization", "name": "K R Bakes" },
+        "reviewBody": "Food waste management has turned into a hassle-free experience with Solwearth.",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
+      },
+      {
+        "@type": "Review",
+        "author": { "@type": "Organization", "name": "Asset Builders" },
+        "reviewBody": "The SE-501 proved to be the most economical and effective alternative for our residential complex.",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
+      }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "3",
+      "bestRating": "5"
+    }
   }
 
   const breadcrumbSchema = {
@@ -267,6 +293,102 @@ export default function SE501Page() {
                   </div>
                 ))}
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Case Studies Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-4">
+              Proven Results with the SE-501
+            </h2>
+            <p className="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+              Trusted by hospitals, restaurants, and residential complexes across India for reliable, odour-free organic waste processing.
+            </p>
+            <div className="grid md:grid-cols-3 gap-8">
+              {/* Gokulam Medical Center */}
+              <Card className="bg-gradient-to-br from-gray-50 to-white border border-gray-100 hover:shadow-lg transition-shadow">
+                <CardContent className="p-6">
+                  <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center text-green-600 mb-4">
+                    <Building2 className="w-6 h-6" />
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-1">Gokulam Medical Center</h3>
+                  <p className="text-sm text-green-600 font-medium mb-4">Hospital Canteen</p>
+                  <div className="space-y-3 mb-6">
+                    <div>
+                      <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Challenge</p>
+                      <p className="text-sm text-gray-600">Limited floor space, persistent odour from existing biogas plant, and complex waste segregation requirements.</p>
+                    </div>
+                    <div>
+                      <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Solution</p>
+                      <p className="text-sm text-gray-600">SE-501 installed in just 1 m² of space with 12-hour processing cycles and zero segregation required.</p>
+                    </div>
+                  </div>
+                  <div className="border-t border-gray-100 pt-4">
+                    <Quote className="w-5 h-5 text-green-400 mb-2" />
+                    <p className="text-sm text-gray-700 italic leading-relaxed">
+                      &ldquo;We relocated the machine to our terrace and cleared out valuable floor space. Go for Solwearth.&rdquo;
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* K R Bakes */}
+              <Card className="bg-gradient-to-br from-gray-50 to-white border border-gray-100 hover:shadow-lg transition-shadow">
+                <CardContent className="p-6">
+                  <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center text-green-600 mb-4">
+                    <UtensilsCrossed className="w-6 h-6" />
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-1">K R Bakes</h3>
+                  <p className="text-sm text-green-600 font-medium mb-4">Restaurant Chain</p>
+                  <div className="space-y-3 mb-6">
+                    <div>
+                      <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Challenge</p>
+                      <p className="text-sm text-gray-600">Extremely limited space in a customer-facing environment with strict odour control requirements.</p>
+                    </div>
+                    <div>
+                      <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Result</p>
+                      <p className="text-sm text-gray-600">Completely odour-free operation within a compact footprint, seamlessly integrated into daily workflow.</p>
+                    </div>
+                  </div>
+                  <div className="border-t border-gray-100 pt-4">
+                    <Quote className="w-5 h-5 text-green-400 mb-2" />
+                    <p className="text-sm text-gray-700 italic leading-relaxed">
+                      &ldquo;Food waste management has turned into a hassle-free experience with Solwearth.&rdquo;
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Asset Builders */}
+              <Card className="bg-gradient-to-br from-gray-50 to-white border border-gray-100 hover:shadow-lg transition-shadow">
+                <CardContent className="p-6">
+                  <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center text-green-600 mb-4">
+                    <Home className="w-6 h-6" />
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-1">Asset Builders</h3>
+                  <p className="text-sm text-green-600 font-medium mb-4">Residential Apartment Complex</p>
+                  <div className="space-y-3 mb-6">
+                    <div>
+                      <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Challenge</p>
+                      <p className="text-sm text-gray-600">Previous bacteria-based composting system failed repeatedly, causing persistent foul odour and resident complaints.</p>
+                    </div>
+                    <div>
+                      <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Result</p>
+                      <p className="text-sm text-gray-600">SE-501 eliminated odour issues entirely and significantly reduced ongoing maintenance costs.</p>
+                    </div>
+                  </div>
+                  <div className="border-t border-gray-100 pt-4">
+                    <Quote className="w-5 h-5 text-green-400 mb-2" />
+                    <p className="text-sm text-gray-700 italic leading-relaxed">
+                      &ldquo;Residents had been complaining about the foul smell. The SE-501 proved to be the most economical and effective alternative.&rdquo;
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </div>

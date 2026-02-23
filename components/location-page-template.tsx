@@ -3,7 +3,7 @@ import { LeadFormSection } from "@/components/lead-form-section"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { CheckCircle, MapPin, Phone, Mail } from "lucide-react"
+import { CheckCircle, MapPin, Phone, Mail, Quote } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 
@@ -153,6 +153,45 @@ export function LocationPageTemplate({
           </div>
         </section>
       )}
+
+      {/* Client Testimonials */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
+              What Our Clients Say
+            </h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              {[
+                {
+                  name: "Fragrant Nature Hotels & Resorts",
+                  type: "Hospitality — Munnar, Kerala",
+                  quote: "The Solwearth team was professional and courteous. We recommend Solwearth as a superior solution to anything else available in the market.",
+                },
+                {
+                  name: "Gokulam Medical Center",
+                  type: "Healthcare",
+                  quote: "We relocated the machine to our terrace and cleared out valuable floor space. Go for Solwearth — it is the most practical solution available.",
+                },
+              ].map((testimonial, index) => (
+                <div
+                  key={index}
+                  className="bg-gray-50 rounded-lg p-6 border border-gray-100"
+                >
+                  <Quote className="w-6 h-6 text-green-300 mb-3" />
+                  <p className="text-gray-700 text-sm leading-relaxed mb-4 italic">
+                    &ldquo;{testimonial.quote}&rdquo;
+                  </p>
+                  <div className="border-t border-gray-200 pt-3">
+                    <p className="font-semibold text-gray-900 text-sm">{testimonial.name}</p>
+                    <p className="text-xs text-gray-500">{testimonial.type}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Products Section */}
       <section className="py-16 bg-gradient-to-b from-gray-50 to-blue-50">
