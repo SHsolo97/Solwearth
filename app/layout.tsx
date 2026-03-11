@@ -4,6 +4,7 @@ import { Open_Sans } from "next/font/google"
 import { Suspense } from "react"
 import dynamic from "next/dynamic"
 import { GoogleAnalytics } from "@/components/google-analytics"
+import { GoogleTagManager, GoogleTagManagerNoScript } from "@/components/google-tag-manager"
 import "./globals.css"
 
 const PopupLeadForm = dynamic(
@@ -54,6 +55,9 @@ export default function RootLayout({
         <link rel="alternate" hrefLang="x-default" href="https://solwearth.com" />
       </head>
       <body className={`${openSans.variable} font-sans antialiased`}>
+        <GoogleTagManagerNoScript />
+        {/* Google Tag Manager */}
+        <GoogleTagManager />
         {/* Google Analytics */}
         {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
           <GoogleAnalytics GA_MEASUREMENT_ID={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID} />

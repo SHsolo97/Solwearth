@@ -7,6 +7,13 @@ import { CheckCircle, MapPin, Phone, Mail, Quote } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 
+interface Dealer {
+  name: string
+  logo: string
+  googleProfileUrl: string
+  city?: string
+}
+
 interface LocationPageProps {
   title: string
   subtitle?: string
@@ -14,6 +21,7 @@ interface LocationPageProps {
   benefits: string[]
   targetMarket?: string[]
   features?: string[]
+  dealers?: Dealer[]
   location: string
 }
 
@@ -24,6 +32,7 @@ export function LocationPageTemplate({
   benefits,
   targetMarket,
   features,
+  dealers,
   location,
 }: LocationPageProps) {
   const allProducts = [
@@ -149,6 +158,60 @@ export function LocationPageTemplate({
                   </div>
                 </CardContent>
               </Card>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Authorized Dealers */}
+      {dealers && dealers.length > 0 && (
+        <section className="py-16 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">
+                Authorized Dealer{dealers.length > 1 ? "s" : ""} in {location}
+              </h2>
+              <p className="text-center text-gray-500 mb-12">
+                Purchase and get local service support through our authorized partner{dealers.length > 1 ? "s" : ""}
+              </p>
+              <div className={`grid gap-8 ${
+                dealers.length === 1
+                  ? "max-w-sm mx-auto"
+                  : "sm:grid-cols-2"
+              }`}>
+                {dealers.map((dealer) => (
+                  <a
+                    key={dealer.name}
+                    href={dealer.googleProfileUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group bg-white rounded-xl shadow-sm border border-gray-100 p-8 flex flex-col items-center gap-5 hover:shadow-md transition-shadow"
+                  >
+                    <div className="relative w-48 h-24">
+                      <Image
+                        src={dealer.logo}
+                        alt={`${dealer.name} logo`}
+                        fill
+                        className="object-contain"
+                      />
+                    </div>
+                    <div className="text-center">
+                      <p className="font-semibold text-gray-900 text-lg group-hover:text-green-600 transition-colors">
+                        {dealer.name}
+                      </p>
+                      {dealer.city && (
+                        <p className="text-sm text-gray-500 mt-1 flex items-center justify-center gap-1">
+                          <MapPin className="w-3.5 h-3.5" />
+                          {dealer.city}
+                        </p>
+                      )}
+                    </div>
+                    <span className="text-sm text-green-600 font-medium border border-green-200 rounded-full px-4 py-1 group-hover:bg-green-50 transition-colors">
+                      View on Google Maps
+                    </span>
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
         </section>

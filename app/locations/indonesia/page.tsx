@@ -62,6 +62,14 @@ export default function IndonesiaPage() {
         "No additives, bacteria, enzymes, or chemicals required",
         "1-year comprehensive warranty with local service support",
       ]}
+      dealers={[
+        {
+          name: "Alpha Environmental Group, PT",
+          logo: "/images/dealers/AEG_Dealer_Indonesia.png",
+          googleProfileUrl: "https://share.google/YQMqhg4Tk1yfbIFm1",
+          city: "Bali, Indonesia",
+        },
+      ]}
     />
   )
 }

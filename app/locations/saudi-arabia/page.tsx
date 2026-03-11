@@ -62,6 +62,14 @@ export default function SaudiArabiaPage() {
         "No additives, bacteria, enzymes, or chemicals required",
         "1-year comprehensive warranty with local service support",
       ]}
+      dealers={[
+        {
+          name: "FARZ Environmental Services",
+          logo: "/images/dealers/Farz-Logo-scaled.webp",
+          googleProfileUrl: "https://share.google/124xuxRgFTDmWRmbh",
+          city: "Riyadh, Saudi Arabia",
+        },
+      ]}
     />
   )
 }
